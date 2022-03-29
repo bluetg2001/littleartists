@@ -1,0 +1,6 @@
+module Pods_littleband_littlebandTests {
+  umbrella header "Pods-littleband-littlebandTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
