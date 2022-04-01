@@ -1,9 +1,6 @@
 import React from 'react';
 
-const getIndexedChildren = (
-  children: React.ReactNode,
-  startingIndex?: number
-) => {
+export default (children: React.ReactNode, startingIndex?: number) => {
   let counter = startingIndex ? startingIndex - 1 : -1;
   const indexedChildren = React.Children.map(children, (child: any) => {
     counter++;
@@ -17,5 +14,3 @@ const getIndexedChildren = (
   });
   return indexedChildren;
 };
-
-export default getIndexedChildren;

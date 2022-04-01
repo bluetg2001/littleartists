@@ -6,62 +6,109 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useState} from 'react';
+// native-base
 import {
-  Link,
-  Text,
-  HStack,
-  Center,
-  Heading,
-  Switch,
-  useColorMode,
+  Box,
   NativeBaseProvider,
+  View,
+  Center,
+  Text,
   VStack,
-  Code,
+  FormControl,
+  Input,
 } from 'native-base';
-import NativeBaseIcon from './src/components/NativeBaseIcon';
+import theme from './src/utils/theme';
+// react-native
+import {Image} from 'react-native';
 
-// Color Switch Component
-function ToggleDarkMode() {
-  const {colorMode, toggleColorMode} = useColorMode();
-  return (
-    <HStack space={2} alignItems="center">
-      <Text>Dark</Text>
-      <Switch
-        isChecked={colorMode === 'light'}
-        onToggle={toggleColorMode}
-        aria-label={
-          colorMode === 'light' ? 'switch to dark mode' : 'switch to light mode'
-        }
-      />
-      <Text>Light</Text>
-    </HStack>
-  );
-}
 const App = () => {
+  const [resend, setResend] = useState(false);
+
+  // 추후 유효성 검사 로직 추가
+  // const validate = () => {
+  //   if (formData.name === undefined) {
+  //     setErrors({...errors, name: 'Name is required'});
+  //     return false;
+  //   } else if (formData.name.length < 3) {
+  //     setErrors({...errors, name: 'Name is too short'});
+  //     return false;
+  //   }
+
+  //   return true;
+  // };
+
   return (
-    <NativeBaseProvider>
-      <Center
-        _dark={{bg: 'blueGray.900'}}
-        _light={{bg: 'blueGray.50'}}
-        px={4}
-        flex={1}>
-        <VStack space={5} alignItems="center">
-          <NativeBaseIcon />
-          <Heading size="lg">Welcome to NativeBase</Heading>
-          <HStack space={2} alignItems="center">
-            <Text>Edit</Text>
-            <Code>App.js</Code>
-            <Text>and save to reload.</Text>
-          </HStack>
-          <Link href="https://docs.nativebase.io" isExternal>
-            <Text color="primary.500" underline fontSize={'xl'}>
-              Learn NativeBase
+    <NativeBaseProvider theme={theme}>
+      <View flex={1} bgColor="gray.100">
+        <Box flex={1} bgColor="amber.500">
+          <Center flex={1} justifyContent="flex-end">
+            <Image
+              // eslint-disable-next-line react-native/no-inline-styles
+              style={{width: 125, height: 60}}
+              source={require('./assets/images/logos/littleband-logo.png')}
+            />
+          </Center>
+        </Box>
+        <Center flex={2} bgColor="blueGray.300">
+          <Box
+            marginTop={8}
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'center'}
+            alignItems={'center'}>
+            <Text fontSize={'md'} color="primary.500" fontWeight={'bold'}>
+              국내 최초{' '}
             </Text>
-          </Link>
-          <ToggleDarkMode />
-        </VStack>
-      </Center>
+            <Text>두뇌밸런스 음악교육 프랜차이즈</Text>
+          </Box>
+
+          <Image
+            flex={5}
+            // eslint-disable-next-line react-native/no-inline-styles
+            style={{aspectRatio: 1, resizeMode: 'contain'}}
+            source={require('./assets/images/characters/with-piano.png')}
+          />
+        </Center>
+        <Center flex={1} bgColor="primary.50">
+          <VStack width="90%" mx="3" maxW="300px">
+            <FormControl>
+              <Input
+                marginBottom={3}
+                placeholder="학부모 번호 (- 제외)"
+                InputRightElement={
+                  <Text
+                    onPress={() => setResend(true)}
+                    mr={2}
+                    fontSize={'xs'}
+                    color="primary.500">
+                    {resend ? '인증번호 재전송' : '인증번호 전송'}
+                  </Text>
+                }
+              />
+              <FormControl.ErrorMessage
+                _text={{
+                  fontSize: 'xs',
+                }}>
+                Error Name
+              </FormControl.ErrorMessage>
+            </FormControl>
+            <FormControl>
+              <Input placeholder="인증번호" />
+            </FormControl>
+          </VStack>
+        </Center>
+        <Box flex={2} bgColor="amber.300">
+          <Center>
+            <Image
+              // flex={5}
+              // eslint-disable-next-line react-native/no-inline-styles
+              style={{width: '40%', resizeMode: 'contain'}}
+              source={require('./assets/images/btns/login-btn.png')}
+            />
+          </Center>
+        </Box>
+      </View>
     </NativeBaseProvider>
   );
 };

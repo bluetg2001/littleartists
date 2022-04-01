@@ -7,10 +7,7 @@ import { useHasResponsiveProps } from '../../../hooks/useHasResponsiveProps';
 
 const StyledSectionList: any = makeStyledComponent(RNSectionList);
 
-const SectionListComponent = <ItemT extends any, sectionT extends any>(
-  props: ISectionListProps<ItemT, sectionT>,
-  ref: any
-) => {
+export const SectionList = forwardRef((props: ISectionListProps, ref: any) => {
   const { ...resolvedProps } = usePropsResolution('SectionList', props);
   //TODO: refactor for responsive prop
   if (useHasResponsiveProps(props)) {
@@ -18,12 +15,4 @@ const SectionListComponent = <ItemT extends any, sectionT extends any>(
   }
 
   return <StyledSectionList {...resolvedProps} ref={ref} />;
-};
-
-export const SectionList = forwardRef(SectionListComponent) as <
-  ItemT,
-  sectionT
->(
-  props: ISectionListProps<ItemT, sectionT>,
-  ref: any
-) => any;
+});

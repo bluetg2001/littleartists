@@ -7,7 +7,7 @@ export {
   useAccessibleColors,
 } from './color-mode';
 
-export type { INativebaseConfig } from './NativeBaseContext';
+export { INativebaseConfig } from './NativeBaseContext';
 
 export type {
   StorageManager,
