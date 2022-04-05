@@ -10,6 +10,7 @@ const theme = extendTheme({
     },
     // 배경색
     gray: {
+      50: '#ebebeb',
       100: '#f4f4f4',
     },
     // font

@@ -17,29 +17,35 @@ function Main({navigation}) {
     {
       title: '공지사항',
       img: require('../../assets/images/logos/main-notice.png'),
+      link: 'Notice',
     },
     {
       title: 'e피아노고고',
-      img: require('../../assets/images/logos/main-littleband-logo.png'),
+      img: require('../../assets/images/logos/main-pianogogo.png'),
+      link: 'Attendance',
     },
     {
       title: '갤러리',
       img: require('../../assets/images/logos/main-gallery.png'),
+      link: 'Gallery',
     },
     {
       title: '소개',
-      img: require('../../assets/images/logos/main-pianogogo.png'),
+      img: require('../../assets/images/logos/main-littleband-logo.png'),
+      link: 'BrandIntro',
     },
     {
       title: '교육비',
       img: require('../../assets/images/logos/main-intuition.png'),
+      link: 'Attendance',
     },
   ]);
 
   const MenuBox = props => {
+    const {img, title, link} = props;
     return (
       <AspectRatio ratio={{base: 1 / 1}}>
-        <TouchableOpacity onPress={() => navigation.navigate('Attendance')}>
+        <TouchableOpacity onPress={() => navigation.navigate(String(link))}>
           <Box
             flex={1}
             rounded="3xl"
@@ -67,13 +73,13 @@ function Main({navigation}) {
                   <Image
                     resizeMethod="contain"
                     style={{aspectRatio: 0.4, resizeMode: 'contain'}}
-                    source={props.img}
+                    source={img}
                   />
                 </Center>
               </Center>
             </Center>
             <Center flex={1}>
-              <Text color="dark.50">{props.title}</Text>
+              <Text color="dark.50">{title}</Text>
             </Center>
           </Box>
         </TouchableOpacity>
@@ -97,7 +103,9 @@ function Main({navigation}) {
           data={menus}
           spacing={32}
           style={{flex: 1}}
-          renderItem={({item}) => <MenuBox img={item.img} title={item.title} />}
+          renderItem={({item}) => (
+            <MenuBox img={item.img} title={item.title} link={item.link} />
+          )}
         />
       </Box>
     </View>
