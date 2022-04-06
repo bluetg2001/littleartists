@@ -8,7 +8,7 @@ import {Image} from 'react-native';
 import PaymentRegistration from './PaymentRegistration';
 import PaymentHistory from './PaymentHistory';
 
-function Intuition() {
+function Intuition({navigation}) {
   const [pageSwitch, setPageSwitch] = useState(true);
 
   return (
@@ -42,7 +42,11 @@ function Intuition() {
                 납입이력
               </Text>
             </HStack>
-            {pageSwitch ? <PaymentRegistration /> : <PaymentHistory />}
+            {pageSwitch ? (
+              <PaymentRegistration />
+            ) : (
+              <PaymentHistory navigation={navigation} />
+            )}
           </VStack>
         </VStack>
       </VStack>

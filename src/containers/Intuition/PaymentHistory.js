@@ -1,22 +1,10 @@
 import React from 'react';
 // native-base
-import {
-  Center,
-  Text,
-  VStack,
-  HStack,
-  ScrollView,
-  Box,
-  Radio,
-  Input,
-  Select,
-  Button,
-  ChevronRightIcon,
-} from 'native-base';
+import {Text, HStack, ChevronRightIcon, Box} from 'native-base';
 
-function PaymentHistory() {
+function PaymentHistory({navigation}) {
   return (
-    <>
+    <Box onTouchEnd={() => navigation.navigate('PaymentHistoryDetail')}>
       <HStack justifyContent={'space-between'} alignItems={'center'} mt={36}>
         <Text fontSize={'md'} color="dark.50">
           2022년 5월 교육비
@@ -26,7 +14,7 @@ function PaymentHistory() {
       <Text color="dark.100" fontSize={'xs'}>
         220,000원
       </Text>
-    </>
+    </Box>
   );
 }
 

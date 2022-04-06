@@ -62,7 +62,7 @@ function GallerDetail() {
           <HStack flex={5} alignItems="center">
             <Carousel
               layout={'default'}
-              layoutCardOffset={18}
+              // layoutCardOffset={1}
               data={carouselState}
               sliderWidth={Dimensions.get('screen').width * 0.9}
               itemWidth={Dimensions.get('screen').width * 0.7}

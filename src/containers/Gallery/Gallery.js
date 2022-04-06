@@ -63,34 +63,34 @@ function Gallery({navigation}) {
           </Center>
         </Box>
         <Box flex={5}>
-          <ScrollView flex={1}>
-            <FlatGrid
-              itemDimension={120}
-              data={menus}
-              spacing={10}
-              style={{flex: 1}}
-              renderItem={({item}) => (
-                <View flex={1}>
-                  <AspectRatio ratio={{base: 1 / 1}}>
-                    <TouchableOpacity
-                      onPress={() => navigation.navigate(String(item.link))}>
-                      <Box flex={1}>
-                        <Image
-                          flex={1}
-                          img={item.img}
-                          title={item.title}
-                          resizeMode="contain"
-                          link={item.link}
-                          style={{aspectRatio: 1}}
-                          source={item.img}
-                        />
-                      </Box>
-                    </TouchableOpacity>
-                  </AspectRatio>
-                </View>
-              )}
-            />
-          </ScrollView>
+          {/* <ScrollView flex={1}> */}
+          <FlatGrid
+            itemDimension={120}
+            data={menus}
+            spacing={10}
+            renderItem={({item}) => (
+              <View flex={1}>
+                <AspectRatio ratio={{base: 1 / 1}}>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate(String(item.link))}>
+                    <Box flex={1}>
+                      <Image
+                        borderRadius={8}
+                        flex={1}
+                        img={item.img}
+                        title={item.title}
+                        resizeMode="contain"
+                        link={item.link}
+                        style={{aspectRatio: 1}}
+                        source={item.img}
+                      />
+                    </Box>
+                  </TouchableOpacity>
+                </AspectRatio>
+              </View>
+            )}
+          />
+          {/* </ScrollView> */}
         </Box>
       </VStack>
     </VStack>

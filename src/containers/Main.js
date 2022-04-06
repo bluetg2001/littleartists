@@ -22,7 +22,7 @@ function Main({navigation}) {
     {
       title: 'e피아노고고',
       img: require('../../assets/images/logos/main-pianogogo.png'),
-      link: 'Attendance',
+      link: 'PianoGoGo',
     },
     {
       title: '갤러리',
