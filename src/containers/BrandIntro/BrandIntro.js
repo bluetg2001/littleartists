@@ -1,30 +1,37 @@
-/* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-// react-native-components
-import {Image} from 'react-native';
+import React, {useState} from 'react';
 // native-base
-import {Center, Text, View, Box} from 'native-base';
+import {Text, Box, VStack, HStack, ScrollView} from 'native-base';
+// components
+import Introduction from './Introduction';
+import BrandNotice from './BrandNotice';
 
 function BrandIntro() {
+  const [pageSwitch, setPageSwitch] = useState(true);
+
   return (
-    <View flex={1} bgColor="white">
-      <Box flex={1}>
-        <Center flex={1}>
-          <Box
-            position="relative"
-            style={{width: 125, height: 60}}
-            bgColor="amber.400">
-            <Image
-              style={{width: 125, height: 60}}
-              source={require('../../../assets/images/logos/littleband-logo.png')}
-            />
-          </Box>
-        </Center>
-      </Box>
-      <Box flex={6} bgColor={'amber.400'}>
-        1
-      </Box>
-    </View>
+    <ScrollView>
+      <VStack flex={1} alignItems="center" bgColor={'white'}>
+        <VStack width="90%">
+          <HStack mt="8">
+            <Text
+              fontSize={'lg'}
+              ml="8"
+              onPress={() => setPageSwitch(true)}
+              color={pageSwitch ? 'primary.500' : 'dark.100'}>
+              소개
+            </Text>
+            <Box width={'8'} />
+            <Text
+              fontSize={'lg'}
+              onPress={() => setPageSwitch(false)}
+              color={pageSwitch ? 'dark.100' : 'primary.500'}>
+              소식
+            </Text>
+          </HStack>
+          {pageSwitch ? <Introduction /> : <BrandNotice />}
+        </VStack>
+      </VStack>
+    </ScrollView>
   );
 }
 export default BrandIntro;

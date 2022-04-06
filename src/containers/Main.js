@@ -37,7 +37,7 @@ function Main({navigation}) {
     {
       title: '교육비',
       img: require('../../assets/images/logos/main-intuition.png'),
-      link: 'Attendance',
+      link: 'Intuition',
     },
   ]);
 

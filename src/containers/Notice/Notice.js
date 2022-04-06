@@ -1,6 +1,7 @@
 import React from 'react';
 // native-base
 import {Center, Text} from 'native-base';
+import BottomTabNavigation from '../../components/BottomTabNavigation';
 
 function Notice() {
   return (

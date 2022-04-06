@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 // react-native components
-import {Image} from 'react-native';
+import {Image, LogBox} from 'react-native';
 
 // native-base
 import {
@@ -15,9 +15,11 @@ import {
   Divider,
 } from 'native-base';
 // components
-// import BottomTabNavigation from '../components/BottomTabNavigation';
+import BottomTabNavigation from '../components/BottomTabNavigation';
 
 function Attendance() {
+  LogBox.ignoreLogs(['NativeBase:']);
+
   const AttendanceInfo = () => {
     return (
       <Box>
@@ -50,7 +52,7 @@ function Attendance() {
   };
 
   return (
-    <View flex={1} bgColor="white">
+    <View flex={6} bgColor="white">
       <Box flex={1}>
         <Center flex={1}>
           <Image
@@ -121,6 +123,16 @@ function Attendance() {
             >
               <Select.Item label="1월" value="1월" />
               <Select.Item label="2월" value="2월" />
+              <Select.Item label="3월" value="3월" />
+              <Select.Item label="4월" value="4월" />
+              <Select.Item label="5월" value="5월" />
+              <Select.Item label="6월" value="6월" />
+              <Select.Item label="7월" value="7월" />
+              <Select.Item label="8월" value="8월" />
+              <Select.Item label="9월" value="9월" />
+              <Select.Item label="10월" value="10월" />
+              <Select.Item label="11월" value="11월" />
+              <Select.Item label="12월" value="12월" />
             </Select>
             {/* gap */}
             <View flex={0.1} />
@@ -174,7 +186,6 @@ function Attendance() {
           </Box>
         </Box>
       </Box>
-      {/* <BottomTabNavigation /> */}
     </View>
   );
 }
