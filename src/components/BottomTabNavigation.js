@@ -1,21 +1,9 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useCallback} from 'react';
 // react-native components
 import {Image} from 'react-native';
 // native-base
-import {
-  Box,
-  Text,
-  Heading,
-  VStack,
-  FormControl,
-  Input,
-  Link,
-  Button,
-  Icon,
-  HStack,
-  Center,
-  Pressable,
-} from 'native-base';
+import {Box, Text, HStack, Center, Pressable} from 'native-base';
 import {useNavigation} from '@react-navigation/native';
 
 function BottomTabNavigation() {
@@ -65,7 +53,7 @@ function BottomTabNavigation() {
       setSelected(index);
       navigation.navigate(String(link));
     },
-    [setSelected],
+    [navigation],
   );
 
   const TabItem = props => {
@@ -96,8 +84,8 @@ function BottomTabNavigation() {
   };
 
   return (
-    <Box bg="white" flex={1} safeAreaTop width="100%">
-      <HStack flex={1} safeAreaBottom>
+    <Box bg="white" flex={1} width="100%">
+      <HStack flex={1} safeAreaBottom paddingTop="4">
         {menus.map(menu => (
           <TabItem
             index={menu.index}
