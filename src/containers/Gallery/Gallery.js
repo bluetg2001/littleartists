@@ -1,15 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 // native-base
-import {
-  Center,
-  Text,
-  VStack,
-  HStack,
-  Box,
-  ScrollView,
-  AspectRatio,
-} from 'native-base';
+import {Center, VStack, View, Box, ScrollView, AspectRatio} from 'native-base';
 // react-native components
 import {Image, TouchableOpacity} from 'react-native';
 // grid system
@@ -20,38 +12,48 @@ function Gallery({navigation}) {
     {
       title: '출석',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'Attendance',
+      link: 'GalleryDetail',
     },
     {
       title: '공지사항',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'Notice',
+      link: 'GalleryDetail',
     },
     {
       title: 'e피아노고고',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'Attendance',
+      link: 'GalleryDetail',
     },
     {
       title: '갤러리',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'Gallery',
+      link: 'GalleryDetail',
     },
     {
       title: '소개',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'BrandIntro',
+      link: 'GalleryDetail',
     },
     {
       title: '교육비',
       img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
-      link: 'Intuition',
+      link: 'GalleryDetail',
+    },
+    {
+      title: '교육비',
+      img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
+      link: 'GalleryDetail',
+    },
+    {
+      title: '교육비',
+      img: require('../../../assets/images/backgrounds/brand-intro-deco-background.png'),
+      link: 'GalleryDetail',
     },
   ]);
 
   return (
     <VStack flex={1} alignItems={'center'}>
-      <VStack flex={1} width="90%" bgColor="amber.100">
+      <VStack flex={1} width="90%">
         <Box flex={1}>
           <Center flex={1}>
             <Image
@@ -61,24 +63,31 @@ function Gallery({navigation}) {
           </Center>
         </Box>
         <Box flex={5}>
-          <ScrollView>
+          <ScrollView flex={1}>
             <FlatGrid
-              itemDimension={130}
+              itemDimension={120}
               data={menus}
-              spacing={32}
+              spacing={10}
               style={{flex: 1}}
               renderItem={({item}) => (
-                // <MenuBox img={item.img} title={item.title} link={item.link} />
-                <AspectRatio ratio={{base: 1 / 1}}>
-                  <Image
-                    // img={item.img}
-                    // title={item.title}
-                    resizeMode="contain"
-                    link={item.link}
-                    style={{aspectRatio: 0.5, resizeMode: 'contain'}}
-                    source={item.img}
-                  />
-                </AspectRatio>
+                <View flex={1}>
+                  <AspectRatio ratio={{base: 1 / 1}}>
+                    <TouchableOpacity
+                      onPress={() => navigation.navigate(String(item.link))}>
+                      <Box flex={1}>
+                        <Image
+                          flex={1}
+                          img={item.img}
+                          title={item.title}
+                          resizeMode="contain"
+                          link={item.link}
+                          style={{aspectRatio: 1}}
+                          source={item.img}
+                        />
+                      </Box>
+                    </TouchableOpacity>
+                  </AspectRatio>
+                </View>
               )}
             />
           </ScrollView>
