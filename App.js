@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 // native-base
-import {NativeBaseProvider, View, Text} from 'native-base';
+import {NativeBaseProvider, View} from 'native-base';
 import theme from './src/utils/theme';
 // navigate
 import Stack from './src/navigation/Stack';

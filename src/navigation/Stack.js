@@ -64,7 +64,6 @@ function Stack(props) {
         />
         <StackNavi.Screen name="PianoGoGo" component={PianoGoGo} />
       </StackNavi.Navigator>
-      {/* <BottomTabNavigation /> */}
     </>
   );
 }
