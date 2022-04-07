@@ -6,8 +6,10 @@ import {Image, TouchableOpacity} from 'react-native';
 import {Box, Center, View, Text, AspectRatio} from 'native-base';
 // grid system
 import {FlatGrid} from 'react-native-super-grid';
+// react-navigation
+import {useFocusEffect} from '@react-navigation/native';
 
-function Main({navigation}) {
+function Main({navigation, hiddenTab, setHiddenTab}) {
   const [menus, setMenus] = useState([
     {
       title: '출석',
@@ -41,11 +43,33 @@ function Main({navigation}) {
     },
   ]);
 
+  useFocusEffect(
+    React.useCallback(() => {
+      setHiddenTab(true);
+      return () => setHiddenTab(false);
+    }, [setHiddenTab]),
+  );
+
+  // useFocusEffect(() => {
+  //   React.useCallback(() => {
+
+  //   })
+  //   setHiddenTab(true);
+  //   return () => {
+  //     setHiddenTab(false);
+  //     console.log('언마운트 됨');
+  //   };
+  // }, []);
+
   const MenuBox = props => {
     const {img, title, link} = props;
     return (
       <AspectRatio ratio={{base: 1 / 1}}>
-        <TouchableOpacity onPress={() => navigation.navigate(String(link))}>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate(String(link));
+            setHiddenTab(false);
+          }}>
           <Box
             flex={1}
             rounded="3xl"

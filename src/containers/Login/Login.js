@@ -3,11 +3,14 @@ import React, {useState} from 'react';
 // native-base
 import {Box, View, Center, Text, VStack, FormControl, Input} from 'native-base';
 // react-native components
-import {Image, TouchableOpacity} from 'react-native';
+import {Image, TouchableOpacity, DeviceEventEmitter} from 'react-native';
+// react-navigation
+import {useFocusEffect} from '@react-navigation/native';
 
-function Login({navigation}) {
+function Login({navigation, hiddenTab, setHiddenTab}) {
   // state
   const [resend, setResend] = useState(false);
+  // const {hiddenTab, setHiddenTab} = props;
 
   // 유효성 검사 로직 추가
   // const validate = () => {
@@ -21,8 +24,16 @@ function Login({navigation}) {
 
   //   return true;
   // };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      setHiddenTab(true);
+    }, [setHiddenTab]),
+  );
+
   return (
     <View flex={1} bgColor="gray.100">
+      {console.log(hiddenTab)}
       <Box flex={1}>
         <Center flex={1} justifyContent="flex-end">
           <Image

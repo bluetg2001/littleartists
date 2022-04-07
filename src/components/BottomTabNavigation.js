@@ -6,7 +6,8 @@ import {Image} from 'react-native';
 import {Box, Text, HStack, Center, Pressable} from 'native-base';
 import {useNavigation} from '@react-navigation/native';
 
-function BottomTabNavigation() {
+function BottomTabNavigation(props) {
+  const {hiddenTab} = props;
   const [selected, setSelected] = useState();
   const navigation = useNavigation();
 
@@ -84,7 +85,7 @@ function BottomTabNavigation() {
   };
 
   return (
-    <Box bg="white" flex={1} width="100%">
+    <Box bg="white" flex={1} width="100%" display={hiddenTab ? 'none' : 'flex'}>
       <HStack flex={1} safeAreaBottom paddingTop="4">
         {menus.map(menu => (
           <TabItem
