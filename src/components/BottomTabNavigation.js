@@ -7,8 +7,8 @@ import {Box, Text, HStack, Center, Pressable} from 'native-base';
 import {useNavigation} from '@react-navigation/native';
 
 function BottomTabNavigation(props) {
-  const {hiddenTab} = props;
-  const [selected, setSelected] = useState();
+  const {hiddenTab, bottomTabIndex, setBottomTabIndex} = props;
+  // const [selected, setSelected] = useState();
   const navigation = useNavigation();
 
   const [menus, setMenus] = useState([
@@ -51,10 +51,11 @@ function BottomTabNavigation(props) {
 
   const onClickNavigate = useCallback(
     (index, link) => {
-      setSelected(index);
+      // setSelected(index);
+      setBottomTabIndex(index);
       navigation.navigate(String(link));
     },
-    [navigation],
+    [navigation, setBottomTabIndex],
   );
 
   const TabItem = props => {
@@ -71,7 +72,7 @@ function BottomTabNavigation(props) {
             flex={1}
             resizeMethod="contain"
             style={{aspectRatio: 1, resizeMode: 'contain'}}
-            source={selected === index ? clickedImg : img}
+            source={bottomTabIndex === index ? clickedImg : img}
           />
 
           <Box flex={1} mt={2}>
@@ -89,6 +90,7 @@ function BottomTabNavigation(props) {
       <HStack flex={1} safeAreaBottom paddingTop="4">
         {menus.map(menu => (
           <TabItem
+            key={menu.index}
             index={menu.index}
             title={menu.title}
             img={menu.img}

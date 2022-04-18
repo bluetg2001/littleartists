@@ -3,7 +3,7 @@ import React, {useState, useCallback} from 'react';
 // native-base
 import {Box, View, Center, Text, VStack, FormControl, Input} from 'native-base';
 // react-native components
-import {Image, TouchableOpacity, DeviceEventEmitter} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
 

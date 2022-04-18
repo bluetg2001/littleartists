@@ -10,15 +10,25 @@ import {NavigationContainer} from '@react-navigation/native';
 const App = () => {
   // 로그인, 메인 부분 하단탭 숨기기 위한 state
   const [hiddenTab, setHiddenTab] = useState(false);
+  const [bottomTabIndex, setBottomTabIndex] = useState(null);
 
   return (
     <NavigationContainer>
       <NativeBaseProvider theme={theme}>
         <View flex={1}>
           <View flex={6}>
-            <Stack hiddenTab={hiddenTab} setHiddenTab={setHiddenTab} />
+            <Stack
+              hiddenTab={hiddenTab}
+              setHiddenTab={setHiddenTab}
+              bottomTabIndex={bottomTabIndex}
+              setBottomTabIndex={setBottomTabIndex}
+            />
           </View>
-          <BottomTabNavigation hiddenTab={hiddenTab} />
+          <BottomTabNavigation
+            hiddenTab={hiddenTab}
+            bottomTabIndex={bottomTabIndex}
+            setBottomTabIndex={setBottomTabIndex}
+          />
         </View>
       </NativeBaseProvider>
     </NavigationContainer>

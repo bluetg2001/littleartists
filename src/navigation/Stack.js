@@ -18,7 +18,7 @@ import PaymentHistoryDetail from '../containers/Intuition/PaymentHistoryDetail';
 const StackNavi = createNativeStackNavigator();
 
 function Stack(props) {
-  const {hiddenTab, setHiddenTab} = props;
+  const {hiddenTab, setHiddenTab, bottomTabIndex, setBottomTabIndex} = props;
   return (
     <>
       <StackNavi.Navigator
@@ -33,7 +33,11 @@ function Stack(props) {
           },
         }}>
         {/* <StackNavi.Screen name="Login" component={Login} /> */}
-        <StackNavi.Screen name="Login">
+        <StackNavi.Screen
+          name="Login"
+          options={{
+            headerShown: false,
+          }}>
           {props => (
             <Login
               {...props}
@@ -42,22 +46,56 @@ function Stack(props) {
             />
           )}
         </StackNavi.Screen>
-        <StackNavi.Screen name="Main">
+        <StackNavi.Screen
+          name="Main"
+          options={{
+            headerShown: false,
+          }}>
           {props => (
             <Main
               {...props}
               hiddenTab={hiddenTab}
               setHiddenTab={setHiddenTab}
+              bottomTabIndex={bottomTabIndex}
+              setBottomTabIndex={setBottomTabIndex}
             />
           )}
         </StackNavi.Screen>
-        <StackNavi.Screen name="Attendance" component={Attendance} />
-        <StackNavi.Screen name="Notice" component={Notice} />
-        <StackNavi.Screen name="NoticeDetail" component={NoticeDetail} />
-        <StackNavi.Screen name="Gallery" component={Gallery} />
-        <StackNavi.Screen name="GalleryDetail" component={GalleryDetail} />
-        <StackNavi.Screen name="BrandIntro" component={BrandIntro} />
-        <StackNavi.Screen name="Intuition" component={Intuition} />
+        <StackNavi.Screen
+          name="Attendance"
+          component={Attendance}
+          options={{title: '출석'}}
+        />
+        <StackNavi.Screen
+          name="Notice"
+          component={Notice}
+          options={{title: '공지사항'}}
+        />
+        <StackNavi.Screen
+          name="NoticeDetail"
+          component={NoticeDetail}
+          options={{title: ''}}
+        />
+        <StackNavi.Screen
+          name="Gallery"
+          component={Gallery}
+          options={{title: '갤러리'}}
+        />
+        <StackNavi.Screen
+          name="GalleryDetail"
+          component={GalleryDetail}
+          options={{title: ''}}
+        />
+        <StackNavi.Screen
+          name="BrandIntro"
+          component={BrandIntro}
+          options={{title: '어린음악대'}}
+        />
+        <StackNavi.Screen
+          name="Intuition"
+          component={Intuition}
+          options={{title: '교육비'}}
+        />
         <StackNavi.Screen
           name="PaymentHistoryDetail"
           component={PaymentHistoryDetail}
