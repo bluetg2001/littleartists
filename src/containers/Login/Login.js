@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 // native-base
 import {Box, View, Center, Text, VStack, FormControl, Input} from 'native-base';
 // react-native components
@@ -26,7 +26,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   // };
 
   useFocusEffect(
-    React.useCallback(() => {
+    useCallback(() => {
       setHiddenTab(true);
     }, [setHiddenTab]),
   );

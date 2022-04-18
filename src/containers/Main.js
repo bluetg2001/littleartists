@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React, {useState, useCallback} from 'react';
 // react-native components
 import {Image, TouchableOpacity} from 'react-native';
 // native-base
@@ -44,22 +44,11 @@ function Main({navigation, hiddenTab, setHiddenTab}) {
   ]);
 
   useFocusEffect(
-    React.useCallback(() => {
+    useCallback(() => {
       setHiddenTab(true);
       return () => setHiddenTab(false);
     }, [setHiddenTab]),
   );
-
-  // useFocusEffect(() => {
-  //   React.useCallback(() => {
-
-  //   })
-  //   setHiddenTab(true);
-  //   return () => {
-  //     setHiddenTab(false);
-  //     console.log('언마운트 됨');
-  //   };
-  // }, []);
 
   const MenuBox = props => {
     const {img, title, link} = props;
@@ -68,7 +57,6 @@ function Main({navigation, hiddenTab, setHiddenTab}) {
         <TouchableOpacity
           onPress={() => {
             navigation.navigate(String(link));
-            setHiddenTab(false);
           }}>
           <Box
             flex={1}
