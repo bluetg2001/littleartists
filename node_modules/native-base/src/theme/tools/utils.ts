@@ -67,6 +67,7 @@ export const stylingProps = {
     'borderLeftColor',
     'borderX',
     'borderY',
+    'rounded',
   ],
   layout: [
     'width',
@@ -104,6 +105,7 @@ export const stylingProps = {
     'order',
   ],
   position: ['position', 'zIndex', 'top', 'right', 'bottom', 'left'],
+  outline: ['outlineWidth', 'outlineColor', 'outlineStyle'],
   background: ['bg', 'backgroundColor', 'bgColor'],
 };
 export type Dict = Record<string, any>;
@@ -217,17 +219,22 @@ export function getClosestBreakpoint(
 ) {
   const dimValues = Object.values(values);
   let index = -1;
+  let breakpointsObj: any = {};
   for (let i = 0; i < dimValues.length; i++) {
-    if (dimValues[i] === point) {
-      index = i;
+    breakpointsObj[dimValues[i]] = i;
+  }
+  const breakpoints = Object.keys(breakpointsObj);
+  for (let i = 0; i < breakpoints.length; i++) {
+    if (parseInt(breakpoints[i]) === point) {
+      index = breakpointsObj[breakpoints[i]];
       break;
-    } else if (dimValues[i] > point && i !== 0) {
-      index = i - 1;
+    } else if (parseInt(breakpoints[i]) > point && i !== 0) {
+      index = breakpointsObj[breakpoints[i - 1]];
       break;
     }
     // If windowWidth is greater than last available breakpoint clamp it to last index
-    else if (dimValues[i] < point && i === dimValues.length - 1) {
-      index = i;
+    else if (parseInt(breakpoints[i]) < point && i === dimValues.length - 1) {
+      index = breakpointsObj[breakpoints[i]];
       break;
     }
   }
