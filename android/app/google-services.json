@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "292341438726",
+    "project_id": "piano-server",
+    "storage_bucket": "piano-server.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292341438726:android:2c22f45b5c466cb9dfa687",
+        "android_client_info": {
+          "package_name": "com.attendance_pad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292341438726-2jhkhfkb143165o266sm3b3n7bu1kor9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAerMYP_F4wl6e5ZaEyF-f4KFYHhufdbhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292341438726-2jhkhfkb143165o266sm3b3n7bu1kor9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "292341438726-6ccis3f4suv64797s6gj22bj17c1pcuu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.attendance-pad"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292341438726:android:3c8497851d5c89d3dfa687",
+        "android_client_info": {
+          "package_name": "com.littleband"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292341438726-2jhkhfkb143165o266sm3b3n7bu1kor9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAerMYP_F4wl6e5ZaEyF-f4KFYHhufdbhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292341438726-2jhkhfkb143165o266sm3b3n7bu1kor9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "292341438726-6ccis3f4suv64797s6gj22bj17c1pcuu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.attendance-pad"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

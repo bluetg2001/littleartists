@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/littleband.iml" filepath="$PROJECT_DIR$/.idea/modules/littleband.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1002267886/littleband.react-native-safe-area-context.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.main.iml" filepath="$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/270485930/littleband.react-native-screens.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.iml" filepath="$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1075242759/littleband.react-native-svg.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/530567053/littleband.react-native-vector-icons.unitTest.iml" />
+    </modules>
+  </component>
+</project>

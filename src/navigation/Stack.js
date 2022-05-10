@@ -61,11 +61,22 @@ function Stack(props) {
             />
           )}
         </StackNavi.Screen>
-        <StackNavi.Screen
+        {/* <StackNavi.Screen
           name="Attendance"
           component={Attendance}
           options={{title: '출석'}}
-        />
+        /> */}
+        <StackNavi.Screen name="Attendance" options={{title: '출석'}}>
+          {props => (
+            <Attendance
+              {...props}
+              hiddenTab={hiddenTab}
+              setHiddenTab={setHiddenTab}
+              bottomTabIndex={bottomTabIndex}
+              setBottomTabIndex={setBottomTabIndex}
+            />
+          )}
+        </StackNavi.Screen>
         <StackNavi.Screen
           name="Notice"
           component={Notice}

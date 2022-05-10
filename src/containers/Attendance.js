@@ -2,7 +2,7 @@
 import React from 'react';
 // react-native components
 import {Image, LogBox} from 'react-native';
-
+// react-navigation
 // native-base
 import {
   Center,
@@ -72,6 +72,7 @@ function Attendance() {
             style={{width: '90%'}}>
             {/* 학생 선택 */}
             <Select
+              // size={'md'}
               flex={1.5}
               bgColor="white"
               accessibilityLabel="김태균"
@@ -136,7 +137,7 @@ function Attendance() {
             </Select>
             {/* gap */}
             <View flex={0.1} />
-            <Button size="xs">조회</Button>
+            <Button size="md">조회</Button>
           </Center>
         </Box>
         <Box flex={7}>

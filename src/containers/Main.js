@@ -211,7 +211,7 @@ function Main({
           <Modal.Header>알림</Modal.Header>
           {/* <ScrollView> */}
           <Modal.Body>
-            <SwipeListView
+            {/* <SwipeListView
               data={listData}
               renderItem={Example}
               renderHiddenItem={renderHiddenItem}
@@ -222,9 +222,8 @@ function Main({
               previewOpenDelay={0}
               onRowDidOpen={onItemOpen}
               tension={100}
-            />
+            /> */}
           </Modal.Body>
-          {/* </ScrollView> */}
           <Modal.Footer>
             <Button
               onPress={() => {
@@ -245,6 +244,7 @@ function Main({
         <TouchableOpacity
           onPress={() => {
             navigation.navigate(String(link));
+            // setHiddenTab(false);
             setBottomTabIndex(index);
             console.log(bottomTabIndex);
           }}>
