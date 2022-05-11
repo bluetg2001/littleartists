@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.2",
     "@react-native-firebase/app": "^14.9.2",
+    "@react-native-firebase/messaging": "^14.9.2",
     "@react-navigation/bottom-tabs": "^6.2.0",
     "@react-navigation/material-bottom-tabs": "^6.1.1",
     "@react-navigation/native": "^6.0.8",

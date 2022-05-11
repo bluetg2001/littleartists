@@ -1,29 +1,63 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useCallback} from 'react';
 // native-base
-import {Box, View, Center, Text, VStack, FormControl, Input} from 'native-base';
+import {
+  Box,
+  View,
+  Center,
+  Text,
+  VStack,
+  HStack,
+  FormControl,
+  Input,
+  Spinner,
+  Heading,
+} from 'native-base';
 // react-native components
 import {Image, TouchableOpacity} from 'react-native';
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
+// graphQL stuff
+import {PARENT_LOGIN} from '../../graphQL/parents';
+import {useMutation} from '@apollo/client';
 
 function Login({navigation, hiddenTab, setHiddenTab}) {
   // state
   const [resend, setResend] = useState(false);
-  // const {hiddenTab, setHiddenTab} = props;
+  const [phoneNum, setPhoneNum] = useState('');
+  const [authKey, setAuthKey] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  // 유효성 검사 로직 추가
-  // const validate = () => {
-  //   if (formData.name === undefined) {
-  //     setErrors({...errors, name: 'Name is required'});
-  //     return false;
-  //   } else if (formData.name.length < 3) {
-  //     setErrors({...errors, name: 'Name is too short'});
-  //     return false;
-  //   }
+  // useMutation
+  const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
 
-  //   return true;
-  // };
+  const checkLogInfo = (_phoneNum, _authKey) => {
+    setErrorMessage('');
+    parentLogin({
+      variables: {
+        phone: _phoneNum,
+        authKey: _authKey,
+      },
+    })
+      .then(res => {
+        console.log(res.data);
+        if (res.data) {
+          const {success, message, parent} = res.data.parentLogin;
+          if (success) {
+            console.log(parent.id, '테스트');
+            navigation.navigate('Main', {
+              parentId: parent.id,
+            });
+          } else {
+            setErrorMessage('전화번호나 인증번호를 확인하세요.');
+            console.log(errorMessage);
+          }
+        } else {
+          setErrorMessage('네트워크를 확인하세요.');
+        }
+      })
+      .catch(console.log);
+  };
 
   useFocusEffect(
     useCallback(() => {
@@ -31,9 +65,34 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
     }, [setHiddenTab]),
   );
 
+  const LoginButton = () => {
+    if (loading) {
+      return (
+        <HStack space={2} justifyContent="center">
+          <Spinner accessibilityLabel="Loading posts" />
+          <Heading color="primary.500" fontSize="md">
+            로그인 중...
+          </Heading>
+        </HStack>
+      );
+    } else {
+      return (
+        <TouchableOpacity onPress={() => checkLogInfo(phoneNum, authKey)}>
+          <Image
+            style={{
+              width: 162,
+              height: 78,
+              resizeMode: 'contain',
+            }}
+            source={require('../../../assets/images/btns/login-btn.png')}
+          />
+        </TouchableOpacity>
+      );
+    }
+  };
+
   return (
     <View flex={1} bgColor="gray.100">
-      {console.log(hiddenTab)}
       <Box flex={1}>
         <Center flex={1} justifyContent="flex-end">
           <Image
@@ -65,6 +124,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         <VStack width="90%" mx="3" maxW="300px">
           <FormControl>
             <Input
+              onChangeText={value => setPhoneNum(value)}
               marginBottom={3}
               placeholder="학부모 번호 (- 제외)"
               InputRightElement={
@@ -85,21 +145,20 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
             </FormControl.ErrorMessage>
           </FormControl>
           <FormControl>
-            <Input placeholder="인증번호" />
+            <Input
+              onChangeText={value => setAuthKey(value)}
+              placeholder="인증번호"
+            />
           </FormControl>
         </VStack>
       </Center>
       <Box flex={2}>
-        <Center>
-          <TouchableOpacity
-            style={{width: '40%'}}
-            onPress={() => navigation.navigate('Main')}>
-            <Image
-              style={{width: '100%', resizeMode: 'contain'}}
-              source={require('../../../assets/images/btns/login-btn.png')}
-            />
-          </TouchableOpacity>
-        </Center>
+        <VStack flex={1} alignItems="center">
+          <Text textAlign="center" color="error.500" my={4}>
+            {errorMessage}
+          </Text>
+          <LoginButton />
+        </VStack>
       </Box>
     </View>
   );

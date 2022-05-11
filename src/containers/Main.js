@@ -1,5 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
+// rnfirebase
+import messaging from '@react-native-firebase/messaging';
 // react-native components
 import {Image, TouchableOpacity, StyleSheet} from 'react-native';
 // native-base
@@ -23,6 +25,9 @@ import {FlatGrid} from 'react-native-super-grid';
 import {useFocusEffect} from '@react-navigation/native';
 // Alert Page - swipe func
 import {SwipeListView} from 'react-native-swipe-list-view';
+// graqlQL sutff
+import {useMutation} from '@apollo/client';
+import {SAVE_TOKEN_TO_DATABASE} from '../graphQL/parents';
 
 function Main({
   navigation,
@@ -30,7 +35,11 @@ function Main({
   setHiddenTab,
   bottomTabIndex,
   setBottomTabIndex,
+  route,
 }) {
+  const parentId = route.params.parentId;
+  console.log(parentId);
+
   const [menus, setMenus] = useState([
     {
       index: 1,
@@ -116,6 +125,7 @@ function Main({
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
     },
   ]);
+  const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
 
   useFocusEffect(
     useCallback(() => {
@@ -123,6 +133,29 @@ function Main({
       return () => setHiddenTab(false);
     }, [setHiddenTab]),
   );
+
+  useEffect(() => {
+    messaging()
+      .getToken()
+      .then(token => {
+        // mutation
+        console.log(token, '토큰입니다');
+        saveTokenToDatabase({
+          variables: {
+            parentId: parentId,
+            token: token,
+          },
+        });
+      });
+    return messaging().onTokenRefresh(token => {
+      saveTokenToDatabase({
+        variables: {
+          parentId: parentId,
+          token: token,
+        },
+      });
+    });
+  }, [parentId, saveTokenToDatabase]);
 
   const deleteItem = (rowMap, rowKey) => {
     const newData = [...listData];

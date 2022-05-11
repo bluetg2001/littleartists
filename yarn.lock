@@ -1672,6 +1672,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/messaging@^14.9.2":
+  version "14.9.2"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-14.9.2.tgz#91ba611b5ea14a84b063d90edba02fd550311e46"
+  integrity sha512-RHU8Yw+CVpnepETk1merUxT6xIqfZ6EToUbSuu27OvUV5NHE0gigVGXfS5fp62BNcyhghWDgvY3CJaKvTlmt2A==
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
