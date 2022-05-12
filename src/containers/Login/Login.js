@@ -116,7 +116,8 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
 
         <Image
           flex={5}
-          style={{aspectRatio: 1, resizeMode: 'contain'}}
+          resizeMode="contain"
+          style={{aspectRatio: 290 / 218}}
           source={require('../../../assets/images/characters/with-piano.png')}
         />
       </Center>

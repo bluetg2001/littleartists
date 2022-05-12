@@ -3,14 +3,13 @@ import React, {useState, useCallback, useEffect} from 'react';
 // rnfirebase
 import messaging from '@react-native-firebase/messaging';
 // react-native components
-import {Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {Image, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
 // native-base
 import {
   Box,
   Center,
   View,
   Text,
-  AspectRatio,
   InfoIcon,
   Modal,
   Button,
@@ -19,8 +18,6 @@ import {
   VStack,
   Spacer,
 } from 'native-base';
-// grid system
-import {FlatGrid} from 'react-native-super-grid';
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
 // Alert Page - swipe func
@@ -28,6 +25,8 @@ import {SwipeListView} from 'react-native-swipe-list-view';
 // graqlQL sutff
 import {useMutation} from '@apollo/client';
 import {SAVE_TOKEN_TO_DATABASE} from '../graphQL/parents';
+// components
+import MenuBox from '../components/main/MenuBox';
 
 function Main({
   navigation,
@@ -270,58 +269,6 @@ function Main({
     );
   };
 
-  const MenuBox = props => {
-    const {index, img, title, link} = props;
-    return (
-      <AspectRatio ratio={{base: 1 / 1}}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate(String(link));
-            // setHiddenTab(false);
-            setBottomTabIndex(index);
-            console.log(bottomTabIndex);
-          }}>
-          <Box
-            flex={1}
-            rounded="3xl"
-            bgColor="#ffffff"
-            shadowColor="#000"
-            shadowOpacity={0.35}
-            shadowRadius={10}
-            elevation={4}
-            style={{
-              color: ('rgba(84,73,120,1)', 'rgba(28,20,56,1)'),
-              backgroundColor: '#ffffff',
-              shadowColor: '#000',
-              shadowOffset: {
-                width: 0,
-                height: 2,
-              },
-              shadowOpacity: 0.25,
-              shadowRadius: 3.84,
-
-              elevation: 5,
-            }}>
-            <Center flex={2} display="flex" flexDirection="row">
-              <Center flex={1}>
-                <Center flex={1}>
-                  <Image
-                    resizeMethod="contain"
-                    style={{aspectRatio: 0.4, resizeMode: 'contain'}}
-                    source={img}
-                  />
-                </Center>
-              </Center>
-            </Center>
-            <Center flex={1}>
-              <Text color="dark.50">{title}</Text>
-            </Center>
-          </Box>
-        </TouchableOpacity>
-      </AspectRatio>
-    );
-  };
-
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>
       <AlertModal />
@@ -333,6 +280,7 @@ function Main({
           />
           <Box style={{position: 'absolute', right: 0}}>
             <InfoIcon
+              size="xl"
               color="primary.500"
               onPress={() => {
                 handleSizeClick();
@@ -342,19 +290,22 @@ function Main({
         </Center>
       </Box>
       <Box flex={5}>
-        <FlatGrid
-          itemDimension={130}
+        <FlatList
+          scrollEnabled="false"
           data={menus}
-          spacing={32}
-          style={{flex: 1}}
           renderItem={({item}) => (
             <MenuBox
+              bottomTabIndex={bottomTabIndex}
+              setBottomTabIndex={setBottomTabIndex}
+              navigation={navigation}
               img={item.img}
               title={item.title}
               link={item.link}
               index={item.index}
             />
           )}
+          keyExtractor={(item, index) => index}
+          numColumns={2}
         />
       </Box>
     </View>

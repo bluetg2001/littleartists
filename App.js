@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+// react native
+import {Alert} from 'react-native';
 // native-base
 import {NativeBaseProvider, View} from 'native-base';
 import theme from './src/utils/theme';
@@ -8,6 +10,8 @@ import BottomTabNavigation from './src/components/BottomTabNavigation';
 import {NavigationContainer} from '@react-navigation/native';
 // graphQL stuff
 import {ApolloProvider, ApolloClient, InMemoryCache, gql} from '@apollo/client';
+// firebase messaging
+import messaging from '@react-native-firebase/messaging';
 
 export const typeDefs = gql`
   extend type Query {
@@ -21,13 +25,32 @@ const App = () => {
   const [hiddenTab, setHiddenTab] = useState(false);
   const [bottomTabIndex, setBottomTabIndex] = useState(null);
 
-  //apollo
+  // fcm 승인 함수
+  async function requestUserPermission() {
+    const authorizationStatus = await messaging().requestPermission();
 
+    if (authorizationStatus) {
+      console.log('Permission status:', authorizationStatus);
+    }
+  }
+
+  useEffect(() => {
+    requestUserPermission();
+
+    // firebase messaging
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
+    });
+
+    return unsubscribe;
+  }, []);
+
+  //apollo
   const client = new ApolloClient({
     // 실서버
-    // uri: 'https://asia-northeast3-piano-server.cloudfunctions.net/api',
+    uri: 'https://asia-northeast3-piano-server.cloudfunctions.net/api',
     // 로컬서버 - 실기기에서 돌리면 안됨
-    uri: 'http://localhost:5001/piano-server/asia-northeast3/api',
+    // uri: 'http://localhost:5001/piano-server/asia-northeast3/api',
     cache: new InMemoryCache(),
   });
 
