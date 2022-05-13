@@ -29,7 +29,6 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [phoneNum, setPhoneNum] = useState('');
   const [authKey, setAuthKey] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  // storage state
 
   // useMutation
   const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
@@ -39,11 +38,8 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
     try {
       const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
       await AsyncStorage.setItem('userData', jsonValue);
-      console.log(
-        `저장 성공! jsonValue : ${jsonValue}, phoneNum: ${jsonValue.phone}, authKey: ${jsonValue.authKey}`,
-      );
     } catch (e) {
-      console.log('저장이 안됐습니다.');
+      console.log('로컬 스토로지 저장 실패.');
     }
   };
 
@@ -67,6 +63,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
     }
   }, [authKey, checkLogInfo, phoneNum]);
 
+  // 로그인 정보 체크 후 Main 페이지 이동
   const checkLogInfo = useCallback(
     (_phoneNum, _authKey) => {
       setErrorMessage('');

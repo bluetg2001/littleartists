@@ -1,5 +1,19 @@
 import {gql} from '@apollo/client';
 
+export const PARENT = gql`
+  query Parent($parentId: ID!) {
+    parent(id: $parentId) {
+      students {
+        id
+        brandId
+        hakwonId
+        status
+        name
+      }
+    }
+  }
+`;
+
 export const PARENT_LOGIN = gql`
   mutation ParentLogin($phone: ID!, $authKey: String!) {
     parentLogin(phone: $phone, authKey: $authKey) {

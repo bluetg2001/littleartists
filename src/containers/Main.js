@@ -3,30 +3,17 @@ import React, {useState, useCallback, useEffect} from 'react';
 // rnfirebase
 import messaging from '@react-native-firebase/messaging';
 // react-native components
-import {Image, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import {Image, StyleSheet, FlatList} from 'react-native';
 // native-base
-import {
-  Box,
-  Center,
-  View,
-  Text,
-  InfoIcon,
-  Modal,
-  Button,
-  Avatar,
-  HStack,
-  VStack,
-  Spacer,
-} from 'native-base';
+import {Box, Center, View, Button} from 'native-base';
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
-// Alert Page - swipe func
-import {SwipeListView} from 'react-native-swipe-list-view';
 // graqlQL sutff
 import {useMutation} from '@apollo/client';
 import {SAVE_TOKEN_TO_DATABASE} from '../graphQL/parents';
 // components
 import MenuBox from '../components/main/MenuBox';
+// async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function Main({
@@ -37,9 +24,6 @@ function Main({
   setBottomTabIndex,
   route,
 }) {
-  const parentId = route.params.parentId;
-  console.log(parentId);
-
   const [menus, setMenus] = useState([
     {
       index: 1,
@@ -78,11 +62,37 @@ function Main({
     },
   ]);
 
+  const parentId = route.params.parentId;
+
+  // Async Storage
+  const saveParentData = useCallback(
+    async _parentId => {
+      try {
+        // const value =
+        await AsyncStorage.setItem('parentId', parentId);
+        // console.log(value, '학부모 ID입니다');
+      } catch (e) {
+        console.log('학부모 정보가 로컬 스토로지에 저장되지 못했습니다.');
+      }
+    },
+    [parentId],
+  );
+
+  const getParentData = useCallback(async () => {
+    try {
+      const value = await AsyncStorage.getItem('parentId');
+      console.log(value, '학부모 정보입니다.');
+    } catch (e) {
+      console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
+    }
+  }, []);
+
   const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
 
   const removeUserDataAndLogout = async () => {
     try {
       await AsyncStorage.removeItem('userData');
+      await AsyncStorage.removeItem('parentId');
       navigation.navigate('Login');
     } catch (e) {
       console.log('로그아웃에 실패했습니다.');
@@ -97,6 +107,10 @@ function Main({
   );
 
   useEffect(() => {
+    // 스토로지 저장
+    saveParentData(parentId);
+    getParentData();
+    // 푸시 관련
     messaging()
       .getToken()
       .then(token => {
@@ -117,7 +131,7 @@ function Main({
         },
       });
     });
-  }, [parentId, saveTokenToDatabase]);
+  }, [getParentData, parentId, saveParentData, saveTokenToDatabase]);
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>
@@ -134,13 +148,6 @@ function Main({
               }}>
               로그아웃
             </Button>
-            {/* <InfoIcon
-              size="xl"
-              color="primary.500"
-              onPress={() => {
-                handleSizeClick();
-              }}
-            /> */}
           </Box>
         </Center>
       </Box>
