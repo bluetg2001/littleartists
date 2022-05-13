@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 // native-base
 import {
   Box,
@@ -20,6 +20,8 @@ import {useFocusEffect} from '@react-navigation/native';
 // graphQL stuff
 import {PARENT_LOGIN} from '../../graphQL/parents';
 import {useMutation} from '@apollo/client';
+// async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function Login({navigation, hiddenTab, setHiddenTab}) {
   // state
@@ -27,43 +29,87 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [phoneNum, setPhoneNum] = useState('');
   const [authKey, setAuthKey] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  // storage state
 
   // useMutation
   const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
 
-  const checkLogInfo = (_phoneNum, _authKey) => {
-    setErrorMessage('');
-    parentLogin({
-      variables: {
-        phone: _phoneNum,
-        authKey: _authKey,
-      },
-    })
-      .then(res => {
-        console.log(res.data);
-        if (res.data) {
-          const {success, message, parent} = res.data.parentLogin;
-          if (success) {
-            console.log(parent.id, '테스트');
-            navigation.navigate('Main', {
-              parentId: parent.id,
-            });
-          } else {
-            setErrorMessage('전화번호나 인증번호를 확인하세요.');
-            console.log(errorMessage);
-          }
-        } else {
-          setErrorMessage('네트워크를 확인하세요.');
-        }
-      })
-      .catch(console.log);
+  // Async Storage
+  const storeData = async (_phoneNum, _authKey) => {
+    try {
+      const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
+      await AsyncStorage.setItem('userData', jsonValue);
+      console.log(
+        `저장 성공! jsonValue : ${jsonValue}, phoneNum: ${jsonValue.phone}, authKey: ${jsonValue.authKey}`,
+      );
+    } catch (e) {
+      console.log('저장이 안됐습니다.');
+    }
   };
+
+  const getData = useCallback(async () => {
+    try {
+      const value = await AsyncStorage.getItem('userData');
+      if (value !== null) {
+        const viewValue = JSON.parse(value);
+        // console.log(viewValue.authKey, '인증키');
+        // console.log(viewValue.phone, '폰 번호');
+        setPhoneNum(viewValue.phone);
+        setAuthKey(viewValue.authKey);
+        console.log(phoneNum, '인증키입니다.');
+        console.log(authKey, '폰 번호입니다.');
+        checkLogInfo(phoneNum, authKey);
+      } else {
+        console.log('else로 빠졌습니다.');
+      }
+    } catch (e) {
+      console.log('데이터 불러오는 것에 실패했습니다.');
+    }
+  }, [authKey, checkLogInfo, phoneNum]);
+
+  const checkLogInfo = useCallback(
+    (_phoneNum, _authKey) => {
+      setErrorMessage('');
+      parentLogin({
+        variables: {
+          phone: _phoneNum,
+          authKey: _authKey,
+        },
+      })
+        .then(res => {
+          console.log(res.data);
+          if (res.data) {
+            const {success, message, parent} = res.data.parentLogin;
+            if (success) {
+              storeData(phoneNum, authKey);
+              navigation.navigate('Main', {
+                parentId: parent.id,
+              });
+            } else {
+              setErrorMessage('전화번호나 인증번호를 확인하세요.');
+              console.log(errorMessage);
+            }
+          } else {
+            setErrorMessage('네트워크를 확인하세요.');
+          }
+        })
+        .catch(console.log);
+    },
+    [authKey, errorMessage, navigation, parentLogin, phoneNum],
+  );
 
   useFocusEffect(
     useCallback(() => {
       setHiddenTab(true);
     }, [setHiddenTab]),
   );
+
+  useEffect(() => {
+    getData();
+    console.log(phoneNum, 'hi');
+    console.log(authKey, 'hi');
+    return () => {};
+  }, [getData, authKey, phoneNum]);
 
   const LoginButton = () => {
     if (loading) {
