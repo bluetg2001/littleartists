@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 // react-native components
 import {Image} from 'react-native';
 // native-base
@@ -15,24 +15,77 @@ import {
 } from 'native-base';
 // graphQL stuff
 import {PARENT} from '../../graphQL/parents';
-import {useQuery} from '@apollo/client';
+import {GET_STUDENT_ATTEND_HISTORY} from '../../graphQL/attendances';
+import {useQuery, useMutation} from '@apollo/client';
 // dayjs
 import dayjs from 'dayjs';
+// async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
 import AttendanceInfo from './AttendanceInfo';
 
 function ProviderAttendance(props) {
   const {parentId} = props;
+  const currentYear = dayjs().format('YYYY');
+  const myAttend = [];
 
+  // graphql stuff
   const {loading, error, data} = useQuery(PARENT, {
     variables: {
       id: parentId,
     },
     //fetchPolicy: 'network-only',
   });
-  const row = data ? data.parent : null;
-  //   console.log(parentId, 'parentId 잘 들어왔는지 확인.');
-  console.log(row, 'parentId 잘 들어왔는지 확인.');
+  const [getStudentAttendHistory] = useMutation(GET_STUDENT_ATTEND_HISTORY);
+
+  // 학부모의 모든 자녀 불러오기
+  const students = data ? data.parent.students : null;
+
+  // state
+  const [hakwonId, setHakwonId] = useState('');
+  const [selectStudent, setSelectStudent] = useState('');
+  const [selectYear, setSelectYear] = useState(null);
+  const [selectMonth, setSelectMonth] = useState(null);
+  const [attendInfo, setAttendInfo] = useState([]);
+
+  // functions
+  const searchAttendInfo = () => {
+    getStudentAttendHistory({
+      variables: {
+        studentId: selectStudent,
+        hakwonId: hakwonId,
+      },
+    })
+      .then(res => {
+        if (res.data) {
+          // setAttendInfo([]);
+          // setAttendInfo(res.data.getStudentAttendHistory);
+          const entireAttendInfo = res.data.getStudentAttendHistory;
+          entireAttendInfo.map((value, key) =>
+            value.date.split('-')[0] === selectYear &&
+            value.date.split('-')[1] === selectMonth
+              ? setAttendInfo(...attendInfo, value)
+              : // myAttend.push(value)
+                null,
+          );
+        } else {
+          console.log('data를 불러오지 못하였습니다.');
+        }
+      })
+      .catch(console.log);
+  };
+
+  const getHakwonIdData = useCallback(async () => {
+    try {
+      setHakwonId(await AsyncStorage.getItem('hakwonId'));
+    } catch (e) {
+      console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
+    }
+  }, []);
+
+  useEffect(() => {
+    getHakwonIdData();
+  }, [getHakwonIdData]);
 
   if (loading) {
     return (
@@ -53,8 +106,6 @@ function ProviderAttendance(props) {
   if (data) {
     return (
       <View flex={6} bgColor="white">
-        {/* {console.log(parentId, 'parentId 잘 넘어왔나?')} */}
-        {console.log(data.parent, '이건 데이터값')}
         <Box flex={1}>
           <Center flex={1}>
             <Image
@@ -83,12 +134,16 @@ function ProviderAttendance(props) {
                 }}
                 // mt={1}
                 // 선택하는 벨류값에 대해서 변화 관리
-                // onValueChange={itemValue => setService(itemValue)}
-              >
-                <Select.Item label="김태균" value="김태균" />
-                <Select.Item label="김영탁" value="김영탁" />
-                <Select.Item label="장수현" value="장수현" />
-                <Select.Item label="김미영" value="김미영" />
+                onValueChange={itemValue => {
+                  setSelectStudent(itemValue);
+                }}>
+                {students.map((student, key) => (
+                  <Select.Item
+                    key={key}
+                    label={student.name}
+                    value={student.id}
+                  />
+                ))}
               </Select>
               {/* gap */}
               <View flex={0.1} />
@@ -103,10 +158,15 @@ function ProviderAttendance(props) {
                 }}
                 // mt={1}
                 // 선택하는 벨류값에 대해서 변화 관리
-                // onValueChange={itemValue => setService(itemValue)}
-              >
-                <Select.Item label="2021" value="2021" />
-                <Select.Item label="2022" value="2022" />
+                onValueChange={itemValue => setSelectYear(itemValue)}>
+                <Select.Item
+                  label={(currentYear - 1).toString()}
+                  value={(currentYear - 1).toString()}
+                />
+                <Select.Item
+                  label={currentYear}
+                  value={currentYear.toString()}
+                />
               </Select>
               {/* gap */}
               <View flex={0.1} />
@@ -121,24 +181,30 @@ function ProviderAttendance(props) {
                 }}
                 // mt={1}
                 // 선택하는 벨류값에 대해서 변화 관리
-                // onValueChange={itemValue => setService(itemValue)}
-              >
-                <Select.Item label="1월" value="1월" />
-                <Select.Item label="2월" value="2월" />
-                <Select.Item label="3월" value="3월" />
-                <Select.Item label="4월" value="4월" />
-                <Select.Item label="5월" value="5월" />
-                <Select.Item label="6월" value="6월" />
-                <Select.Item label="7월" value="7월" />
-                <Select.Item label="8월" value="8월" />
-                <Select.Item label="9월" value="9월" />
-                <Select.Item label="10월" value="10월" />
-                <Select.Item label="11월" value="11월" />
-                <Select.Item label="12월" value="12월" />
+                onValueChange={itemValue => setSelectMonth(itemValue)}>
+                <Select.Item label="1월" value="01" />
+                <Select.Item label="2월" value="02" />
+                <Select.Item label="3월" value="03" />
+                <Select.Item label="4월" value="04" />
+                <Select.Item label="5월" value="05" />
+                <Select.Item label="6월" value="06" />
+                <Select.Item label="7월" value="07" />
+                <Select.Item label="8월" value="08" />
+                <Select.Item label="9월" value="09" />
+                <Select.Item label="10월" value="10" />
+                <Select.Item label="11월" value="11" />
+                <Select.Item label="12월" value="12" />
               </Select>
               {/* gap */}
               <View flex={0.1} />
-              <Button size="md">조회</Button>
+              <Button
+                size="md"
+                onPress={() => {
+                  searchAttendInfo();
+                  // console.log(selectStudent, selectYear, selectMonth);
+                }}>
+                조회
+              </Button>
             </Center>
           </Box>
           <Box flex={7}>
@@ -169,20 +235,19 @@ function ProviderAttendance(props) {
                 </Box>
                 <Divider my={4} bgColor={'gray.50'} />
                 <ScrollView>
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
-                  <AttendanceInfo />
+                  {console.log(myAttend)}
+                  {/* {attendInfo.length === 0 ? (
+                    <></>
+                  ) : (
+                    attendInfo.map((value, key) => (
+                      <AttendanceInfo
+                        key={key}
+                        arrivedAt={value.arrivedAt}
+                        leftAt={value.leftAt}
+                        date={value.date}
+                      />
+                    ))
+                  )} */}
                 </ScrollView>
               </Box>
             </Box>

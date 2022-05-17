@@ -48,8 +48,6 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
       const value = await AsyncStorage.getItem('userData');
       if (value !== null) {
         const viewValue = JSON.parse(value);
-        // console.log(viewValue.authKey, '인증키');
-        // console.log(viewValue.phone, '폰 번호');
         setPhoneNum(viewValue.phone);
         setAuthKey(viewValue.authKey);
         console.log(phoneNum, '인증키입니다.');
@@ -74,13 +72,13 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         },
       })
         .then(res => {
-          console.log(res.data);
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
               storeData(phoneNum, authKey);
               navigation.navigate('Main', {
                 parentId: parent.id,
+                hakwonId: parent.hakwonId,
               });
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');
@@ -103,8 +101,6 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
 
   useEffect(() => {
     getData();
-    console.log(phoneNum, 'hi');
-    console.log(authKey, 'hi');
     return () => {};
   }, [getData, authKey, phoneNum]);
 

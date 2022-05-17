@@ -64,30 +64,30 @@ function Main({
 
   // parentId -> 로컬스토로지에 저장
   const parentId = route.params.parentId;
+  const hakwonId = route.params.hakwonId;
 
   // Async Storage
   const saveParentData = useCallback(
     async _parentId => {
       try {
-        // const value =
         await AsyncStorage.setItem('parentId', parentId);
-        // console.log(value, '학부모 ID입니다');
+        await AsyncStorage.setItem('hakwonId', hakwonId);
       } catch (e) {
-        console.log('학부모 정보가 로컬 스토로지에 저장되지 못했습니다.');
+        console.log('정보가 로컬 스토로지에 저장되지 못했습니다.');
       }
     },
-    [parentId],
+    [parentId, hakwonId],
   );
 
-  const getParentData = useCallback(async () => {
-    try {
-      const value = await AsyncStorage.getItem('parentId');
-      console.log(value, 'parentID 입니다');
-      return value;
-    } catch (e) {
-      console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
-    }
-  }, []);
+  // const getParentData = useCallback(async () => {
+  //   try {
+  //     const parentIds = await AsyncStorage.getItem('parentId');
+  //     const hakwonIds = await AsyncStorage.getItem('hakwonId');
+  //     console.log(parentIds, hakwonIds, 'parentID 입니다');
+  //   } catch (e) {
+  //     console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
+  //   }
+  // }, []);
 
   const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
 
@@ -111,7 +111,7 @@ function Main({
   useEffect(() => {
     // 스토로지 저장
     saveParentData(parentId);
-    getParentData();
+    // getParentData();
     // 푸시 관련
     messaging()
       .getToken()
@@ -133,7 +133,7 @@ function Main({
         },
       });
     });
-  }, [getParentData, parentId, saveParentData, saveTokenToDatabase]);
+  }, [parentId, saveParentData, saveTokenToDatabase]);
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>

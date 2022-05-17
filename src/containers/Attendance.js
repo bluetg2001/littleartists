@@ -1,6 +1,4 @@
 import React, {useCallback, useState, useEffect} from 'react';
-import {gql, useQuery} from '@apollo/client';
-import axios from 'axios';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
