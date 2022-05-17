@@ -35,7 +35,7 @@ function MenuBox(props) {
           navigation.navigate(String(link));
           // setHiddenTab(false);
           setBottomTabIndex(index);
-          console.log(bottomTabIndex);
+          // console.log(bottomTabIndex);
         }}>
         <Box
           flex={1}

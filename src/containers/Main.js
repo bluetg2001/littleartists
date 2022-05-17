@@ -62,6 +62,7 @@ function Main({
     },
   ]);
 
+  // parentId -> 로컬스토로지에 저장
   const parentId = route.params.parentId;
 
   // Async Storage
@@ -81,7 +82,8 @@ function Main({
   const getParentData = useCallback(async () => {
     try {
       const value = await AsyncStorage.getItem('parentId');
-      console.log(value, '학부모 정보입니다.');
+      console.log(value, 'parentID 입니다');
+      return value;
     } catch (e) {
       console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
     }
@@ -164,6 +166,7 @@ function Main({
               title={item.title}
               link={item.link}
               index={item.index}
+              parentId={parentId}
             />
           )}
           keyExtractor={(item, index) => index}
@@ -174,26 +177,4 @@ function Main({
   );
 }
 
-const styles = StyleSheet.create({
-  rowBack: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingLeft: 5,
-  },
-  actionButton: {
-    alignItems: 'center',
-    bottom: 0,
-    justifyContent: 'center',
-    position: 'absolute',
-    top: 0,
-    width: 75,
-  },
-  deleteBtn: {
-    backgroundColor: 'red',
-    right: 0,
-  },
-});
 export default Main;

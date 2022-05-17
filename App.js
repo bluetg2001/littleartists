@@ -52,6 +52,20 @@ const App = () => {
     // 로컬서버 - 실기기에서 돌리면 안됨
     // uri: 'http://localhost:5001/piano-server/asia-northeast3/api',
     cache: new InMemoryCache(),
+    defaultOptions: {
+      watchQuery: {
+        fetchPolicy: 'network-only',
+        errorPolicy: 'ignore',
+      },
+      query: {
+        fetchPolicy: 'network-only',
+        errorPolicy: 'all',
+      },
+      mutate: {
+        errorPolicy: 'all',
+      },
+    },
+    //defaultOptions: {watchQuery: {fetchPolicy: 'cache-and-network'}},
   });
 
   return (
