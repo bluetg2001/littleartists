@@ -3,7 +3,7 @@ import React, {useState, useCallback, useEffect} from 'react';
 // rnfirebase
 import messaging from '@react-native-firebase/messaging';
 // react-native components
-import {Image, StyleSheet, FlatList} from 'react-native';
+import {Image, FlatList} from 'react-native';
 // native-base
 import {Box, Center, View, Button} from 'native-base';
 // react-navigation
@@ -22,7 +22,7 @@ function Main({
   setHiddenTab,
   bottomTabIndex,
   setBottomTabIndex,
-  route,
+  // route,
 }) {
   const [menus, setMenus] = useState([
     {
@@ -62,8 +62,11 @@ function Main({
     },
   ]);
 
-  const parentId = route.params.parentId;
-  const hakwonId = route.params.hakwonId;
+  const [parentId, setParentId] = useState(null);
+  const [hakwonId, setHakwonId] = useState(null);
+
+  // const parentId = route.params.parentId;
+  // const hakwonId = route.params.hakwonId;
 
   const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
 
@@ -78,6 +81,15 @@ function Main({
     }
   };
 
+  const getParentIdAndHakwonId = async () => {
+    try {
+      setParentId(await AsyncStorage.getItem('parentId'));
+      setHakwonId(await AsyncStorage.getItem('hakwonId'));
+    } catch (e) {
+      console.log('read error');
+    }
+  };
+
   useFocusEffect(
     useCallback(() => {
       setHiddenTab(true);
@@ -88,7 +100,7 @@ function Main({
   useEffect(() => {
     // 스토로지 저장
     // saveParentData(parentId);
-    // getParentData();
+    getParentIdAndHakwonId();
     // 푸시 관련
     messaging()
       .getToken()
@@ -109,7 +121,7 @@ function Main({
         },
       });
     });
-  }, [parentId, saveTokenToDatabase]);
+  }, [hakwonId, parentId, saveTokenToDatabase]);
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>

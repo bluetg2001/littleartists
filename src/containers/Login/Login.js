@@ -34,10 +34,12 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
 
   // Async Storage
-  const storeData = async (_phoneNum, _authKey) => {
+  const storeData = async (_phoneNum, _authKey, _parentId, _hakwonId) => {
     try {
       const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
       await AsyncStorage.setItem('userData', jsonValue);
+      await AsyncStorage.setItem('parentId', _parentId);
+      await AsyncStorage.setItem('hakwonId', _hakwonId);
     } catch (e) {
       console.log('로컬 스토로지 저장 실패.');
     }
@@ -74,11 +76,8 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
-              storeData(phoneNum, authKey);
-              navigation.navigate('Main', {
-                parentId: parent.id,
-                hakwonId: parent.hakwonId,
-              });
+              storeData(phoneNum, authKey, parent.id, parent._hakwonId);
+              navigation.navigate('Main');
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');
               console.log(errorMessage);

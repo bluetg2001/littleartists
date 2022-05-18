@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 // native-base
 import {
   View,
@@ -16,9 +16,12 @@ import {Image, TouchableOpacity} from 'react-native';
 // graphql stuff
 import {HAKWON_BOARDS} from '../../graphQL/boards';
 import {useQuery} from '@apollo/client';
+// async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-function Notice({navigation, route}) {
-  const hakwonId = route.params.hakwonId;
+function Notice({navigation}) {
+  const [parentId, setParentId] = useState(null);
+  const [hakwonId, setHakwonId] = useState(null);
 
   const {loading, error, data} = useQuery(HAKWON_BOARDS, {
     variables: {
@@ -27,6 +30,19 @@ function Notice({navigation, route}) {
       type: 'hakwon',
     },
   });
+
+  const getParentIdAndHakwonId = async () => {
+    try {
+      setParentId(await AsyncStorage.getItem('parentId'));
+      setHakwonId(await AsyncStorage.getItem('hakwonId'));
+    } catch (e) {
+      console.log('read error');
+    }
+  };
+
+  useEffect(() => {
+    getParentIdAndHakwonId();
+  }, []);
 
   const LinkToDetailPage = props => {
     const {title, contents} = props;

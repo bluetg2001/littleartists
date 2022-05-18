@@ -24,8 +24,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
 import AttendanceInfo from './AttendanceInfo';
 
-function ProviderAttendance(props) {
-  const {parentId, hakwonId} = props;
+function ProviderAttendance() {
+  const [parentId, setParentId] = useState(null);
+  const [hakwonId, setHakwonId] = useState(null);
+
   const currentYear = dayjs().format('YYYY');
   const myAttend = [];
 
@@ -74,6 +76,19 @@ function ProviderAttendance(props) {
       })
       .catch(console.log);
   };
+
+  const getParentIdAndHakwonId = async () => {
+    try {
+      setParentId(await AsyncStorage.getItem('parentId'));
+      setHakwonId(await AsyncStorage.getItem('hakwonId'));
+    } catch (e) {
+      console.log('read error');
+    }
+  };
+
+  useEffect(() => {
+    getParentIdAndHakwonId();
+  }, []);
 
   if (loading) {
     return (
