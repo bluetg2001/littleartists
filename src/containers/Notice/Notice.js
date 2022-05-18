@@ -2,6 +2,7 @@
 import React from 'react';
 // native-base
 import {
+  View,
   Center,
   Box,
   Text,
@@ -11,45 +12,99 @@ import {
   ChevronRightIcon,
 } from 'native-base';
 // react-native components
-import {Image} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
+// graphql stuff
+import {HAKWON_BOARDS} from '../../graphQL/boards';
+import {useQuery} from '@apollo/client';
 
-function Notice({navigation}) {
-  return (
-    <ScrollView>
-      <VStack alignItems="center" bgColor="white">
-        <VStack width="90%">
-          <Center>
-            <Image
-              style={{
-                width: 125,
-                height: 60,
-                marginTop: 16,
-              }}
-              source={require('../../../assets/images/logos/littleband-logo.png')}
-            />
-          </Center>
-          <Text mt={8} fontSize="lg" color="dark.50">
-            학원 소식
+function Notice({navigation, route}) {
+  const hakwonId = route.params.hakwonId;
+
+  const {loading, error, data} = useQuery(HAKWON_BOARDS, {
+    variables: {
+      id: hakwonId,
+      // type을 학원으로 고정
+      type: 'hakwon',
+    },
+  });
+
+  const LinkToDetailPage = props => {
+    const {title, contents} = props;
+    return (
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('NoticeDetail', {
+            title: title,
+            contents: contents,
+          })
+        }>
+        <Box
+        // onTouchEnd={() => navigation.navigate('NoticeDetail')}
+        >
+          <HStack
+            justifyContent={'space-between'}
+            alignItems={'center'}
+            mt={36}>
+            <Text fontSize={'md'} color="dark.50">
+              {title}
+            </Text>
+            <ChevronRightIcon />
+          </HStack>
+          <Text color="dark.100" fontSize={'xs'}>
+            3시간 전
           </Text>
-          <VStack mt={4}>
-            <Box onTouchEnd={() => navigation.navigate('NoticeDetail')}>
-              <HStack
-                justifyContent={'space-between'}
-                alignItems={'center'}
-                mt={36}>
-                <Text fontSize={'md'} color="dark.50">
-                  세천원에서 알려드립니다.
-                </Text>
-                <ChevronRightIcon />
-              </HStack>
-              <Text color="dark.100" fontSize={'xs'}>
-                3시간 전
-              </Text>
-            </Box>
+        </Box>
+      </TouchableOpacity>
+    );
+  };
+
+  if (loading) {
+    return (
+      <View flex={1}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View flex={1}>
+        <Text>error...</Text>
+      </View>
+    );
+  }
+
+  if (data) {
+    return (
+      <ScrollView>
+        <VStack alignItems="center" bgColor="white">
+          <VStack width="90%">
+            <Center>
+              <Image
+                style={{
+                  width: 125,
+                  height: 60,
+                  marginTop: 16,
+                }}
+                source={require('../../../assets/images/logos/littleband-logo.png')}
+              />
+            </Center>
+            <Text mt={8} fontSize="lg" color="dark.50">
+              학원 소식
+            </Text>
+            <VStack mt={4}>
+              {data.hakwonBoards.map((value, key) => (
+                <LinkToDetailPage
+                  key={key}
+                  title={value.title}
+                  contents={value.contents}
+                />
+              ))}
+            </VStack>
           </VStack>
         </VStack>
-      </VStack>
-    </ScrollView>
-  );
+      </ScrollView>
+    );
+  }
 }
 export default Notice;

@@ -1,22 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 // react-native components
-import {Image, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 // native-base
-import {
-  Box,
-  Center,
-  View,
-  Text,
-  AspectRatio,
-  InfoIcon,
-  Modal,
-  Button,
-  Avatar,
-  HStack,
-  VStack,
-  Spacer,
-} from 'native-base';
+import {Box, Center, Text, AspectRatio} from 'native-base';
+// async storage
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function MenuBox(props) {
   const {
@@ -26,16 +15,19 @@ function MenuBox(props) {
     link,
     navigation,
     setBottomTabIndex,
-    bottomTabIndex,
+    parentId,
+    hakwonId,
   } = props;
+
   return (
     <AspectRatio ratio={{base: 1 / 1}} width="50%">
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate(String(link));
-          // setHiddenTab(false);
+          navigation.navigate(String(link), {
+            hakwonId: hakwonId,
+            parentId: parentId,
+          });
           setBottomTabIndex(index);
-          // console.log(bottomTabIndex);
         }}>
         <Box
           flex={1}

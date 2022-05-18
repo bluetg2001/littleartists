@@ -48,10 +48,9 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
       const value = await AsyncStorage.getItem('userData');
       if (value !== null) {
         const viewValue = JSON.parse(value);
+        // 휴대폰과 인증키 스토로지에 저장❗️
         setPhoneNum(viewValue.phone);
         setAuthKey(viewValue.authKey);
-        console.log(phoneNum, '인증키입니다.');
-        console.log(authKey, '폰 번호입니다.');
         checkLogInfo(phoneNum, authKey);
       } else {
         console.log('else로 빠졌습니다.');

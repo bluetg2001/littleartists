@@ -25,7 +25,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import AttendanceInfo from './AttendanceInfo';
 
 function ProviderAttendance(props) {
-  const {parentId} = props;
+  const {parentId, hakwonId} = props;
   const currentYear = dayjs().format('YYYY');
   const myAttend = [];
 
@@ -42,7 +42,6 @@ function ProviderAttendance(props) {
   const students = data ? data.parent.students : null;
 
   // state
-  const [hakwonId, setHakwonId] = useState('');
   const [selectStudent, setSelectStudent] = useState('');
   const [selectYear, setSelectYear] = useState(null);
   const [selectMonth, setSelectMonth] = useState(null);
@@ -57,6 +56,7 @@ function ProviderAttendance(props) {
       },
     })
       .then(res => {
+        console.log(hakwonId);
         if (res.data) {
           // setAttendInfo([]);
           // setAttendInfo(res.data.getStudentAttendHistory);
@@ -74,18 +74,6 @@ function ProviderAttendance(props) {
       })
       .catch(console.log);
   };
-
-  const getHakwonIdData = useCallback(async () => {
-    try {
-      setHakwonId(await AsyncStorage.getItem('hakwonId'));
-    } catch (e) {
-      console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
-    }
-  }, []);
-
-  useEffect(() => {
-    getHakwonIdData();
-  }, [getHakwonIdData]);
 
   if (loading) {
     return (

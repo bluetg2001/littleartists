@@ -62,32 +62,8 @@ function Main({
     },
   ]);
 
-  // parentId -> 로컬스토로지에 저장
   const parentId = route.params.parentId;
   const hakwonId = route.params.hakwonId;
-
-  // Async Storage
-  const saveParentData = useCallback(
-    async _parentId => {
-      try {
-        await AsyncStorage.setItem('parentId', parentId);
-        await AsyncStorage.setItem('hakwonId', hakwonId);
-      } catch (e) {
-        console.log('정보가 로컬 스토로지에 저장되지 못했습니다.');
-      }
-    },
-    [parentId, hakwonId],
-  );
-
-  // const getParentData = useCallback(async () => {
-  //   try {
-  //     const parentIds = await AsyncStorage.getItem('parentId');
-  //     const hakwonIds = await AsyncStorage.getItem('hakwonId');
-  //     console.log(parentIds, hakwonIds, 'parentID 입니다');
-  //   } catch (e) {
-  //     console.log('로컬 스토로지에 학부모 정보가 잘못 되었습니다.');
-  //   }
-  // }, []);
 
   const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
 
@@ -95,6 +71,7 @@ function Main({
     try {
       await AsyncStorage.removeItem('userData');
       await AsyncStorage.removeItem('parentId');
+      await AsyncStorage.removeItem('hakwonId');
       navigation.navigate('Login');
     } catch (e) {
       console.log('로그아웃에 실패했습니다.');
@@ -110,14 +87,13 @@ function Main({
 
   useEffect(() => {
     // 스토로지 저장
-    saveParentData(parentId);
+    // saveParentData(parentId);
     // getParentData();
     // 푸시 관련
     messaging()
       .getToken()
       .then(token => {
         // mutation
-        console.log(token, '토큰입니다');
         saveTokenToDatabase({
           variables: {
             parentId: parentId,
@@ -133,7 +109,7 @@ function Main({
         },
       });
     });
-  }, [parentId, saveParentData, saveTokenToDatabase]);
+  }, [parentId, saveTokenToDatabase]);
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>
@@ -167,6 +143,7 @@ function Main({
               link={item.link}
               index={item.index}
               parentId={parentId}
+              hakwonId={hakwonId}
             />
           )}
           keyExtractor={(item, index) => index}
