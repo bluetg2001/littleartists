@@ -20,6 +20,7 @@ function Introduction() {
     <>
       <ZStack alignItems={'center'}>
         <Box
+          shadow={5}
           mt={'16'}
           width={'100%'}
           borderRadius={'3xl'}
