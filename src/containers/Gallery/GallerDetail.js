@@ -72,8 +72,7 @@ function GallerDetail({route}) {
           <Image
             borderRadius={20}
             flex={1}
-            resizeMethod="contain"
-            style={{aspectRatio: 1}}
+            style={{aspectRatio: 1 / 1}}
             source={{uri: item.url}}
           />
         </Box>

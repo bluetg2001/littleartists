@@ -70,8 +70,7 @@ function BottomTabNavigation(props) {
         <Center flex={1}>
           <Image
             flex={1}
-            resizeMethod="contain"
-            style={{aspectRatio: 1, resizeMode: 'contain'}}
+            style={{aspectRatio: 1 / 1}}
             source={bottomTabIndex === index ? clickedImg : img}
           />
 

@@ -56,8 +56,7 @@ function MenuBox(props) {
             <Center flex={1}>
               <Center flex={1}>
                 <Image
-                  resizeMethod="contain"
-                  style={{aspectRatio: 0.4, resizeMode: 'contain'}}
+                  style={{aspectRatio: 0.4, resizeMode: 'center'}}
                   source={img}
                 />
               </Center>
