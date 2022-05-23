@@ -238,8 +238,8 @@ function ProviderAttendance() {
                 </Box>
                 <Divider my={4} bgColor={'gray.50'} />
                 <ScrollView>
-                  {console.log(myAttend)}
                   {/* {attendInfo.length === 0 ? (
+                  {console.log(myAttend)}
                     <></>
                   ) : (
                     attendInfo.map((value, key) => (

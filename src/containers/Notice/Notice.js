@@ -46,6 +46,7 @@ function Notice({navigation}) {
 
   const LinkToDetailPage = props => {
     const {title, contents} = props;
+
     return (
       <TouchableOpacity
         onPress={() =>

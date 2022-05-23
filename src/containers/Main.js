@@ -112,7 +112,8 @@ function Main({
             token: token,
           },
         });
-      });
+      })
+      .catch('messaging error');
     return messaging().onTokenRefresh(token => {
       saveTokenToDatabase({
         variables: {
@@ -143,7 +144,6 @@ function Main({
       </Box>
       <Box flex={5}>
         <FlatList
-          scrollEnabled="false"
           data={menus}
           renderItem={({item}) => (
             <MenuBox

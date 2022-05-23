@@ -76,7 +76,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
-              storeData(phoneNum, authKey, parent.id, parent._hakwonId);
+              storeData(phoneNum, authKey, parent.id, parent.hakwonId);
               navigation.navigate('Main');
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');
