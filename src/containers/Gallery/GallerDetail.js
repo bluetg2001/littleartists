@@ -11,7 +11,13 @@ import {
   Text,
 } from 'native-base';
 // react-native components
-import {Image, Dimensions} from 'react-native';
+import {
+  Image,
+  Dimensions,
+  PermissionsAndroid,
+  TouchableOpacity,
+  Platform,
+} from 'react-native';
 // carousel
 import Carousel from 'react-native-snap-carousel';
 // graphql stuff
@@ -19,6 +25,9 @@ import {GET_HAKWON_GALLERIES} from '../../graphQL/galleries';
 import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// RNFetchBlob
+import RNFetchBlob from 'rn-fetch-blob';
+import CameraRoll from '@react-native-community/cameraroll';
 
 function GallerDetail({route}) {
   const imageIndex = route.params.imageIndex;
@@ -37,6 +46,63 @@ function GallerDetail({route}) {
       console.log('read error');
     }
   };
+
+  const imageDownload = () => {
+    if (Platform.OS === 'android') {
+      RNFetchBlob.config({
+        addAndroidDownloads: {
+          useDownloadManager: true, // <-- this is the only thing required
+          // Optional, override notification setting (default to true)
+          notification: true,
+          // Optional, but recommended since android DownloadManager will fail when
+          // the url does not contains a file extension, by default the mime type will be text/plain
+          // mime: 'text/plain',
+          description: 'File downloaded by download manager.',
+        },
+      })
+        .fetch(
+          'GET',
+          'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
+        )
+        .then(resp => {
+          // the path of downloaded file
+          resp.path();
+        });
+    } else {
+      CameraRoll.save(
+        'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
+      );
+    }
+  };
+
+  // const saveToGallery = () => {
+  //   if (Platform.OS === 'android') {
+  //     RNFetchBlob.config({
+  //       fileCache: true,
+  //       // appendExt: '',
+  //       indicator: true,
+  //       IOSBackgroundTask: true,
+  //       path: 'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
+  //       addAndroidDownloads: {
+  //         useDownloadManager: true,
+  //         notification: true,
+  //         path: 'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
+  //         description: 'Image',
+  //       },
+  //     })
+  //       .fetch(
+  //         'GET',
+  //         'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
+  //       )
+  //       .then(res => {
+  //         console.log(res, 'end downloaded');
+  //       });
+  //   } else {
+  //     CameraRoll.saveToCameraRoll(
+  //       'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
+  //     );
+  //   }
+  // };
 
   useEffect(() => {
     getHakwonId();
@@ -68,14 +134,19 @@ function GallerDetail({route}) {
           borderRadius: 20,
           padding: 50,
         }}>
-        <Box flex={1}>
-          <Image
-            borderRadius={20}
-            flex={1}
-            style={{aspectRatio: 1 / 1}}
-            source={{uri: item.url}}
-          />
-        </Box>
+        <TouchableOpacity
+          onPress={() => {
+            imageDownload();
+          }}>
+          <Box flex={1}>
+            <Image
+              borderRadius={20}
+              flex={1}
+              style={{aspectRatio: 1 / 1}}
+              source={{uri: item.url}}
+            />
+          </Box>
+        </TouchableOpacity>
       </AspectRatio>
     );
   };

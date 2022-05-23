@@ -239,12 +239,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>react-native-cameraroll.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>react-native-safe-area-context.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>react-native-webview.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>rn-fetch-blob.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

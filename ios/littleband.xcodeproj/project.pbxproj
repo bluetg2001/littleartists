@@ -41,6 +41,8 @@
 		3421A51B67F43D9336D7D318 /* libPods-littleband.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-littleband.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C21A99282BE080001A39C4 /* littleband.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = littleband.entitlements; path = littleband/littleband.entitlements; sourceTree = "<group>"; };
 		42FB1C56283B21D500FA9F5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42FB1C58283B7EDC00FA9F5C /* littleband */ = {isa = PBXFileReference; lastKnownFileType = folder; path = littleband; sourceTree = "<group>"; };
+		42FB1C5A283B801000FA9F5C /* cameraroll */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cameraroll; path = "../node_modules/@react-native-community/cameraroll"; sourceTree = "<group>"; };
 		502F8DA40EFC4FD49344506A /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		5B859AAFBC5709131A52C2DF /* Pods-littleband.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-littleband.debug.xcconfig"; path = "Target Support Files/Pods-littleband/Pods-littleband.debug.xcconfig"; sourceTree = "<group>"; };
 		5C8681EC016041519D2E3096 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -162,6 +164,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				42FB1C5A283B801000FA9F5C /* cameraroll */,
+				42FB1C58283B7EDC00FA9F5C /* littleband */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";

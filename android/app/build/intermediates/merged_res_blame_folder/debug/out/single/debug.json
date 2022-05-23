@@ -4,36 +4,40 @@
         "source": "com.littleband.app-main-28:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
     },
     {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "com.littleband.app-merged_res-26:/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
         "source": "com.littleband.app-main-28:/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/raw_node_modules_stringifyentities_lib_constant_dangerous.json.flat",
         "source": "com.littleband.app-main-28:/raw/node_modules_stringifyentities_lib_constant_dangerous.json"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.littleband.app-merged_res-26:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/raw_node_modules_mdndata_css_properties.json.flat",
         "source": "com.littleband.app-main-28:/raw/node_modules_mdndata_css_properties.json"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxxhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "com.littleband.app-merged_res-26:/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
         "source": "com.littleband.app-main-28:/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
-    },
-    {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_logos_mainpianogogo.png.flat",
@@ -46,6 +50,10 @@
     {
         "merged": "com.littleband.app-merged_res-26:/raw_app.json.flat",
         "source": "com.littleband.app-main-28:/raw/app.json"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_icons_tabclickedintuition.png.flat",
@@ -80,6 +88,10 @@
         "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_backgrounds_pianogogotopbackground.png"
     },
     {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "com.littleband.app-merged_res-26:/raw_node_modules_csstree_data_patch.json.flat",
         "source": "com.littleband.app-main-28:/raw/node_modules_csstree_data_patch.json"
     },
@@ -108,16 +120,12 @@
         "source": "com.littleband.app-main-28:/raw/node_modules_characterentitieshtml4_index.json"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_icons_tabclickednotice.png.flat",
         "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_icons_tabclickednotice.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_backgrounds_brandintrodecobackground.png.flat",
@@ -136,10 +144,6 @@
         "source": "com.littleband.app-main-28:/raw/node_modules_reactnativevectoricons_glyphmaps_antdesign.json"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
         "source": "com.littleband.app-main-28:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
     },
@@ -150,10 +154,6 @@
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_characters_halfrest.png.flat",
         "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_characters_halfrest.png"
-    },
-    {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_icons_tabclickedattendance.png.flat",
@@ -200,12 +200,16 @@
         "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_icons_tabclickedgallery.png"
     },
     {
-        "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_logos_mainattendance.png.flat",
-        "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_logos_mainattendance.png"
+        "merged": "com.littleband.app-merged_res-26:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "com.littleband.app-merged_res-26:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.littleband.app-main-28:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_logos_mainattendance.png.flat",
+        "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_logos_mainattendance.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/raw_node_modules_domserializer_node_modules_entities_lib_maps_decode.json.flat",
@@ -214,10 +218,6 @@
     {
         "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_characters_tempoaryprofileicon.png.flat",
         "source": "com.littleband.app-main-28:/drawable-mdpi/assets_images_characters_tempoaryprofileicon.png"
-    },
-    {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.littleband.app-merged_res-26:/raw_node_modules_csscolorkeywords_colors.json.flat",
