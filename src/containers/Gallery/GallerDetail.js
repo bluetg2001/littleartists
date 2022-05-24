@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 // native-base
 import {
   Center,
@@ -9,7 +9,9 @@ import {
   HStack,
   View,
   Text,
-  Button,
+  AlertDialog,
+  useToast,
+  Alert,
 } from 'native-base';
 // react-native components
 import {Image, Dimensions, TouchableOpacity, Platform} from 'react-native';
@@ -23,16 +25,26 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // RNFetchBlob
 import RNFetchBlob from 'rn-fetch-blob';
 import CameraRoll from '@react-native-community/cameraroll';
+// icons
+import Icon from 'react-native-vector-icons/AntDesign';
 
 function GallerDetail({route}) {
   const imageIndex = route.params.imageIndex;
   const [hakwonId, setHakwonId] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toast = useToast();
+
+  const [howToUseIsOpen, setHowToUseIsOpen] = useState(false);
+  const cancelRef = useRef(null);
 
   const {loading, error, data} = useQuery(GET_HAKWON_GALLERIES, {
     variables: {
       hakwonId: hakwonId,
     },
   });
+
+  const onClose = () => setHowToUseIsOpen(false);
 
   const getHakwonId = async () => {
     try {
@@ -42,7 +54,7 @@ function GallerDetail({route}) {
     }
   };
 
-  const imageDownload = () => {
+  const imageDownload = url => {
     if (Platform.OS === 'android') {
       RNFetchBlob.config({
         addAndroidDownloads: {
@@ -57,7 +69,8 @@ function GallerDetail({route}) {
       })
         .fetch(
           'GET',
-          'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
+          url,
+          // 'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
         )
         .then(resp => {
           // the path of downloaded file
@@ -66,7 +79,8 @@ function GallerDetail({route}) {
     } else {
       // iOS
       CameraRoll.save(
-        'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
+        url,
+        // 'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
       );
     }
   };
@@ -104,7 +118,16 @@ function GallerDetail({route}) {
         <TouchableOpacity
           activeOpacity={1}
           onPress={() => {
-            imageDownload();
+            imageDownload(item.url);
+            toast.show({
+              render: () => {
+                return (
+                  <Box bg="primary.500" px="2" py="1" rounded="sm" mb={5}>
+                    <Text color="white">사진 저장 완료!</Text>
+                  </Box>
+                );
+              },
+            });
           }}>
           <Box flex={1}>
             <Image
@@ -119,9 +142,29 @@ function GallerDetail({route}) {
     );
   };
 
+  const AlertFromQuestion = () => {
+    return (
+      <AlertDialog
+        leastDestructiveRef={cancelRef}
+        isOpen={howToUseIsOpen}
+        onClose={onClose}>
+        <AlertDialog.Content>
+          <AlertDialog.CloseButton
+            onPress={() => setHowToUseIsOpen(!howToUseIsOpen)}
+          />
+          <AlertDialog.Header>갤러리 사용법</AlertDialog.Header>
+          <AlertDialog.Body>
+            사진을 클릭하면 휴대폰에 저장 할 수 있고, 다른 사진을 보려면 현재
+            사진을 좌우로 밀어 보세요.
+          </AlertDialog.Body>
+        </AlertDialog.Content>
+      </AlertDialog>
+    );
+  };
+
   if (data) {
     return (
-      <VStack flex={1} alignItems="center" bgColor={'white'}>
+      <VStack flex={1} alignItems="center" bgColor="white">
         <VStack flex={1} width="90%">
           <Box flex={1}>
             <Center flex={1}>
@@ -130,6 +173,26 @@ function GallerDetail({route}) {
                 source={require('../../../assets/images/logos/littleband-logo.png')}
               />
             </Center>
+            {/* <Icon
+                    {...triggerProps}
+                    name="questioncircleo"
+                    size={24}
+                    color="#009fe8"
+                    style={{textAlign: 'right'}}
+                  /> */}
+            <TouchableOpacity
+              onPress={() => {
+                setHowToUseIsOpen(!howToUseIsOpen);
+              }}>
+              <Icon
+                name="questioncircleo"
+                size={24}
+                color="#009fe8"
+                style={{textAlign: 'right'}}
+              />
+            </TouchableOpacity>
+            <AlertFromQuestion />
+
             <HStack flex={5} alignItems="center">
               <Carousel
                 firstItem={imageIndex === null ? 0 : imageIndex}

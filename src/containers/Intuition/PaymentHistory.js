@@ -1,6 +1,9 @@
 import React from 'react';
 // native-base
-import {Text, HStack, ChevronRightIcon, Box} from 'native-base';
+import {Text, HStack, ChevronRightIcon, Box, View} from 'native-base';
+// graphQL stuff
+import {GET_STUDENT_FEE} from '../../graphQL/students';
+import {useQuery} from '@apollo/client';
 
 function PaymentHistory({navigation}) {
   return (
