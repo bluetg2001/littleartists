@@ -9,15 +9,10 @@ import {
   HStack,
   View,
   Text,
+  Button,
 } from 'native-base';
 // react-native components
-import {
-  Image,
-  Dimensions,
-  PermissionsAndroid,
-  TouchableOpacity,
-  Platform,
-} from 'react-native';
+import {Image, Dimensions, TouchableOpacity, Platform} from 'react-native';
 // carousel
 import Carousel from 'react-native-snap-carousel';
 // graphql stuff
@@ -69,40 +64,12 @@ function GallerDetail({route}) {
           resp.path();
         });
     } else {
+      // iOS
       CameraRoll.save(
         'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
       );
     }
   };
-
-  // const saveToGallery = () => {
-  //   if (Platform.OS === 'android') {
-  //     RNFetchBlob.config({
-  //       fileCache: true,
-  //       // appendExt: '',
-  //       indicator: true,
-  //       IOSBackgroundTask: true,
-  //       path: 'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
-  //       addAndroidDownloads: {
-  //         useDownloadManager: true,
-  //         notification: true,
-  //         path: 'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
-  //         description: 'Image',
-  //       },
-  //     })
-  //       .fetch(
-  //         'GET',
-  //         'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
-  //       )
-  //       .then(res => {
-  //         console.log(res, 'end downloaded');
-  //       });
-  //   } else {
-  //     CameraRoll.saveToCameraRoll(
-  //       'https://static.scientificamerican.com/sciam/cache/file/EAF12335-B807-4021-9AC95BBA8BEE7C8D_source.jpg',
-  //     );
-  //   }
-  // };
 
   useEffect(() => {
     getHakwonId();
@@ -135,6 +102,7 @@ function GallerDetail({route}) {
           padding: 50,
         }}>
         <TouchableOpacity
+          activeOpacity={1}
           onPress={() => {
             imageDownload();
           }}>
