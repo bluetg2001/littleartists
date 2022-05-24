@@ -47,10 +47,9 @@ function PaymentRegistration(props) {
               교육비(음악)
             </Text>
             <Text flex={3} textAlign="right">
-              {/* {studentInfo.tuitionMusic
+              {studentInfo.tuitionMusic
                 .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')} */}
-              {studentInfo.tuitionMusic.toLocaleString('ko-KR')}
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
           </HStack>
           <HStack flex={1} alignItems="center" mb={4}>
@@ -60,7 +59,7 @@ function PaymentRegistration(props) {
             <Text flex={3} textAlign="right">
               {studentInfo.tuitionArt
                 .toString()
-                .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')}
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
           </HStack>
           <HStack flex={1} alignItems="center" mb={4}>
@@ -68,7 +67,9 @@ function PaymentRegistration(props) {
               교육비(특강)
             </Text>
             <Text flex={3} textAlign="right">
-              {studentInfo.tuitionSpecial.toLocaleString('ko-KR')}
+              {studentInfo.tuitionSpecial
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
           </HStack>
           <HStack flex={1} alignItems="center" mb={4}>
@@ -76,7 +77,9 @@ function PaymentRegistration(props) {
               기타비용
             </Text>
             <Text flex={3} textAlign="right">
-              {studentInfo.tuitionOthers.toLocaleString('ko-KR')}
+              {studentInfo.tuitionOthers
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
           </HStack>
           <HStack flex={1} alignItems="center" mb={4}>
@@ -89,7 +92,9 @@ function PaymentRegistration(props) {
                 studentInfo.tuitionMusic +
                 studentInfo.tuitionArt +
                 studentInfo.tuitionOthers
-              ).toLocaleString('ko-KR')}
+              )
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
             </Text>
           </HStack>
           <HStack flex={1} alignItems="center" mb={4}>
