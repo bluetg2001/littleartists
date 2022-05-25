@@ -4,47 +4,41 @@ import React from 'react';
 // react-native-components
 import {Image} from 'react-native';
 // native-base
-import {
-  Center,
-  Text,
-  View,
-  Box,
-  VStack,
-  HStack,
-  ScrollView,
-  ZStack,
-} from 'native-base';
+import {Text, Box, VStack, HStack} from 'native-base';
 
 function Introduction() {
   return (
     <>
-      <ZStack alignItems={'center'}>
+      <VStack mt="5" alignItems="center" style={{position: 'relative'}}>
+        <Image
+          style={{
+            width: 125,
+            height: 65,
+            position: 'absolute',
+            zIndex: 2,
+            elevation: 2,
+          }}
+          source={require('../../../assets/images/logos/littleband-border-logo.png')}
+        />
         <Box
-          shadow={5}
-          mt={'16'}
+          mt="8"
+          shadow="9"
           width={'100%'}
           borderRadius={'3xl'}
           bgColor="primary.500"
           paddingTop={'6'}
           paddingBottom={'6'}
-          paddingLeft={4}>
+          paddingLeft={4}
+          style={{position: 'absolute', zIndex: 1, elevation: 1}}>
           <Text
             color="white"
             fontSize={
               'lg'
             }>{`달라진 어린음악대! \n 아이에게 가장 알맞는 \n 교육환경과 음악적 경험을 \n 만들어 드립니다.`}</Text>
         </Box>
-      </ZStack>
-      <Center mt={'6'}>
-        <Image
-          style={{
-            width: 125,
-            height: 65,
-          }}
-          source={require('../../../assets/images/logos/littleband-border-logo.png')}
-        />
-      </Center>
-      <HStack mt={150} alignItems="center">
+      </VStack>
+
+      <HStack mt={220} alignItems="center">
         <Image
           style={{
             width: 63,

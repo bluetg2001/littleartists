@@ -112,7 +112,7 @@ function PianoGoGo() {
         alignItems="center"
         style={{backgroundColor: '#f0faff'}}>
         <VStack width="80%" flex={1} space={7}>
-          <VStack>
+          <VStack style={{position: 'relative'}}>
             <Text>피아노고고</Text>
             <Progress
               mt={2}
@@ -125,6 +125,19 @@ function PianoGoGo() {
             <Text mt={3} textAlign="right">
               26/45
             </Text>
+            <Image
+              resizeMode="stretch"
+              style={{
+                width: 25,
+                height: 'auto',
+                aspectRatio: 1,
+                position: 'absolute',
+                top: '28%',
+                //나중에 value 변수받아서 일정값 빼주어 다른 변수에 받아 넘겨받으면 됨
+                left: '72%',
+              }}
+              source={require('../../../assets/images/icons/note-blue.png')}
+            />
           </VStack>
           <VStack>
             <Text>피아노고고</Text>

@@ -29,8 +29,6 @@ function ProviderAttendance() {
   const [hakwonId, setHakwonId] = useState(null);
 
   const currentYear = dayjs().format('YYYY');
-  const myAttend = [];
-
   // graphql stuff
   const {loading, error, data} = useQuery(PARENT, {
     variables: {
@@ -47,7 +45,7 @@ function ProviderAttendance() {
   const [selectStudent, setSelectStudent] = useState('');
   const [selectYear, setSelectYear] = useState(null);
   const [selectMonth, setSelectMonth] = useState(null);
-  const [attendInfo, setAttendInfo] = useState([]);
+  const [AttendInfo, setAttendInfo] = useState([]);
 
   // functions
   const searchAttendInfo = () => {
@@ -60,16 +58,22 @@ function ProviderAttendance() {
       .then(res => {
         console.log(hakwonId);
         if (res.data) {
-          // setAttendInfo([]);
-          // setAttendInfo(res.data.getStudentAttendHistory);
           const entireAttendInfo = res.data.getStudentAttendHistory;
+          const myAttend = [];
+
           entireAttendInfo.map((value, key) =>
             value.date.split('-')[0] === selectYear &&
             value.date.split('-')[1] === selectMonth
-              ? setAttendInfo(...attendInfo, value)
-              : // myAttend.push(value)
-                null,
+              ? myAttend.push(value)
+              : null,
           );
+
+          // console.log(myAttend);
+          // const sortMyAttend = myAttend.sort(
+          //   (a, b) => a.data.split('-') - b.data.split('-'),
+          // );
+          // console.log(sortMyAttend);
+          setAttendInfo(myAttend);
         } else {
           console.log('data를 불러오지 못하였습니다.');
         }
@@ -182,7 +186,6 @@ function ProviderAttendance() {
                 _selectedItem={{
                   bgColor: 'primary.500',
                 }}
-                // mt={1}
                 // 선택하는 벨류값에 대해서 변화 관리
                 onValueChange={itemValue => setSelectMonth(itemValue)}>
                 <Select.Item label="1월" value="01" />
@@ -204,7 +207,6 @@ function ProviderAttendance() {
                 size="md"
                 onPress={() => {
                   searchAttendInfo();
-                  // console.log(selectStudent, selectYear, selectMonth);
                 }}>
                 조회
               </Button>
@@ -238,19 +240,14 @@ function ProviderAttendance() {
                 </Box>
                 <Divider my={4} bgColor={'gray.50'} />
                 <ScrollView>
-                  {/* {attendInfo.length === 0 ? (
-                  {console.log(myAttend)}
-                    <></>
-                  ) : (
-                    attendInfo.map((value, key) => (
-                      <AttendanceInfo
-                        key={key}
-                        arrivedAt={value.arrivedAt}
-                        leftAt={value.leftAt}
-                        date={value.date}
-                      />
-                    ))
-                  )} */}
+                  {AttendInfo.map((value, key) => (
+                    <AttendanceInfo
+                      key={key}
+                      arrivedAt={value.arrivedAt}
+                      leftAt={value.leftAt}
+                      date={value.date}
+                    />
+                  ))}
                 </ScrollView>
               </Box>
             </Box>

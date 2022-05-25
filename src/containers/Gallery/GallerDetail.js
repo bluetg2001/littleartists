@@ -145,6 +145,7 @@ function GallerDetail({route}) {
   const AlertFromQuestion = () => {
     return (
       <AlertDialog
+        shadow={9}
         leastDestructiveRef={cancelRef}
         isOpen={howToUseIsOpen}
         onClose={onClose}>
@@ -154,8 +155,8 @@ function GallerDetail({route}) {
           />
           <AlertDialog.Header>갤러리 사용법</AlertDialog.Header>
           <AlertDialog.Body>
-            사진을 클릭하면 휴대폰에 저장 할 수 있고, 다른 사진을 보려면 현재
-            사진을 좌우로 밀어 보세요.
+            사진을 좌우로 밀어 여러 사진을 감상하고, 원하는 사진을 터치하여
+            저장해보세요.
           </AlertDialog.Body>
         </AlertDialog.Content>
       </AlertDialog>
