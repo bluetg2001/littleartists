@@ -9,7 +9,6 @@ const AttendanceInfo = props => {
     <Box>
       <Box flexDirection={'row'}>
         <Text fontSize={'sm'} color={'dark.100'} textAlign={'center'} flex={1}>
-          {/* 2022-02-01 */}
           {date}
         </Text>
         {arrivedAt === '' ? (
@@ -36,7 +35,6 @@ const AttendanceInfo = props => {
             color={'dark.100'}
             textAlign={'center'}
             flex={1}>
-            {/* 오전 08:27 */}
             미입력
           </Text>
         ) : (
@@ -45,7 +43,6 @@ const AttendanceInfo = props => {
             color={'dark.100'}
             textAlign={'center'}
             flex={1}>
-            {/* 오전 08:27 */}
             {leftAt}
           </Text>
         )}

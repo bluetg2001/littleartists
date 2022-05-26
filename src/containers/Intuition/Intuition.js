@@ -7,7 +7,6 @@ import {
   VStack,
   HStack,
   ScrollView,
-  Box,
   Select,
   View,
 } from 'native-base';
@@ -21,6 +20,7 @@ import {useQuery} from '@apollo/client';
 // components
 import PaymentRegistration from './PaymentRegistration';
 import PaymentHistory from './PaymentHistory';
+import Loading from '../../components/Loading';
 
 function Intuition({navigation}) {
   const [pageSwitch, setPageSwitch] = useState(true);
@@ -54,11 +54,7 @@ function Intuition({navigation}) {
   }, []);
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {
@@ -73,7 +69,7 @@ function Intuition({navigation}) {
     return (
       <ScrollView bgColor="white">
         <VStack alignItems="center">
-          <VStack width="90%" flex={1}>
+          <VStack width="80%" flex={1}>
             <Center>
               <Image
                 style={{
@@ -85,30 +81,32 @@ function Intuition({navigation}) {
               />
             </Center>
             <VStack>
-              <HStack mt="16">
+              <HStack mt="16" space="4">
                 <Text
                   onPress={() => setPageSwitch(true)}
                   ml="2"
-                  fontSize={'lg'}
+                  fontSize="lg"
+                  fontWeight="bold"
                   color={pageSwitch ? 'primary.500' : 'dark.100'}>
                   교육비
                 </Text>
-                <Box width="4" />
+
                 <Text
                   onPress={() => setPageSwitch(false)}
-                  fontSize={'lg'}
+                  fontSize="lg"
+                  fontWeight="bold"
                   color={pageSwitch ? 'dark.100' : 'primary.500'}>
                   납입이력
                 </Text>
               </HStack>
-              <HStack>
-                <Text>이름</Text>
+              <HStack mt={4} justifyContent="space-between" alignItems="center">
+                <Text fontSize="md">이름</Text>
 
                 {/* 학생 선택 */}
                 <Select
-                  flex={1.5}
+                  flex={0.7}
+                  // flex={1}
                   bgColor="white"
-                  // accessibilityLabel=""
                   placeholder="학생 선택"
                   _selectedItem={{
                     bg: 'primary.500',

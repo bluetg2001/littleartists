@@ -4,6 +4,7 @@ import {Text, VStack, HStack, View, Center} from 'native-base';
 // graphQL stuff
 import {GET_STUDENT_FEE} from '../../graphQL/students';
 import {useQuery} from '@apollo/client';
+import Loading from '../../components/Loading';
 
 function PaymentRegistration(props) {
   const {studentId} = props;
@@ -17,11 +18,7 @@ function PaymentRegistration(props) {
   const studentInfo = data ? data.getStudentFee : null;
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {

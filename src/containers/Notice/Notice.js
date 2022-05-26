@@ -18,6 +18,7 @@ import {HAKWON_BOARDS} from '../../graphQL/boards';
 import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loading from '../../components/Loading';
 
 function Notice({navigation}) {
   const [parentId, setParentId] = useState(null);
@@ -55,9 +56,7 @@ function Notice({navigation}) {
             contents: contents,
           })
         }>
-        <Box
-        // onTouchEnd={() => navigation.navigate('NoticeDetail')}
-        >
+        <Box>
           <HStack
             justifyContent={'space-between'}
             alignItems={'center'}
@@ -76,11 +75,7 @@ function Notice({navigation}) {
   };
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {

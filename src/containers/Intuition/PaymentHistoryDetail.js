@@ -2,13 +2,22 @@ import React from 'react';
 // native-base
 import {VStack, Text, HStack, Box, Divider} from 'native-base';
 
-function PaymentHistoryDetail() {
+function PaymentHistoryDetail({route}) {
+  const {
+    product_nm,
+    appr_origin_dt,
+    appr_price,
+    appr_pay_type,
+    appr_issuer_cd,
+    appr_state,
+    hakwonId,
+  } = route.params;
   return (
     <VStack flex={1} bgColor="white" alignItems="center">
       <VStack flex={1} width="90%">
         <HStack flex={1} alignItems="flex-end">
           <Text fontSize="xl" color="dark.100" ml={2}>
-            2022년 4월 교육비
+            {product_nm}
           </Text>
         </HStack>
         <Box flex={0.5} />
@@ -20,7 +29,7 @@ function PaymentHistoryDetail() {
                 수납일자
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                2022-04-02 13:12
+                {appr_origin_dt === null ? 'null' : appr_origin_dt}
               </Text>
             </HStack>
           </Box>
@@ -30,7 +39,9 @@ function PaymentHistoryDetail() {
                 결제금액
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                220,000원
+                {appr_price === null
+                  ? 'null'
+                  : appr_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </Text>
             </HStack>
           </Box>
@@ -40,7 +51,7 @@ function PaymentHistoryDetail() {
                 결제방법
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                신용카드 결제
+                {appr_pay_type === null ? 'null' : appr_pay_type}
               </Text>
             </HStack>
           </Box>
@@ -50,7 +61,7 @@ function PaymentHistoryDetail() {
                 카드사
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                삼성
+                {appr_issuer_cd === null ? 'null' : appr_issuer_cd}
               </Text>
             </HStack>
           </Box>
@@ -60,7 +71,7 @@ function PaymentHistoryDetail() {
                 상태
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                결제
+                {appr_state === null ? 'null' : appr_state}
               </Text>
             </HStack>
           </Box>
@@ -70,7 +81,7 @@ function PaymentHistoryDetail() {
                 납입이력
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                세천원
+                {hakwonId === null ? 'null' : hakwonId}
               </Text>
             </HStack>
           </Box>

@@ -11,6 +11,7 @@ import {GET_HAKWON_GALLERIES} from '../../graphQL/galleries';
 import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Loading from '../../components/Loading';
 
 function Gallery({navigation}) {
   const [hakwonId, setHakwonId] = useState(null);
@@ -40,11 +41,7 @@ function Gallery({navigation}) {
   }, []);
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {

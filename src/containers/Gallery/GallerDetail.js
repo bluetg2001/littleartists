@@ -27,6 +27,7 @@ import RNFetchBlob from 'rn-fetch-blob';
 import CameraRoll from '@react-native-community/cameraroll';
 // icons
 import Icon from 'react-native-vector-icons/AntDesign';
+import Loading from '../../components/Loading';
 
 function GallerDetail({route}) {
   const imageIndex = route.params.imageIndex;
@@ -67,21 +68,14 @@ function GallerDetail({route}) {
           description: 'File downloaded by download manager.',
         },
       })
-        .fetch(
-          'GET',
-          url,
-          // 'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
-        )
+        .fetch('GET', url)
         .then(resp => {
           // the path of downloaded file
           resp.path();
         });
     } else {
       // iOS
-      CameraRoll.save(
-        url,
-        // 'https://www.howtogeek.com/wp-content/uploads/2021/10/1-red-apple.png?trim=1,1&bg-color=000&pad=1,1',
-      );
+      CameraRoll.save(url);
     }
   };
 
@@ -90,11 +84,7 @@ function GallerDetail({route}) {
   }, []);
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {
@@ -174,13 +164,6 @@ function GallerDetail({route}) {
                 source={require('../../../assets/images/logos/littleband-logo.png')}
               />
             </Center>
-            {/* <Icon
-                    {...triggerProps}
-                    name="questioncircleo"
-                    size={24}
-                    color="#009fe8"
-                    style={{textAlign: 'right'}}
-                  /> */}
             <TouchableOpacity
               onPress={() => {
                 setHowToUseIsOpen(!howToUseIsOpen);

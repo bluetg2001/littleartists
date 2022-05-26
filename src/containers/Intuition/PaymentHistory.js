@@ -4,6 +4,7 @@ import {Text, HStack, ChevronRightIcon, Box, View, Center} from 'native-base';
 // graphQL stuff
 import {GET_STUDENT_BILLS} from '../../graphQL/paymints';
 import {useQuery} from '@apollo/client';
+import Loading from '../../components/Loading';
 
 function PaymentHistory(props) {
   const {studentId, navigation} = props;
@@ -15,11 +16,7 @@ function PaymentHistory(props) {
   });
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {
@@ -48,7 +45,17 @@ function PaymentHistory(props) {
           {bills.map((bill, key) => (
             <Box
               key={key}
-              onTouchEnd={() => navigation.navigate('PaymentHistoryDetail')}>
+              onTouchEnd={() =>
+                navigation.navigate('PaymentHistoryDetail', {
+                  product_nm: bill.product_nm,
+                  appr_origin_dt: bill.payment.appr_origin_dt,
+                  appr_price: bill.payment.appr_price,
+                  appr_pay_type: bill.payment.appr_pay_type,
+                  appr_issuer_cd: bill.payment.appr_issuer_cd,
+                  appr_state: bill.payment.appr_state,
+                  hakwonId: bill.hakwonId,
+                })
+              }>
               <HStack
                 justifyContent={'space-between'}
                 alignItems={'center'}

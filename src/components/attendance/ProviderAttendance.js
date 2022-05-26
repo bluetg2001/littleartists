@@ -12,6 +12,9 @@ import {
   ScrollView,
   Text,
   Divider,
+  VStack,
+  HStack,
+  CheckIcon,
 } from 'native-base';
 // graphQL stuff
 import {PARENT} from '../../graphQL/parents';
@@ -23,6 +26,7 @@ import dayjs from 'dayjs';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
 import AttendanceInfo from './AttendanceInfo';
+import Loading from '../Loading';
 
 function ProviderAttendance() {
   const [parentId, setParentId] = useState(null);
@@ -67,12 +71,6 @@ function ProviderAttendance() {
               ? myAttend.push(value)
               : null,
           );
-
-          // console.log(myAttend);
-          // const sortMyAttend = myAttend.sort(
-          //   (a, b) => a.data.split('-') - b.data.split('-'),
-          // );
-          // console.log(sortMyAttend);
           setAttendInfo(myAttend);
         } else {
           console.log('data를 불러오지 못하였습니다.');
@@ -95,11 +93,7 @@ function ProviderAttendance() {
   }, []);
 
   if (loading) {
-    return (
-      <View flex={1}>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Loading />;
   }
 
   if (error) {
@@ -112,148 +106,129 @@ function ProviderAttendance() {
 
   if (data) {
     return (
-      <View flex={6} bgColor="white">
-        <Box flex={1}>
-          <Center flex={1}>
-            <Image
-              style={{width: 125, height: 60}}
-              source={require('../../../assets/images/logos/littleband-logo.png')}
+      <VStack alignItems="center" bgColor="white" flex={1}>
+        <Center my={4}>
+          <Image
+            style={{width: 125, height: 60}}
+            source={require('../../../assets/images/logos/littleband-logo.png')}
+          />
+        </Center>
+
+        <HStack
+          space="1"
+          alignItems="center"
+          bgColor="trueGray.100"
+          borderRadius="lg"
+          padding="4"
+          width="95%">
+          {/* 학생 선택 */}
+          <Select
+            minWidth="29%"
+            bgColor="white"
+            accessibilityLabel="김태균"
+            placeholder="학생 선택"
+            _selectedItem={{
+              bg: 'primary.500',
+              endIcon: <CheckIcon size="4" />,
+            }}
+            // 선택하는 벨류값에 대해서 변화 관리
+            onValueChange={itemValue => {
+              setSelectStudent(itemValue);
+            }}>
+            {students.map((student, key) => (
+              <Select.Item key={key} label={student.name} value={student.id} />
+            ))}
+          </Select>
+          {/* 년도 입력 */}
+          <Select
+            minWidth="29%"
+            bgColor={'white'}
+            accessibilityLabel="김태균"
+            placeholder="년도 입력"
+            _selectedItem={{
+              bg: 'primary.500',
+            }}
+            // 선택하는 벨류값에 대해서 변화 관리
+            onValueChange={itemValue => setSelectYear(itemValue)}>
+            <Select.Item
+              label={(currentYear - 1).toString()}
+              value={(currentYear - 1).toString()}
             />
-          </Center>
-        </Box>
-        <Box flex={5}>
-          <Box flex={1} alignItems={'center'}>
-            <Center
-              flexDirection={'row'}
-              flex={1}
-              bgColor="trueGray.100"
-              borderRadius={'lg'}
-              padding="2"
-              style={{width: '90%'}}>
-              {/* 학생 선택 */}
-              <Select
-                flex={1.5}
-                bgColor="white"
-                accessibilityLabel="김태균"
-                placeholder="학생 선택"
-                _selectedItem={{
-                  bg: 'primary.500',
-                }}
-                // mt={1}
-                // 선택하는 벨류값에 대해서 변화 관리
-                onValueChange={itemValue => {
-                  setSelectStudent(itemValue);
-                }}>
-                {students.map((student, key) => (
-                  <Select.Item
-                    key={key}
-                    label={student.name}
-                    value={student.id}
-                  />
-                ))}
-              </Select>
-              {/* gap */}
-              <View flex={0.1} />
-              {/* 년도 입력 */}
-              <Select
-                flex={1.5}
-                bgColor={'white'}
-                accessibilityLabel="김태균"
-                placeholder="년도 입력"
-                _selectedItem={{
-                  bg: 'primary.500',
-                }}
-                // mt={1}
-                // 선택하는 벨류값에 대해서 변화 관리
-                onValueChange={itemValue => setSelectYear(itemValue)}>
-                <Select.Item
-                  label={(currentYear - 1).toString()}
-                  value={(currentYear - 1).toString()}
+            <Select.Item label={currentYear} value={currentYear.toString()} />
+          </Select>
+          {/* 월 입력 */}
+          <Select
+            minWidth="27%"
+            bgColor="white"
+            accessibilityLabel="김태균"
+            placeholder="월 입력"
+            _selectedItem={{
+              bgColor: 'primary.500',
+            }}
+            // 선택하는 벨류값에 대해서 변화 관리
+            onValueChange={itemValue => setSelectMonth(itemValue)}>
+            <Select.Item label="1월" value="01" />
+            <Select.Item label="2월" value="02" />
+            <Select.Item label="3월" value="03" />
+            <Select.Item label="4월" value="04" />
+            <Select.Item label="5월" value="05" />
+            <Select.Item label="6월" value="06" />
+            <Select.Item label="7월" value="07" />
+            <Select.Item label="8월" value="08" />
+            <Select.Item label="9월" value="09" />
+            <Select.Item label="10월" value="10" />
+            <Select.Item label="11월" value="11" />
+            <Select.Item label="12월" value="12" />
+          </Select>
+          <Button
+            size="xs"
+            onPress={() => {
+              searchAttendInfo();
+            }}>
+            조회
+          </Button>
+        </HStack>
+
+        <VStack flex={7} alignItems="center" mt="4">
+          <VStack style={{width: '90%'}}>
+            <HStack width="100%">
+              <Text
+                fontSize={'lg'}
+                color={'dark.100'}
+                textAlign={'center'}
+                flex={1}>
+                날짜
+              </Text>
+              <Text
+                fontSize={'lg'}
+                color={'#f55858'}
+                textAlign={'center'}
+                flex={1}>
+                등원
+              </Text>
+              <Text
+                fontSize={'lg'}
+                color={'#009fe8'}
+                textAlign={'center'}
+                flex={1}>
+                하원
+              </Text>
+            </HStack>
+
+            <Divider my={4} />
+            <ScrollView>
+              {AttendInfo.map((value, key) => (
+                <AttendanceInfo
+                  key={key}
+                  arrivedAt={value.arrivedAt}
+                  leftAt={value.leftAt}
+                  date={value.date}
                 />
-                <Select.Item
-                  label={currentYear}
-                  value={currentYear.toString()}
-                />
-              </Select>
-              {/* gap */}
-              <View flex={0.1} />
-              {/* 월 입력 */}
-              <Select
-                flex={1.5}
-                bgColor="white"
-                accessibilityLabel="김태균"
-                placeholder="월 입력"
-                _selectedItem={{
-                  bgColor: 'primary.500',
-                }}
-                // 선택하는 벨류값에 대해서 변화 관리
-                onValueChange={itemValue => setSelectMonth(itemValue)}>
-                <Select.Item label="1월" value="01" />
-                <Select.Item label="2월" value="02" />
-                <Select.Item label="3월" value="03" />
-                <Select.Item label="4월" value="04" />
-                <Select.Item label="5월" value="05" />
-                <Select.Item label="6월" value="06" />
-                <Select.Item label="7월" value="07" />
-                <Select.Item label="8월" value="08" />
-                <Select.Item label="9월" value="09" />
-                <Select.Item label="10월" value="10" />
-                <Select.Item label="11월" value="11" />
-                <Select.Item label="12월" value="12" />
-              </Select>
-              {/* gap */}
-              <View flex={0.1} />
-              <Button
-                size="md"
-                onPress={() => {
-                  searchAttendInfo();
-                }}>
-                조회
-              </Button>
-            </Center>
-          </Box>
-          <Box flex={7}>
-            <Box mt="4" style={{width: '100%'}} alignItems="center">
-              <Box style={{width: '90%'}}>
-                <Box flexDirection={'row'}>
-                  <Text
-                    fontSize={'lg'}
-                    color={'dark.100'}
-                    textAlign={'center'}
-                    flex={1}>
-                    날짜
-                  </Text>
-                  <Text
-                    fontSize={'lg'}
-                    color={'#f55858'}
-                    textAlign={'center'}
-                    flex={1}>
-                    등원
-                  </Text>
-                  <Text
-                    fontSize={'lg'}
-                    color={'#009fe8'}
-                    textAlign={'center'}
-                    flex={1}>
-                    하원
-                  </Text>
-                </Box>
-                <Divider my={4} bgColor={'gray.50'} />
-                <ScrollView>
-                  {AttendInfo.map((value, key) => (
-                    <AttendanceInfo
-                      key={key}
-                      arrivedAt={value.arrivedAt}
-                      leftAt={value.leftAt}
-                      date={value.date}
-                    />
-                  ))}
-                </ScrollView>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </View>
+              ))}
+            </ScrollView>
+          </VStack>
+        </VStack>
+      </VStack>
     );
   }
 }
