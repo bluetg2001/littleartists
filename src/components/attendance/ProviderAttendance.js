@@ -6,7 +6,6 @@ import {Image} from 'react-native';
 import {
   Center,
   View,
-  Box,
   Select,
   Button,
   ScrollView,
@@ -27,6 +26,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
 import AttendanceInfo from './AttendanceInfo';
 import Loading from '../Loading';
+import Logo from '../Logo';
 
 function ProviderAttendance() {
   const [parentId, setParentId] = useState(null);
@@ -108,10 +108,7 @@ function ProviderAttendance() {
     return (
       <VStack alignItems="center" bgColor="white" flex={1}>
         <Center my={4}>
-          <Image
-            style={{width: 125, height: 60}}
-            source={require('../../../assets/images/logos/littleband-logo.png')}
-          />
+          <Logo />
         </Center>
 
         <HStack

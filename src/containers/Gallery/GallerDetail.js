@@ -28,6 +28,7 @@ import CameraRoll from '@react-native-community/cameraroll';
 // icons
 import Icon from 'react-native-vector-icons/AntDesign';
 import Loading from '../../components/Loading';
+import Logo from '../../components/Logo';
 
 function GallerDetail({route}) {
   const imageIndex = route.params.imageIndex;
@@ -159,10 +160,7 @@ function GallerDetail({route}) {
         <VStack flex={1} width="90%">
           <Box flex={1}>
             <Center flex={1}>
-              <Image
-                style={{width: 125, height: 60}}
-                source={require('../../../assets/images/logos/littleband-logo.png')}
-              />
+              <Logo />
             </Center>
             <TouchableOpacity
               onPress={() => {

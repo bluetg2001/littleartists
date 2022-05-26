@@ -21,6 +21,7 @@ import {useQuery} from '@apollo/client';
 import PaymentRegistration from './PaymentRegistration';
 import PaymentHistory from './PaymentHistory';
 import Loading from '../../components/Loading';
+import Logo from '../../components/Logo';
 
 function Intuition({navigation}) {
   const [pageSwitch, setPageSwitch] = useState(true);
@@ -71,14 +72,7 @@ function Intuition({navigation}) {
         <VStack alignItems="center">
           <VStack width="80%" flex={1}>
             <Center>
-              <Image
-                style={{
-                  width: 125,
-                  height: 60,
-                  marginTop: 16,
-                }}
-                source={require('../../../assets/images/logos/littleband-logo.png')}
-              />
+              <Logo />
             </Center>
             <VStack>
               <HStack mt="16" space="4">

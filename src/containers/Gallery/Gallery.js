@@ -12,6 +12,7 @@ import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Loading from '../../components/Loading';
+import Logo from '../../components/Logo';
 
 function Gallery({navigation}) {
   const [hakwonId, setHakwonId] = useState(null);
@@ -58,10 +59,7 @@ function Gallery({navigation}) {
         <VStack flex={1} width="90%">
           <Box flex={1}>
             <Center flex={1}>
-              <Image
-                style={{width: 125, height: 60}}
-                source={require('../../../assets/images/logos/littleband-logo.png')}
-              />
+              <Logo />
             </Center>
           </Box>
           <Box flex={5}>

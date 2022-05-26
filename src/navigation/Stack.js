@@ -110,6 +110,7 @@ function Stack(props) {
         <StackNavi.Screen
           name="PaymentHistoryDetail"
           component={PaymentHistoryDetail}
+          options={{title: '납입 상세'}}
         />
         <StackNavi.Screen name="PianoGoGo" component={PianoGoGo} />
       </StackNavi.Navigator>

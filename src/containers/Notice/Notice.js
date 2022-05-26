@@ -19,6 +19,7 @@ import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Loading from '../../components/Loading';
+import Logo from '../../components/Logo';
 
 function Notice({navigation}) {
   const [parentId, setParentId] = useState(null);
@@ -92,14 +93,15 @@ function Notice({navigation}) {
         <VStack alignItems="center" bgColor="white">
           <VStack width="90%">
             <Center>
-              <Image
+              <Logo />
+              {/* <Image
                 style={{
                   width: 125,
                   height: 60,
                   marginTop: 16,
                 }}
                 source={require('../../../assets/images/logos/littleband-logo.png')}
-              />
+              /> */}
             </Center>
             <Text mt={8} fontSize="lg" color="dark.50">
               학원 소식
