@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect, useCallback} from 'react';
 // react-native components
-import {Image} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 // native-base
 import {
   Center,
@@ -27,10 +27,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import AttendanceInfo from './AttendanceInfo';
 import Loading from '../Loading';
 import Logo from '../Logo';
+// icons
+import Icon from 'react-native-vector-icons/AntDesign';
 
 function ProviderAttendance() {
   const [parentId, setParentId] = useState(null);
   const [hakwonId, setHakwonId] = useState(null);
+  // 출석 날짜 정렬
+  const [isReverseSort, setIsReverseSort] = useState(false);
 
   const currentYear = dayjs().format('YYYY');
   // graphql stuff
@@ -88,6 +92,10 @@ function ProviderAttendance() {
     }
   };
 
+  const switchReverseSort = useCallback(() => {
+    setIsReverseSort(!isReverseSort);
+  }, [isReverseSort]);
+
   useEffect(() => {
     getParentIdAndHakwonId();
   }, []);
@@ -112,6 +120,7 @@ function ProviderAttendance() {
         </Center>
 
         <HStack
+          shadow="1"
           space="1"
           alignItems="center"
           bgColor="trueGray.100"
@@ -187,41 +196,47 @@ function ProviderAttendance() {
         </HStack>
 
         <VStack flex={7} alignItems="center" mt="4">
-          <VStack style={{width: '90%'}}>
+          <VStack width="90%">
             <HStack width="100%">
-              <Text
-                fontSize={'lg'}
-                color={'dark.100'}
-                textAlign={'center'}
-                flex={1}>
-                날짜
-              </Text>
-              <Text
-                fontSize={'lg'}
-                color={'#f55858'}
-                textAlign={'center'}
-                flex={1}>
+              <HStack
+                flex={1}
+                justifyContent="center"
+                alignItems="center"
+                space="2">
+                <Text fontSize="lg" color="dark.100">
+                  날짜
+                </Text>
+                <TouchableOpacity onPress={() => switchReverseSort()}>
+                  <Icon name="up" size={12} color="#27272a" />
+                </TouchableOpacity>
+              </HStack>
+              <Text fontSize="lg" color="#f55858" textAlign="center" flex={1}>
                 등원
               </Text>
-              <Text
-                fontSize={'lg'}
-                color={'#009fe8'}
-                textAlign={'center'}
-                flex={1}>
+              <Text fontSize="lg" color="#009fe8" textAlign="center" flex={1}>
                 하원
               </Text>
             </HStack>
 
             <Divider my={4} />
             <ScrollView>
-              {AttendInfo.map((value, key) => (
-                <AttendanceInfo
-                  key={key}
-                  arrivedAt={value.arrivedAt}
-                  leftAt={value.leftAt}
-                  date={value.date}
-                />
-              ))}
+              {isReverseSort
+                ? AttendInfo.reverse().map((value, key) => (
+                    <AttendanceInfo
+                      key={key}
+                      arrivedAt={value.arrivedAt}
+                      leftAt={value.leftAt}
+                      date={value.date}
+                    />
+                  ))
+                : AttendInfo.map((value, key) => (
+                    <AttendanceInfo
+                      key={key}
+                      arrivedAt={value.arrivedAt}
+                      leftAt={value.leftAt}
+                      date={value.date}
+                    />
+                  ))}
             </ScrollView>
           </VStack>
         </VStack>

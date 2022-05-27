@@ -132,14 +132,18 @@ function Main({
             style={{width: 127, height: 62}}
             source={require('../../assets/images/logos/littleband-logo.png')}
           />
-          <Box style={{position: 'absolute', right: 0}}>
-            <Button
-              onPress={() => {
-                removeUserDataAndLogout();
-              }}>
-              로그아웃
-            </Button>
-          </Box>
+          {/* <Box style={{position: 'absolute', right: 0}}> */}
+          <Button
+            variant="outline"
+            size="xs"
+            position="absolute"
+            right="0"
+            onPress={() => {
+              removeUserDataAndLogout();
+            }}>
+            로그아웃
+          </Button>
+          {/* </Box> */}
         </Center>
       </Box>
       <Box flex={5}>

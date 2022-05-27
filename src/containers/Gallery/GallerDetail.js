@@ -27,6 +27,7 @@ import RNFetchBlob from 'rn-fetch-blob';
 import CameraRoll from '@react-native-community/cameraroll';
 // icons
 import Icon from 'react-native-vector-icons/AntDesign';
+// components
 import Loading from '../../components/Loading';
 import Logo from '../../components/Logo';
 

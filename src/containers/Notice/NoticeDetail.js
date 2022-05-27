@@ -7,6 +7,7 @@ import WebView from 'react-native-webview';
 import IframeRenderer, {iframeModel} from '@native-html/iframe-plugin';
 // react-native components
 import {useWindowDimensions} from 'react-native';
+import './css/index.css';
 
 function NoticeDetail({route}) {
   const {width} = useWindowDimensions();

@@ -58,16 +58,13 @@ function Notice({navigation}) {
           })
         }>
         <Box>
-          <HStack
-            justifyContent={'space-between'}
-            alignItems={'center'}
-            mt={36}>
-            <Text fontSize={'md'} color="dark.50">
+          <HStack justifyContent="space-between" alignItems="center" mt={36}>
+            <Text fontSize="md" color="dark.50">
               {title}
             </Text>
             <ChevronRightIcon />
           </HStack>
-          <Text color="dark.100" fontSize={'xs'}>
+          <Text color="dark.100" fontSize="xs">
             3시간 전
           </Text>
         </Box>
@@ -94,14 +91,6 @@ function Notice({navigation}) {
           <VStack width="90%">
             <Center>
               <Logo />
-              {/* <Image
-                style={{
-                  width: 125,
-                  height: 60,
-                  marginTop: 16,
-                }}
-                source={require('../../../assets/images/logos/littleband-logo.png')}
-              /> */}
             </Center>
             <Text mt={8} fontSize="lg" color="dark.50">
               학원 소식

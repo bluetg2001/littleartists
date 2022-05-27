@@ -14,7 +14,12 @@ import {
   Heading,
 } from 'native-base';
 // react-native components
-import {Image, TouchableOpacity} from 'react-native';
+import {
+  Image,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
 // graphQL stuff
@@ -129,76 +134,80 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   };
 
   return (
-    <View flex={1} bgColor="gray.100">
-      <Box flex={1}>
-        <Center flex={1} justifyContent="flex-end">
+    <KeyboardAvoidingView
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      flex={1}>
+      <View flex={1} bgColor="gray.100">
+        <Box flex={1}>
+          <Center flex={1} justifyContent="flex-end">
+            <Image
+              style={{width: 125, height: 60}}
+              source={require('../../..//assets/images/logos/littleband-logo.png')}
+            />
+          </Center>
+        </Box>
+        <Center flex={2}>
+          <Box
+            marginTop={8}
+            display={'flex'}
+            flexDirection={'row'}
+            justifyContent={'center'}
+            alignItems={'center'}>
+            <Text fontSize={'md'} color="primary.500" fontWeight={'bold'}>
+              국내 최초{' '}
+            </Text>
+            <Text color="dark.50">두뇌밸런스 음악교육 프랜차이즈</Text>
+          </Box>
+
           <Image
-            style={{width: 125, height: 60}}
-            source={require('../../..//assets/images/logos/littleband-logo.png')}
+            flex={5}
+            resizeMode="contain"
+            style={{aspectRatio: 290 / 218}}
+            source={require('../../../assets/images/characters/with-piano.png')}
           />
         </Center>
-      </Box>
-      <Center flex={2}>
-        <Box
-          marginTop={8}
-          display={'flex'}
-          flexDirection={'row'}
-          justifyContent={'center'}
-          alignItems={'center'}>
-          <Text fontSize={'md'} color="primary.500" fontWeight={'bold'}>
-            국내 최초{' '}
-          </Text>
-          <Text color="dark.50">두뇌밸런스 음악교육 프랜차이즈</Text>
+        <Center flex={1}>
+          <VStack width="90%" mx="3" maxW="300px">
+            <FormControl>
+              <Input
+                onChangeText={value => setPhoneNum(value)}
+                marginBottom={3}
+                placeholder="학부모 번호 (- 제외)"
+                InputRightElement={
+                  <Text
+                    onPress={() => setResend(true)}
+                    mr={2}
+                    fontSize={'xs'}
+                    color="primary.500">
+                    {resend ? '인증번호 재전송' : '인증번호 전송'}
+                  </Text>
+                }
+              />
+              <FormControl.ErrorMessage
+                _text={{
+                  fontSize: 'xs',
+                }}>
+                Error Name
+              </FormControl.ErrorMessage>
+            </FormControl>
+            <FormControl>
+              <Input
+                onChangeText={value => setAuthKey(value)}
+                placeholder="인증번호"
+              />
+            </FormControl>
+          </VStack>
+        </Center>
+        <Box flex={2}>
+          <VStack flex={1} alignItems="center">
+            <Text textAlign="center" color="error.500" my={4}>
+              {errorMessage}
+            </Text>
+            <LoginButton />
+          </VStack>
         </Box>
-
-        <Image
-          flex={5}
-          resizeMode="contain"
-          style={{aspectRatio: 290 / 218}}
-          source={require('../../../assets/images/characters/with-piano.png')}
-        />
-      </Center>
-      <Center flex={1}>
-        <VStack width="90%" mx="3" maxW="300px">
-          <FormControl>
-            <Input
-              onChangeText={value => setPhoneNum(value)}
-              marginBottom={3}
-              placeholder="학부모 번호 (- 제외)"
-              InputRightElement={
-                <Text
-                  onPress={() => setResend(true)}
-                  mr={2}
-                  fontSize={'xs'}
-                  color="primary.500">
-                  {resend ? '인증번호 재전송' : '인증번호 전송'}
-                </Text>
-              }
-            />
-            <FormControl.ErrorMessage
-              _text={{
-                fontSize: 'xs',
-              }}>
-              Error Name
-            </FormControl.ErrorMessage>
-          </FormControl>
-          <FormControl>
-            <Input
-              onChangeText={value => setAuthKey(value)}
-              placeholder="인증번호"
-            />
-          </FormControl>
-        </VStack>
-      </Center>
-      <Box flex={2}>
-        <VStack flex={1} alignItems="center">
-          <Text textAlign="center" color="error.500" my={4}>
-            {errorMessage}
-          </Text>
-          <LoginButton />
-        </VStack>
-      </Box>
-    </View>
+      </View>
+    </KeyboardAvoidingView>
   );
 }
 
