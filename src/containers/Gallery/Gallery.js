@@ -80,7 +80,6 @@ function Gallery({navigation}) {
                           source={{
                             uri: item.url,
                           }}
-                          resizeMode="contain"
                           style={{aspectRatio: 1}}
                         />
                       </Box>

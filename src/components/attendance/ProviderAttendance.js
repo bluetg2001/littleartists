@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 // react-native components
 import {TouchableOpacity} from 'react-native';
 // native-base
@@ -21,8 +21,6 @@ import {GET_STUDENT_ATTEND_HISTORY} from '../../graphQL/attendances';
 import {useQuery, useMutation} from '@apollo/client';
 // dayjs
 import dayjs from 'dayjs';
-// async storage
-import AsyncStorage from '@react-native-async-storage/async-storage';
 // components
 import AttendanceInfo from './AttendanceInfo';
 import Loading from '../Loading';
@@ -30,9 +28,8 @@ import Logo from '../Logo';
 // icons
 import Icon from 'react-native-vector-icons/AntDesign';
 
-function ProviderAttendance() {
-  const [parentId, setParentId] = useState(null);
-  const [hakwonId, setHakwonId] = useState(null);
+function ProviderAttendance(props) {
+  const {parentId, hakwonId} = props;
   // 출석 날짜 정렬
   const [isReverseSort, setIsReverseSort] = useState(false);
 
@@ -51,8 +48,8 @@ function ProviderAttendance() {
 
   // state
   const [selectStudent, setSelectStudent] = useState('');
-  const [selectYear, setSelectYear] = useState(null);
-  const [selectMonth, setSelectMonth] = useState(null);
+  const [selectYear, setSelectYear] = useState('전체');
+  const [selectMonth, setSelectMonth] = useState('전체');
   const [AttendInfo, setAttendInfo] = useState([]);
 
   // functions
@@ -64,17 +61,33 @@ function ProviderAttendance() {
       },
     })
       .then(res => {
-        console.log(hakwonId);
         if (res.data) {
           const entireAttendInfo = res.data.getStudentAttendHistory;
           const myAttend = [];
 
-          entireAttendInfo.map((value, key) =>
-            value.date.split('-')[0] === selectYear &&
-            value.date.split('-')[1] === selectMonth
-              ? myAttend.push(value)
-              : null,
-          );
+          if (selectYear && selectMonth === '전체') {
+            entireAttendInfo.map((value, key) => myAttend.push(value));
+          } else if (selectYear === '전체') {
+            entireAttendInfo.map((value, key) =>
+              value.date.split('-')[1] === selectMonth
+                ? myAttend.push(value)
+                : null,
+            );
+          } else if (selectMonth === '전체') {
+            entireAttendInfo.map((value, map) =>
+              value.data.split('-')[0] === selectYear
+                ? myAttend.push(value)
+                : null,
+            );
+          } else {
+            entireAttendInfo.map((value, key) =>
+              value.date.split('-')[0] === selectYear &&
+              value.date.split('-')[1] === selectMonth
+                ? myAttend.push(value)
+                : null,
+            );
+          }
+
           setAttendInfo(myAttend);
         } else {
           console.log('data를 불러오지 못하였습니다.');
@@ -83,22 +96,15 @@ function ProviderAttendance() {
       .catch(console.log);
   };
 
-  const getParentIdAndHakwonId = async () => {
-    try {
-      setParentId(await AsyncStorage.getItem('parentId'));
-      setHakwonId(await AsyncStorage.getItem('hakwonId'));
-    } catch (e) {
-      console.log('read error');
-    }
-  };
-
   const switchReverseSort = useCallback(() => {
     setIsReverseSort(!isReverseSort);
   }, [isReverseSort]);
 
   useEffect(() => {
-    getParentIdAndHakwonId();
-  }, []);
+    if (data) {
+      setSelectStudent(students[0].id);
+    }
+  }, [data, students]);
 
   if (loading) {
     return <Loading />;
@@ -129,10 +135,11 @@ function ProviderAttendance() {
           width="95%">
           {/* 학생 선택 */}
           <Select
+            selectedValue={students[0].id}
+            // placeholder="이름 입력"
             minWidth="29%"
             bgColor="white"
-            accessibilityLabel="김태균"
-            placeholder="학생 선택"
+            // accessibilityLabel="김태균"
             _selectedItem={{
               bg: 'primary.500',
               endIcon: <CheckIcon size="4" />,
@@ -147,15 +154,15 @@ function ProviderAttendance() {
           </Select>
           {/* 년도 입력 */}
           <Select
+            selectedValue={selectYear}
             minWidth="29%"
-            bgColor={'white'}
-            accessibilityLabel="김태균"
-            placeholder="년도 입력"
+            bgColor="white"
             _selectedItem={{
               bg: 'primary.500',
             }}
             // 선택하는 벨류값에 대해서 변화 관리
             onValueChange={itemValue => setSelectYear(itemValue)}>
+            <Select.Item label="전체" value="전체" />
             <Select.Item
               label={(currentYear - 1).toString()}
               value={(currentYear - 1).toString()}
@@ -164,6 +171,7 @@ function ProviderAttendance() {
           </Select>
           {/* 월 입력 */}
           <Select
+            selectedValue={selectMonth}
             minWidth="27%"
             bgColor="white"
             accessibilityLabel="김태균"
@@ -173,6 +181,7 @@ function ProviderAttendance() {
             }}
             // 선택하는 벨류값에 대해서 변화 관리
             onValueChange={itemValue => setSelectMonth(itemValue)}>
+            <Select.Item label="전체" value="전체" />
             <Select.Item label="1월" value="01" />
             <Select.Item label="2월" value="02" />
             <Select.Item label="3월" value="03" />
@@ -218,8 +227,8 @@ function ProviderAttendance() {
               </Text>
             </HStack>
 
-            <Divider my={4} />
-            <ScrollView>
+            <Divider my={3} />
+            <ScrollView mb={20}>
               {isReverseSort
                 ? AttendInfo.reverse().map((value, key) => (
                     <AttendanceInfo

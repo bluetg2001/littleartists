@@ -7,7 +7,7 @@ import WebView from 'react-native-webview';
 import IframeRenderer, {iframeModel} from '@native-html/iframe-plugin';
 // react-native components
 import {useWindowDimensions} from 'react-native';
-import './css/index.css';
+import tagStyles from './tagStyles';
 
 function NoticeDetail({route}) {
   const {width} = useWindowDimensions();
@@ -36,21 +36,23 @@ function NoticeDetail({route}) {
         <Box flex={1}>
           <Text
             mt={8}
-            textAlign={'left'}
+            textAlign="left"
             color="dark.50"
-            fontSize={'lg'}
+            fontSize="lg"
             fontWeight="semibold">
             {title}
           </Text>
-          <Text mt={4} color="dark.100" textAlign={'right'}>
+          <Text mt={4} color="dark.100" textAlign="right">
             3시간 전
           </Text>
         </Box>
         <Box flex={5}>
           <ScrollView>
             <RenderHtml
+              tagStyles={tagStyles}
               renderers={renderers}
               WebView={WebView}
+              // classesStyles={tagStyles}
               customHTMLElementModels={customHTMLElementModels}
               source={source}
               contentWidth={width}

@@ -49,6 +49,7 @@
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="littleband.react-native-async-storage_async-storage.main" />
+    <orderEntry type="module" module-name="littleband.react-native-community_cameraroll.main" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_app.main" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_messaging.main" />
     <orderEntry type="module" module-name="littleband.react-native-safe-area-context.main" />
@@ -56,6 +57,7 @@
     <orderEntry type="module" module-name="littleband.react-native-svg.main" />
     <orderEntry type="module" module-name="littleband.react-native-vector-icons.main" />
     <orderEntry type="module" module-name="littleband.react-native-webview.main" />
+    <orderEntry type="module" module-name="littleband.rn-fetch-blob.main" />
     <orderEntry type="library" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0" level="project" />
     <orderEntry type="library" name="Gradle: com.parse.bolts:bolts-applinks:1.4.0" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.infer.annotation:infer-annotation:0.11.2" level="project" />

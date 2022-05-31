@@ -27,6 +27,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="littleband.app.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-async-storage_async-storage.main" scope="TEST" />
+    <orderEntry type="module" module-name="littleband.react-native-community_cameraroll.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_app.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_messaging.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-safe-area-context.main" scope="TEST" />
@@ -34,6 +35,7 @@
     <orderEntry type="module" module-name="littleband.react-native-svg.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-vector-icons.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-webview.main" scope="TEST" />
+    <orderEntry type="module" module-name="littleband.rn-fetch-blob.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.parse.bolts:bolts-tasks:1.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.parse.bolts:bolts-applinks:1.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.infer.annotation:infer-annotation:0.11.2" level="project" />

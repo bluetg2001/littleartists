@@ -59,7 +59,7 @@ function Notice({navigation}) {
         }>
         <Box>
           <HStack justifyContent="space-between" alignItems="center" mt={36}>
-            <Text fontSize="md" color="dark.50">
+            <Text fontSize="md" color="dark.50" mr={4}>
               {title}
             </Text>
             <ChevronRightIcon />

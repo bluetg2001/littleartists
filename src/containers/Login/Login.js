@@ -122,9 +122,8 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         <TouchableOpacity onPress={() => checkLogInfo(phoneNum, authKey)}>
           <Image
             style={{
-              width: 162,
-              height: 78,
-              resizeMode: 'contain',
+              maxWidth: '50%',
+              resizeMode: 'center',
             }}
             source={require('../../../assets/images/btns/login-btn.png')}
           />
@@ -161,7 +160,6 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
 
           <Image
             flex={5}
-            resizeMode="contain"
             style={{aspectRatio: 290 / 218}}
             source={require('../../../assets/images/characters/with-piano.png')}
           />

@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/littleband.iml" filepath="$PROJECT_DIR$/.idea/modules/littleband.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.@react-native-community_cameraroll.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/littleband.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/littleband.app.main.iml" />
@@ -11,6 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-440982670/littleband.react-native-async-storage_async-storage.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1473895173/littleband.react-native-community_cameraroll.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/850216460/littleband.react-native-firebase_app.main.iml" />
@@ -39,6 +47,10 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-470571492/littleband.react-native-webview.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.iml" filepath="$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-214024618/littleband.rn-fetch-blob.unitTest.iml" />
     </modules>
   </component>
 </project>
