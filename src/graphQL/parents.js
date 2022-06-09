@@ -31,6 +31,7 @@ export const PARENT_LOGIN = gql`
         tel
         status
         authKey
+        isConsent
         isKeySent
         createdAt
         changedAt
@@ -40,9 +41,27 @@ export const PARENT_LOGIN = gql`
   }
 `;
 
+export const EDIT_PARENT = gql`
+  mutation EditParent($editParentId: ID!, $isConsent: Boolean) {
+    editParent(id: $editParentId, isConsent: $isConsent) {
+      success
+      message
+    }
+  }
+`;
+
 export const SAVE_TOKEN_TO_DATABASE = gql`
   mutation SaveTokenToDatabase($parentId: ID!, $token: String!) {
     saveTokenToDatabase(parentId: $parentId, token: $token) {
+      success
+      message
+    }
+  }
+`;
+
+export const SEND_AUTHKEY = gql`
+  mutation SendAuthKey($phoneNumber: String!) {
+    sendAuthKey(phoneNumber: $phoneNumber) {
       success
       message
     }

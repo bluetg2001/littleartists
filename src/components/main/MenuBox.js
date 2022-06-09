@@ -1,11 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect, useCallback} from 'react';
+import React from 'react';
 // react-native components
 import {Image, TouchableOpacity} from 'react-native';
 // native-base
 import {Box, Center, Text, AspectRatio} from 'native-base';
-// async storage
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function MenuBox(props) {
   const {
@@ -52,17 +50,16 @@ function MenuBox(props) {
 
             elevation: 5,
           }}>
-          <Center flex={2} display="flex" flexDirection="row">
-            <Center flex={1}>
-              <Center flex={1}>
-                <Image
-                  style={{aspectRatio: 0.4, resizeMode: 'center'}}
-                  source={img}
-                />
-              </Center>
-            </Center>
-          </Center>
           <Center flex={1}>
+            <Image
+              style={{
+                flex: 1,
+                aspectRatio: 85 / 85,
+                maxHeight: '50%',
+                resizeMode: 'contain',
+              }}
+              source={img}
+            />
             <Text color="dark.50">{title}</Text>
           </Center>
         </Box>

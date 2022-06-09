@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react';
-// react native
-import {Alert} from 'react-native';
 // native-base
 import {NativeBaseProvider, View} from 'native-base';
 import theme from './src/utils/theme';

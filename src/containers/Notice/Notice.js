@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect} from 'react';
 // native-base
 import {
@@ -10,14 +9,16 @@ import {
   HStack,
   ScrollView,
   ChevronRightIcon,
+  Divider,
 } from 'native-base';
 // react-native components
-import {Image, TouchableOpacity} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 // graphql stuff
 import {HAKWON_BOARDS} from '../../graphQL/boards';
 import {useQuery} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// components
 import Loading from '../../components/Loading';
 import Logo from '../../components/Logo';
 
@@ -92,9 +93,18 @@ function Notice({navigation}) {
             <Center>
               <Logo />
             </Center>
-            <Text mt={8} fontSize="lg" color="dark.50">
-              학원 소식
-            </Text>
+            <VStack w="85">
+              <Text
+                mt={8}
+                fontSize="lg"
+                fontWeight="bold"
+                color="primary.500"
+                ml="2"
+                mb="2">
+                학원 소식
+              </Text>
+              <Divider bg="primary.500" thickness="1.5" />
+            </VStack>
             <VStack mt={4}>
               {data.hakwonBoards.map((value, key) => (
                 <LinkToDetailPage

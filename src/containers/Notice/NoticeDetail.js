@@ -7,7 +7,8 @@ import WebView from 'react-native-webview';
 import IframeRenderer, {iframeModel} from '@native-html/iframe-plugin';
 // react-native components
 import {useWindowDimensions} from 'react-native';
-import tagStyles from './tagStyles';
+// web view style
+import {boardsTagsStyles} from '../../utils/boardsTagsStyles';
 
 function NoticeDetail({route}) {
   const {width} = useWindowDimensions();
@@ -49,7 +50,7 @@ function NoticeDetail({route}) {
         <Box flex={5}>
           <ScrollView>
             <RenderHtml
-              tagStyles={tagStyles}
+              tagsStyles={boardsTagsStyles}
               renderers={renderers}
               WebView={WebView}
               // classesStyles={tagStyles}

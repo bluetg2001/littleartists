@@ -29,7 +29,7 @@ function PaymentHistoryDetail({route}) {
                 수납일자
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                {appr_origin_dt === null ? 'null' : appr_origin_dt}
+                {appr_origin_dt === null ? '정보가 없습니다.' : appr_origin_dt}
               </Text>
             </HStack>
           </Box>
@@ -40,7 +40,7 @@ function PaymentHistoryDetail({route}) {
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
                 {appr_price === null
-                  ? 'null'
+                  ? '정보가 없습니다.'
                   : appr_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
               </Text>
             </HStack>
@@ -51,7 +51,7 @@ function PaymentHistoryDetail({route}) {
                 결제방법
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                {appr_pay_type === null ? 'null' : appr_pay_type}
+                {appr_pay_type === null ? '정보가 없습니다.' : appr_pay_type}
               </Text>
             </HStack>
           </Box>
@@ -61,7 +61,7 @@ function PaymentHistoryDetail({route}) {
                 카드사
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                {appr_issuer_cd === null ? 'null' : appr_issuer_cd}
+                {appr_issuer_cd === null ? '정보가 없습니다.' : appr_issuer_cd}
               </Text>
             </HStack>
           </Box>
@@ -71,7 +71,7 @@ function PaymentHistoryDetail({route}) {
                 상태
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                {appr_state === null ? 'null' : appr_state}
+                {appr_state === null ? '정보가 없습니다.' : appr_state}
               </Text>
             </HStack>
           </Box>
@@ -81,7 +81,7 @@ function PaymentHistoryDetail({route}) {
                 납입이력
               </Text>
               <Text flex={3} color="dark.50" fontSize="md">
-                {hakwonId === null ? 'null' : hakwonId}
+                {hakwonId === null ? '정보가 없습니다.' : hakwonId}
               </Text>
             </HStack>
           </Box>

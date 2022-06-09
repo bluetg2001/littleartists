@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect, useRef} from 'react';
 // native-base
@@ -14,7 +15,13 @@ import {
   Alert,
 } from 'native-base';
 // react-native components
-import {Image, Dimensions, TouchableOpacity, Platform} from 'react-native';
+import {
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  Platform,
+  PermissionsAndroid,
+} from 'react-native';
 // carousel
 import Carousel from 'react-native-snap-carousel';
 // graphql stuff
@@ -57,28 +64,45 @@ function GallerDetail({route}) {
     }
   };
 
-  const imageDownload = url => {
-    if (Platform.OS === 'android') {
-      RNFetchBlob.config({
-        addAndroidDownloads: {
-          useDownloadManager: true, // <-- this is the only thing required
-          // Optional, override notification setting (default to true)
-          notification: true,
-          // Optional, but recommended since android DownloadManager will fail when
-          // the url does not contains a file extension, by default the mime type will be text/plain
-          // mime: 'text/plain',
-          description: 'File downloaded by download manager.',
-        },
-      })
-        .fetch('GET', url)
-        .then(resp => {
-          // the path of downloaded file
-          resp.path();
-        });
-    } else {
-      // iOS
-      CameraRoll.save(url);
+  async function hasAndroidPermission() {
+    const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
+
+    const hasPermission = await PermissionsAndroid.check(permission);
+    if (hasPermission) {
+      return true;
     }
+
+    const status = await PermissionsAndroid.request(permission);
+    return status === 'granted';
+  }
+
+  const imageDownload = async url => {
+    if (Platform.OS === 'android' && !(await hasAndroidPermission())) {
+      return;
+    }
+    // if (Platform.OS === 'android') {
+    //   RNFetchBlob.config({
+    //     fileCache: true,
+    //     addAndroidDownloads: {
+    //       useDownloadManager: true, // <-- this is the only thing required
+    //       // Optional, override notification setting (default to true)
+    //       notification: true,
+    //       // Optional, but recommended since android DownloadManager will fail when
+    //       // the url does not contains a file extension, by default the mime type will be text/plain
+    //       mime: 'image/png',
+    //       mediaScannable: true,
+    //       description: 'File downloaded by download manager.',
+    //     },
+    //   })
+    //     .fetch('GET', url)
+    //     .then(resp => {
+    //       // the path of downloaded file
+    //       resp.path();
+    //     });
+    // } else {
+    // iOS
+    CameraRoll.save(url, {type: 'photo'});
+    // }
   };
 
   useEffect(() => {
@@ -98,7 +122,6 @@ function GallerDetail({route}) {
   }
 
   const RenderItem = ({item, index}) => {
-    console.log(item, 'hi');
     return (
       <AspectRatio
         ratio={{base: 1 / 1}}
@@ -147,8 +170,7 @@ function GallerDetail({route}) {
           />
           <AlertDialog.Header>갤러리 사용법</AlertDialog.Header>
           <AlertDialog.Body>
-            사진을 좌우로 밀어 여러 사진을 감상하고, 원하는 사진을 터치하여
-            저장해보세요.
+            {`사진을 좌우로 밀어 여러 사진을 감상하고, 원하는 사진을 터치하여 저장해보세요. \n(30일이 지난 사진은 자동 삭제됩니다.)`}
           </AlertDialog.Body>
         </AlertDialog.Content>
       </AlertDialog>

@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 // native-base
 import {Center, VStack, View, Box, AspectRatio, Text} from 'native-base';
 // react-native components

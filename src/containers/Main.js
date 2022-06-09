@@ -10,7 +10,11 @@ import {Box, Center, View, Button} from 'native-base';
 import {useFocusEffect} from '@react-navigation/native';
 // graqlQL sutff
 import {useMutation} from '@apollo/client';
-import {SAVE_TOKEN_TO_DATABASE} from '../graphQL/parents';
+import {
+  SAVE_TOKEN_TO_DATABASE,
+  EDIT_PARENT,
+  PARENT_LOGIN,
+} from '../graphQL/parents';
 // components
 import MenuBox from '../components/main/MenuBox';
 // async storage
@@ -22,7 +26,6 @@ function Main({
   setHiddenTab,
   bottomTabIndex,
   setBottomTabIndex,
-  // route,
 }) {
   const [menus, setMenus] = useState([
     {
@@ -51,7 +54,7 @@ function Main({
     {
       index: 4,
       title: '소개',
-      img: require('../../assets/images/logos/main-littleband-logo.png'),
+      img: require('../../assets/images/logos/littleband-border-logo.png'),
       link: 'BrandIntro',
     },
     {
@@ -65,30 +68,57 @@ function Main({
   const [parentId, setParentId] = useState(null);
   const [hakwonId, setHakwonId] = useState(null);
 
-  // const parentId = route.params.parentId;
-  // const hakwonId = route.params.hakwonId;
-
   const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
+  const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
+  const [editParent] = useMutation(EDIT_PARENT);
 
+  // functions
   const removeUserDataAndLogout = async () => {
     try {
-      await AsyncStorage.removeItem('userData');
+      await AsyncStorage.removeItem('phoneNum');
+      await AsyncStorage.removeItem('authKey');
       await AsyncStorage.removeItem('parentId');
       await AsyncStorage.removeItem('hakwonId');
+      await AsyncStorage.removeItem('consent');
       navigation.navigate('Login');
     } catch (e) {
       console.log('로그아웃에 실패했습니다.');
     }
   };
 
-  const getParentIdAndHakwonId = async () => {
+  const getParentIdAndHakwonId = useCallback(async () => {
     try {
       setParentId(await AsyncStorage.getItem('parentId'));
       setHakwonId(await AsyncStorage.getItem('hakwonId'));
     } catch (e) {
       console.log('read error');
     }
-  };
+  }, []);
+
+  const checkConsentInfo = useCallback(async () => {
+    // const isConsent = await AsyncStorage.getItem('isConsent');
+    const isConsent = await AsyncStorage.getItem('consent');
+    console.log(isConsent);
+    if (isConsent === 'null') {
+      parentLogin(
+        {
+          variables: {
+            phone: await AsyncStorage.getItem('phoneNum'),
+            authKey: await AsyncStorage.getItem('authKey'),
+          },
+        }.then(res => {
+          if (res.data) {
+            const {success, message} = res.data.parentLogin;
+            console.log(message, 'hihi');
+          } else {
+            console.log('네트워크를 확인하세요.');
+          }
+        }),
+      );
+    }
+  }, [parentLogin]);
+
+  // useEffects
 
   useFocusEffect(
     useCallback(() => {
@@ -122,7 +152,35 @@ function Main({
         },
       });
     });
-  }, [hakwonId, parentId, saveTokenToDatabase]);
+  }, [getParentIdAndHakwonId, hakwonId, parentId, saveTokenToDatabase]);
+
+  useEffect(() => {
+    checkConsentInfo();
+  }, [checkConsentInfo]);
+
+  // useEffect(() => {
+  //   // 동의 항목 수정
+
+  //   if (isConsent !== undefined || null) {
+  //     editParent({
+  //       variables: {
+  //         editParentId: parentId,
+  //         isConsent: isConsent,
+  //       },
+  //     }).then(res => {
+  //       if (res.data) {
+  //         const {success, message} = res.data.editParent;
+  //         if (success) {
+  //           console.log(success, message, '수정 성공!');
+  //         } else {
+  //           console.log('동의 항목 수정에 실패하였습니다. DB를 확인해주세요.');
+  //         }
+  //       } else {
+  //         console.log('네트워크를 확인하세요.');
+  //       }
+  //     });
+  //   }
+  // }, [editParent, isConsent, parentId]);
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>
@@ -132,7 +190,7 @@ function Main({
             style={{width: 127, height: 62}}
             source={require('../../assets/images/logos/littleband-logo.png')}
           />
-          {/* <Box style={{position: 'absolute', right: 0}}> */}
+
           <Button
             variant="outline"
             size="xs"
@@ -143,7 +201,6 @@ function Main({
             }}>
             로그아웃
           </Button>
-          {/* </Box> */}
         </Center>
       </Box>
       <Box flex={5}>

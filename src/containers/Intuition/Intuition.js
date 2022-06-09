@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect} from 'react';
 // native-base
 import {
@@ -9,9 +8,8 @@ import {
   ScrollView,
   Select,
   View,
+  Divider,
 } from 'native-base';
-// react-native components
-import {Image} from 'react-native';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // graphQL stuff
@@ -75,23 +73,33 @@ function Intuition({navigation}) {
               <Logo />
             </Center>
             <VStack>
-              <HStack mt="16" space="4">
-                <Text
-                  onPress={() => setPageSwitch(true)}
-                  ml="2"
-                  fontSize="lg"
-                  fontWeight="bold"
-                  color={pageSwitch ? 'primary.500' : 'dark.100'}>
-                  교육비
-                </Text>
-
-                <Text
-                  onPress={() => setPageSwitch(false)}
-                  fontSize="lg"
-                  fontWeight="bold"
-                  color={pageSwitch ? 'dark.100' : 'primary.500'}>
-                  납입이력
-                </Text>
+              <HStack mt="16" space="6">
+                <VStack>
+                  <Text
+                    onPress={() => setPageSwitch(true)}
+                    fontSize="lg"
+                    fontWeight="bold"
+                    color={pageSwitch ? 'primary.500' : 'dark.100'}>
+                    교육비
+                  </Text>
+                  <Divider
+                    bg={pageSwitch ? 'primary.500' : 'white'}
+                    thickness="1.5"
+                  />
+                </VStack>
+                <VStack>
+                  <Text
+                    onPress={() => setPageSwitch(false)}
+                    fontSize="lg"
+                    fontWeight="bold"
+                    color={pageSwitch ? 'dark.100' : 'primary.500'}>
+                    납입이력
+                  </Text>
+                  <Divider
+                    bg={pageSwitch ? 'white' : 'primary.500'}
+                    thickness="1.5"
+                  />
+                </VStack>
               </HStack>
               <HStack mt={4} justifyContent="space-between" alignItems="center">
                 <Text fontSize="md">이름</Text>
@@ -105,7 +113,6 @@ function Intuition({navigation}) {
                   _selectedItem={{
                     bg: 'primary.500',
                   }}
-                  // mt={1}
                   // 선택하는 벨류값에 대해서 변화 관리
                   onValueChange={itemValue => {
                     setSelectStudent(itemValue);

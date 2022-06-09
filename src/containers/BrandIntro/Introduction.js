@@ -22,7 +22,6 @@ function Introduction() {
         />
         <Box
           mt="8"
-          shadow="9"
           width={'100%'}
           borderRadius={'3xl'}
           bgColor="primary.500"
@@ -66,13 +65,20 @@ function Introduction() {
         source={require('../../../assets/images/backgrounds/brand-intro-deco-background.png')}
       />
       <Box mt={36}>
-        <Text fontSize={'md'} color={'dark.100'} mb={32}>
-          {` 어린음악대만의 디지털 콘텐츠를 대폭 강화하여\n 언제 어디서나 비대면 수업이 가능합니다. \n 체계적인 레슨과 관리, 전문교구와 \n 통합형 피아노레슨 프로그램의 도입으로 \n 최상의 교육서비스를 제공합니다. `}
+        <Text
+          letterSpacing="md"
+          lineHeight="xl"
+          fontSize="md"
+          color="dark.100"
+          mb={16}
+          position="relative"
+          zIndex="1">
+          {` 어린음악대만의 디지털 콘텐츠를 대폭 강화하여\n 언제 어디서나 비대면 수업이 가능합니다. \n 체계적인 레슨과 관리, 전문교구와 \n 통합형 피아노레슨 프로그램의 \n 도입으로 최상의 교육서비스를 \n 제공합니다. `}
         </Text>
         <Box
           alignItems="flex-end"
           position={'absolute'}
-          style={{right: 0, top: 30}}>
+          style={{right: 0, top: 30, zIndex: -1}}>
           <Image
             source={require('../../../assets/images/characters/half-rest.png')}
             style={{

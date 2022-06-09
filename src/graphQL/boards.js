@@ -8,6 +8,7 @@ export const HAKWON_BOARDS = gql`
       title
       contents
       createdAt
+      openToApp
     }
   }
 `;

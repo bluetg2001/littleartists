@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // @react-native-community/cameraroll
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
+// @react-native-community/checkbox
+import com.reactnativecommunity.checkbox.ReactCheckBoxPackage;
 // @react-native-firebase/app
 import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 // @react-native-firebase/messaging
@@ -78,6 +80,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
       new CameraRollPackage(),
+      new ReactCheckBoxPackage(),
       new ReactNativeFirebaseAppPackage(),
       new ReactNativeFirebaseMessagingPackage(),
       new SafeAreaContextPackage(),

@@ -12,7 +12,10 @@ import {
   Input,
   Spinner,
   Heading,
+  Button,
 } from 'native-base';
+// native-base checkbox는 v3 버전 기준, 하자가 있음 -> react-native의 checkbox 사용
+import CheckBox from '@react-native-community/checkbox';
 // react-native components
 import {
   Image,
@@ -23,7 +26,7 @@ import {
 // react-navigation
 import {useFocusEffect} from '@react-navigation/native';
 // graphQL stuff
-import {PARENT_LOGIN} from '../../graphQL/parents';
+import {PARENT_LOGIN, SEND_AUTHKEY} from '../../graphQL/parents';
 import {useMutation} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -33,21 +36,54 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [resend, setResend] = useState(false);
   const [phoneNum, setPhoneNum] = useState('');
   const [authKey, setAuthKey] = useState('');
+  const [sendAuthKeyInfoMessage, setSendAuthKeyInfoMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   // useMutation
   const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
+  const [sendAuthKey] = useMutation(SEND_AUTHKEY);
 
   // Async Storage
-  const storeData = async (_phoneNum, _authKey, _parentId, _hakwonId) => {
-    try {
-      const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
-      await AsyncStorage.setItem('userData', jsonValue);
-      await AsyncStorage.setItem('parentId', _parentId);
-      await AsyncStorage.setItem('hakwonId', _hakwonId);
-    } catch (e) {
-      console.log('로컬 스토로지 저장 실패.');
-    }
+  const storeData = useCallback(
+    async (_phoneNum, _authKey, _parentId, _hakwonId, _isConsent) => {
+      try {
+        // const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
+        console.log(_isConsent, 'hihi');
+        await AsyncStorage.setItem('phoneNum', _phoneNum);
+        await AsyncStorage.setItem('authKey', _authKey);
+        await AsyncStorage.setItem('parentId', _parentId);
+        await AsyncStorage.setItem('hakwonId', _hakwonId);
+
+        // storage에는 null값은 받지 않아 string값 null을 저장시킴
+        if (_isConsent === null) {
+          await AsyncStorage.setItem('consent', 'null111');
+        }
+      } catch (e) {
+        console.log('로컬 스토로지 저장 실패.');
+      }
+    },
+    [],
+  );
+
+  const sendAuthKeyToParent = _phoneNum => {
+    sendAuthKey({
+      variables: {
+        phoneNumber: _phoneNum,
+      },
+    }).then(res => {
+      if (res.data) {
+        const {success, message} = res.data.sendAuthKey;
+        if (success) {
+          setResend(true);
+          setSendAuthKeyInfoMessage(message);
+        } else {
+          console.log(message);
+          setSendAuthKeyInfoMessage(message);
+        }
+      } else {
+        setSendAuthKeyInfoMessage('네트워크를 확인하세요.');
+      }
+    });
   };
 
   const getData = useCallback(async () => {
@@ -81,7 +117,13 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
-              storeData(phoneNum, authKey, parent.id, parent.hakwonId);
+              storeData(
+                phoneNum,
+                authKey,
+                parent.id,
+                parent.hakwonId,
+                parent.isConsent,
+              );
               navigation.navigate('Main');
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');
@@ -93,7 +135,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         })
         .catch(console.log);
     },
-    [authKey, errorMessage, navigation, parentLogin, phoneNum],
+    [authKey, errorMessage, navigation, parentLogin, phoneNum, storeData],
   );
 
   useFocusEffect(
@@ -122,8 +164,9 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         <TouchableOpacity onPress={() => checkLogInfo(phoneNum, authKey)}>
           <Image
             style={{
-              maxWidth: '50%',
-              resizeMode: 'center',
+              aspectRatio: 178 / 62,
+              maxHeight: '50%',
+              resizeMode: 'contain',
             }}
             source={require('../../../assets/images/btns/login-btn.png')}
           />
@@ -148,11 +191,11 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         <Center flex={2}>
           <Box
             marginTop={8}
-            display={'flex'}
-            flexDirection={'row'}
-            justifyContent={'center'}
-            alignItems={'center'}>
-            <Text fontSize={'md'} color="primary.500" fontWeight={'bold'}>
+            display="flex"
+            flexDirection="row"
+            justifyContent="center"
+            alignItems="center">
+            <Text fontSize="md" color="primary.500" fontWeight="bold">
               국내 최초{' '}
             </Text>
             <Text color="dark.50">두뇌밸런스 음악교육 프랜차이즈</Text>
@@ -173,7 +216,7 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
                 placeholder="학부모 번호 (- 제외)"
                 InputRightElement={
                   <Text
-                    onPress={() => setResend(true)}
+                    onPress={() => sendAuthKeyToParent(phoneNum)}
                     mr={2}
                     fontSize={'xs'}
                     color="primary.500">
@@ -198,8 +241,11 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         </Center>
         <Box flex={2}>
           <VStack flex={1} alignItems="center">
-            <Text textAlign="center" color="error.500" my={4}>
+            <Text textAlign="center" color="error.500" my={2}>
               {errorMessage}
+            </Text>
+            <Text textAlign="center" color="success.500" my={2}>
+              {sendAuthKeyInfoMessage}
             </Text>
             <LoginButton />
           </VStack>

@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {useState, useCallback, useEffect} from 'react';
 // react-native components
 import {TouchableOpacity} from 'react-native';
@@ -65,21 +64,25 @@ function ProviderAttendance(props) {
           const entireAttendInfo = res.data.getStudentAttendHistory;
           const myAttend = [];
 
-          if (selectYear && selectMonth === '전체') {
+          if (selectYear === '전체' && selectMonth === '전체') {
+            console.log('둘다 전체로 선택', selectYear, selectMonth);
             entireAttendInfo.map((value, key) => myAttend.push(value));
-          } else if (selectYear === '전체') {
+          } else if (selectYear === '전체' && selectMonth !== '전체') {
+            console.log('년도 전체로 선택, ');
             entireAttendInfo.map((value, key) =>
               value.date.split('-')[1] === selectMonth
                 ? myAttend.push(value)
                 : null,
             );
-          } else if (selectMonth === '전체') {
-            entireAttendInfo.map((value, map) =>
-              value.data.split('-')[0] === selectYear
+          } else if (selectMonth === '전체' && selectYear !== '전체') {
+            console.log('월은 전체로 선택', selectYear, selectMonth);
+            entireAttendInfo.map((value, key) =>
+              value.date.split('-')[0] === selectYear
                 ? myAttend.push(value)
                 : null,
             );
           } else {
+            console.log('둘다 전체로 선택 안함', selectYear, selectMonth);
             entireAttendInfo.map((value, key) =>
               value.date.split('-')[0] === selectYear &&
               value.date.split('-')[1] === selectMonth
@@ -135,11 +138,9 @@ function ProviderAttendance(props) {
           width="95%">
           {/* 학생 선택 */}
           <Select
-            selectedValue={students[0].id}
-            // placeholder="이름 입력"
+            selectedValue={selectStudent}
             minWidth="29%"
             bgColor="white"
-            // accessibilityLabel="김태균"
             _selectedItem={{
               bg: 'primary.500',
               endIcon: <CheckIcon size="4" />,
@@ -174,7 +175,7 @@ function ProviderAttendance(props) {
             selectedValue={selectMonth}
             minWidth="27%"
             bgColor="white"
-            accessibilityLabel="김태균"
+            // accessibilityLabel="김태균"
             placeholder="월 입력"
             _selectedItem={{
               bgColor: 'primary.500',
