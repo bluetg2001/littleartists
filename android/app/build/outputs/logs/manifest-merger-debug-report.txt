@@ -15,6 +15,7 @@ MERGED from [:react-native-firebase_messaging] /Users/gimtaegyun/Desktop/Project
 MERGED from [:react-native-firebase_app] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-27:12
 MERGED from [:react-native-safe-area-context] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-splash-screen] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-svg] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-webview] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
@@ -270,6 +271,8 @@ MERGED from [:react-native-safe-area-context] /Users/gimtaegyun/Desktop/Project/
 MERGED from [:react-native-safe-area-context] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-splash-screen] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-splash-screen] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/gimtaegyun/Desktop/Project/littleband/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41

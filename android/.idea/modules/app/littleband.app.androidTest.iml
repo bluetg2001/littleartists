@@ -33,10 +33,12 @@
     <orderEntry type="module" module-name="littleband.app.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-async-storage_async-storage.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-community_cameraroll.main" scope="TEST" />
+    <orderEntry type="module" module-name="littleband.react-native-community_checkbox.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_app.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-firebase_messaging.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-safe-area-context.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-screens.main" scope="TEST" />
+    <orderEntry type="module" module-name="littleband.react-native-splash-screen.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-svg.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-vector-icons.main" scope="TEST" />
     <orderEntry type="module" module-name="littleband.react-native-webview.main" scope="TEST" />
@@ -99,6 +101,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.fresco:nativeimagetranscoder:2.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.fresco:imagepipeline-okhttp3:2.0.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.soloader:soloader:0.9.0@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: androidx.constraintlayout:constraintlayout:2.1.4@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.webkit:android-jsc:r245459@aar" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="littleband.app.main" />

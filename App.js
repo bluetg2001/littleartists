@@ -10,6 +10,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {ApolloProvider, ApolloClient, InMemoryCache, gql} from '@apollo/client';
 // firebase messaging
 import messaging from '@react-native-firebase/messaging';
+import SplashScreen from 'react-native-splash-screen';
 
 export const typeDefs = gql`
   extend type Query {
@@ -42,6 +43,16 @@ const App = () => {
 
     // return unsubscribe;
   }, []);
+
+  useEffect(() => {
+    try {
+      setTimeout(() => {
+        SplashScreen.hide();
+      }, 2000); //스플래시 활성화 시간 2초
+    } catch (e) {
+      console.log(e.message);
+    }
+  });
 
   //apollo
   const client = new ApolloClient({
