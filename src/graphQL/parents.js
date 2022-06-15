@@ -32,6 +32,7 @@ export const PARENT_LOGIN = gql`
         status
         authKey
         isConsent
+        isMarketing
         isKeySent
         createdAt
         changedAt

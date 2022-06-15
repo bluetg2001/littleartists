@@ -15,6 +15,7 @@ import Intuition from '../containers/Intuition/Intuition';
 import PianoGoGo from '../containers/PianoGoGo/PianoGoGo';
 import PianoGoGoDetail from '../containers/PianoGoGo/PianoGoGoDetail';
 import PaymentHistoryDetail from '../containers/Intuition/PaymentHistoryDetail';
+import ProviderMain from '../components/main/ProviderMain';
 
 const StackNavi = createNativeStackNavigator();
 
@@ -36,32 +37,18 @@ function Stack(props) {
         {/* <StackNavi.Screen name="Login" component={Login} /> */}
         <StackNavi.Screen
           name="Login"
+          component={Login}
           options={{
             headerShown: false,
-          }}>
-          {props => (
-            <Login
-              {...props}
-              hiddenTab={hiddenTab}
-              setHiddenTab={setHiddenTab}
-            />
-          )}
-        </StackNavi.Screen>
+          }}
+        />
         <StackNavi.Screen
           name="Main"
+          component={Main}
           options={{
             headerShown: false,
-          }}>
-          {props => (
-            <Main
-              {...props}
-              hiddenTab={hiddenTab}
-              setHiddenTab={setHiddenTab}
-              bottomTabIndex={bottomTabIndex}
-              setBottomTabIndex={setBottomTabIndex}
-            />
-          )}
-        </StackNavi.Screen>
+          }}
+        />
         {/* <StackNavi.Screen
           name="Attendance"
           component={Attendance}
@@ -70,11 +57,11 @@ function Stack(props) {
         <StackNavi.Screen name="Attendance" options={{title: '출석'}}>
           {props => (
             <Attendance
-              {...props}
-              hiddenTab={hiddenTab}
-              setHiddenTab={setHiddenTab}
-              bottomTabIndex={bottomTabIndex}
-              setBottomTabIndex={setBottomTabIndex}
+            // {...props}
+            // hiddenTab={hiddenTab}
+            // setHiddenTab={setHiddenTab}
+            // bottomTabIndex={bottomTabIndex}
+            // setBottomTabIndex={setBottomTabIndex}
             />
           )}
         </StackNavi.Screen>

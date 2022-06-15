@@ -4,18 +4,12 @@ import React from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 // native-base
 import {Box, Center, Text, AspectRatio} from 'native-base';
+import {useNavigation} from '@react-navigation/native';
 
 function MenuBox(props) {
-  const {
-    index,
-    img,
-    title,
-    link,
-    navigation,
-    setBottomTabIndex,
-    parentId,
-    hakwonId,
-  } = props;
+  const {img, title, link, parentId, hakwonId} = props;
+
+  const navigation = useNavigation();
 
   return (
     <AspectRatio ratio={{base: 1 / 1}} width="50%">
@@ -25,7 +19,7 @@ function MenuBox(props) {
             hakwonId: hakwonId,
             parentId: parentId,
           });
-          setBottomTabIndex(index);
+          // setBottomTabIndex(index);
         }}>
         <Box
           flex={1}

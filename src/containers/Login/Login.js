@@ -44,26 +44,26 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [sendAuthKey] = useMutation(SEND_AUTHKEY);
 
   // Async Storage
-  const storeData = useCallback(
-    async (_phoneNum, _authKey, _parentId, _hakwonId, _isConsent) => {
-      try {
-        // const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
-        console.log(_isConsent, 'hihi');
-        await AsyncStorage.setItem('phoneNum', _phoneNum);
-        await AsyncStorage.setItem('authKey', _authKey);
-        await AsyncStorage.setItem('parentId', _parentId);
-        await AsyncStorage.setItem('hakwonId', _hakwonId);
-
-        // storage에는 null값은 받지 않아 string값 null을 저장시킴
-        if (_isConsent === null) {
-          await AsyncStorage.setItem('consent', 'null111');
-        }
-      } catch (e) {
-        console.log('로컬 스토로지 저장 실패.');
-      }
-    },
-    [],
-  );
+  const storeData = async (
+    _phoneNum,
+    _authKey,
+    _hakwonId,
+    _parentId,
+    _isConsent,
+    _isMarketing,
+  ) => {
+    try {
+      const jsonValue = JSON.stringify({phone: _phoneNum, authKey: _authKey});
+      await AsyncStorage.setItem('userData', jsonValue);
+      await AsyncStorage.setItem('hakwonId', _hakwonId);
+      await AsyncStorage.setItem('parentId', _parentId);
+      await AsyncStorage.setItem('isConsent', _isConsent);
+      await AsyncStorage.setItem('isMarketing', _isMarketing);
+      console.log(`저장 성공! jsonValue : ${jsonValue}`);
+    } catch (e) {
+      console.log('저장이 안됐습니다.');
+    }
+  };
 
   const sendAuthKeyToParent = _phoneNum => {
     sendAuthKey({
@@ -91,12 +91,11 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
       const value = await AsyncStorage.getItem('userData');
       if (value !== null) {
         const viewValue = JSON.parse(value);
-        // 휴대폰과 인증키 스토로지에 저장❗️
         setPhoneNum(viewValue.phone);
         setAuthKey(viewValue.authKey);
         checkLogInfo(phoneNum, authKey);
       } else {
-        console.log('else로 빠졌습니다.');
+        console.log('userData 정보가 없어 자동 로그인이 비활성화됩니다.');
       }
     } catch (e) {
       console.log('데이터 불러오는 것에 실패했습니다.');
@@ -114,15 +113,17 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         },
       })
         .then(res => {
+          console.log(res.data);
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
               storeData(
                 phoneNum,
                 authKey,
-                parent.id,
                 parent.hakwonId,
-                parent.isConsent,
+                parent.id,
+                parent.isConsent.toString(),
+                parent.isMarketing.toString(),
               );
               navigation.navigate('Main');
             } else {
@@ -135,14 +136,14 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
         })
         .catch(console.log);
     },
-    [authKey, errorMessage, navigation, parentLogin, phoneNum, storeData],
+    [authKey, errorMessage, navigation, parentLogin, phoneNum],
   );
 
-  useFocusEffect(
-    useCallback(() => {
-      setHiddenTab(true);
-    }, [setHiddenTab]),
-  );
+  // useFocusEffect(
+  //   useCallback(() => {
+  //     setHiddenTab(true);
+  //   }, [setHiddenTab]),
+  // );
 
   useEffect(() => {
     getData();
