@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useCallback, useEffect, useContext} from 'react';
 // native-base
 import {
   Box,
@@ -30,8 +30,9 @@ import {PARENT_LOGIN, SEND_AUTHKEY} from '../../graphQL/parents';
 import {useMutation} from '@apollo/client';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import TabContext from '../../utils/TabContext';
 
-function Login({navigation, hiddenTab, setHiddenTab}) {
+function Login({navigation}) {
   // state
   const [resend, setResend] = useState(false);
   const [phoneNum, setPhoneNum] = useState('');
@@ -39,9 +40,15 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
   const [sendAuthKeyInfoMessage, setSendAuthKeyInfoMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const {hiddenTab, setHiddenTab} = useContext(TabContext);
+
   // useMutation
   const [parentLogin, {data, loading, error}] = useMutation(PARENT_LOGIN);
   const [sendAuthKey] = useMutation(SEND_AUTHKEY);
+
+  const onChangePhoneNum = useCallback(value => {
+    setPhoneNum(value);
+  }, []);
 
   // Async Storage
   const storeData = async (
@@ -117,15 +124,18 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
+              console.log(parent.isConsent, 'Login에서 받아오는 isConsent');
               storeData(
                 phoneNum,
                 authKey,
                 parent.hakwonId,
                 parent.id,
-                parent.isConsent.toString(),
-                parent.isMarketing.toString(),
+                // parent.isConsent.toString(),
+                // parent.isMarketing.toString(),
               );
-              navigation.navigate('Main');
+              navigation.navigate('Main', {
+                isConsent: parent.isConsent,
+              });
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');
               console.log(errorMessage);
@@ -139,16 +149,17 @@ function Login({navigation, hiddenTab, setHiddenTab}) {
     [authKey, errorMessage, navigation, parentLogin, phoneNum],
   );
 
-  // useFocusEffect(
-  //   useCallback(() => {
-  //     setHiddenTab(true);
-  //   }, [setHiddenTab]),
-  // );
+  useFocusEffect(
+    useCallback(() => {
+      setHiddenTab(true);
+    }, [setHiddenTab]),
+  );
 
   useEffect(() => {
+    setHiddenTab(true);
     getData();
     return () => {};
-  }, [getData, authKey, phoneNum]);
+  }, [getData, authKey, phoneNum, setHiddenTab]);
 
   const LoginButton = () => {
     if (loading) {

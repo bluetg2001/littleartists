@@ -19,8 +19,7 @@ import ProviderMain from '../components/main/ProviderMain';
 
 const StackNavi = createNativeStackNavigator();
 
-function Stack(props) {
-  const {hiddenTab, setHiddenTab, bottomTabIndex, setBottomTabIndex} = props;
+function Stack() {
   return (
     <>
       <StackNavi.Navigator
@@ -34,7 +33,6 @@ function Stack(props) {
             fontWeight: 'bold',
           },
         }}>
-        {/* <StackNavi.Screen name="Login" component={Login} /> */}
         <StackNavi.Screen
           name="Login"
           component={Login}
@@ -49,22 +47,12 @@ function Stack(props) {
             headerShown: false,
           }}
         />
-        {/* <StackNavi.Screen
+        <StackNavi.Screen
           name="Attendance"
-          component={Attendance}
           options={{title: '출석'}}
-        /> */}
-        <StackNavi.Screen name="Attendance" options={{title: '출석'}}>
-          {props => (
-            <Attendance
-            // {...props}
-            // hiddenTab={hiddenTab}
-            // setHiddenTab={setHiddenTab}
-            // bottomTabIndex={bottomTabIndex}
-            // setBottomTabIndex={setBottomTabIndex}
-            />
-          )}
-        </StackNavi.Screen>
+          component={Attendance}
+        />
+
         <StackNavi.Screen
           name="Notice"
           component={Notice}

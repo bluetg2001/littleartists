@@ -1,18 +1,23 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useCallback, useContext} from 'react';
+import {useFocusEffect} from '@react-navigation/native';
 import ProviderMain from '../components/main/ProviderMain';
-// async storage
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// context
+import TabContext from '../utils/TabContext';
 
-function Main() {
-  const [isConsent, setIsConsent] = useState(null);
+function Main({route}) {
+  const isConsent = route.params.isConsent ?? true;
 
-  const getConsentsData = async () => {
-    setIsConsent(await AsyncStorage.getItem('isConsent'));
-  };
+  const {hiddenTab, setHiddenTab} = useContext(TabContext);
+  console.log(isConsent, '메인에서 넘어오는 isConsent');
 
-  useEffect(() => {
-    getConsentsData();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      setHiddenTab(true);
+      return () => {
+        setHiddenTab(false);
+      };
+    }, [setHiddenTab]),
+  );
 
   return <ProviderMain isConsent={isConsent} />;
 }

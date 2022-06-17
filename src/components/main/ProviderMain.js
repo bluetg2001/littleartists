@@ -1,35 +1,26 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState, useCallback, useEffect, useContext} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 // rnfirebase
 import messaging from '@react-native-firebase/messaging';
 // react-native components
 import {Image, FlatList} from 'react-native';
 // native-base
-import {Box, Center, View, Button, Text} from 'native-base';
+import {Box, Center, View, Button} from 'native-base';
 // react-navigation
 import {useNavigation} from '@react-navigation/native';
 // graqlQL sutff
 import {useMutation} from '@apollo/client';
-import {
-  SAVE_TOKEN_TO_DATABASE,
-  EDIT_PARENT,
-  PARENT_LOGIN,
-  //   props,
-} from '../../graphQL/parents';
+import {SAVE_TOKEN_TO_DATABASE} from '../../graphQL/parents';
 // components
 import MenuBox from './MenuBox';
-
+import ConsentModal from './ConsentAlert';
 // async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import context from '../../utils/context';
 
-function ProviderMain({
-  hiddenTab,
-  setHiddenTab,
-  bottomTabIndex,
-  setBottomTabIndex,
-  //   props,
-}) {
+function ProviderMain(props) {
+  const {isConsent} = props;
+  console.log(isConsent, 'ProviderMain에서 넘어오는 isConsent');
+
   const [menus, setMenus] = useState([
     {
       title: '출석',
@@ -64,7 +55,6 @@ function ProviderMain({
   ]);
 
   const navigation = useNavigation();
-  const stateContext = useContext(context);
 
   //   const isConsent = props;
   const [parentId, setParentId] = useState(null);
@@ -93,15 +83,6 @@ function ProviderMain({
       console.log('read error');
     }
   }, []);
-
-  // useEffects
-
-  //   useFocusEffect(
-  //     useCallback(() => {
-  //       setHiddenTab(true);
-  //       return () => setHiddenTab(false);
-  //     }, [setHiddenTab]),
-  //   );
 
   useEffect(() => {
     // 스토로지 저장
@@ -132,6 +113,7 @@ function ProviderMain({
 
   return (
     <View flex={1} bgColor="gray.100" alignItems={'center'}>
+      <ConsentModal isConsent={isConsent} parentId={parentId} />
       <Box flex={1} width="90%" safeArea>
         <Center flex={1}>
           <Image

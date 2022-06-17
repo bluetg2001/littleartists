@@ -43,8 +43,16 @@ export const PARENT_LOGIN = gql`
 `;
 
 export const EDIT_PARENT = gql`
-  mutation EditParent($editParentId: ID!, $isConsent: Boolean) {
-    editParent(id: $editParentId, isConsent: $isConsent) {
+  mutation EditParent(
+    $editParentId: ID!
+    $isConsent: Boolean
+    $isMarketing: Boolean
+  ) {
+    editParent(
+      id: $editParentId
+      isConsent: $isConsent
+      isMarketing: $isMarketing
+    ) {
       success
       message
     }

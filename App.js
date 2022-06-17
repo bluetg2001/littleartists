@@ -1,4 +1,4 @@
-import React, {useState, useEffect, createContext, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 // native-base
 import {NativeBaseProvider, View} from 'native-base';
 import theme from './src/utils/theme';
@@ -11,7 +11,8 @@ import {ApolloProvider, ApolloClient, InMemoryCache, gql} from '@apollo/client';
 // firebase messaging
 import messaging from '@react-native-firebase/messaging';
 import SplashScreen from 'react-native-splash-screen';
-import context from './src/utils/context';
+// context
+import TabContext from './src/utils/TabContext';
 
 export const typeDefs = gql`
   extend type Query {
@@ -22,10 +23,8 @@ export const typeDefs = gql`
 
 const App = () => {
   // 로그인, 메인 부분 하단탭 숨기기 위한 state
-  const StateContext = createContext();
-  const stateContext = useContext(context);
-  const [hiddenTab, setHiddenTab] = useState(stateContext.hiddenTab);
-  // const [bottomTabIndex, setBottomTabIndex] = useState(null);
+  const [hiddenTab, setHiddenTab] = useState(true);
+  const [TabIndex, setTabIndex] = useState(null);
 
   // fcm 승인 함수
   async function requestUserPermission() {
@@ -48,7 +47,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    context._currentValue.hiddenTab === true;
     try {
       setTimeout(() => {
         SplashScreen.hide();
@@ -83,28 +81,19 @@ const App = () => {
 
   return (
     <ApolloProvider client={client}>
-      <StateContext.Provider value={context}>
+      <TabContext.Provider
+        value={{hiddenTab, setHiddenTab, TabIndex, setTabIndex}}>
         <NavigationContainer>
           <NativeBaseProvider theme={theme}>
-            {console.log(context._currentValue.hiddenTab, '야 이거 나오냐')}
             <View flex={1}>
               <View flex={6}>
-                <Stack
-                // hiddenTab={hiddenTab}
-                // setHiddenTab={setHiddenTab}
-                // bottomTabIndex={bottomTabIndex}
-                // setBottomTabIndex={setBottomTabIndex}
-                />
+                <Stack />
               </View>
-              <BottomTabNavigation
-              // hiddenTab={hiddenTab}
-              // bottomTabIndex={bottomTabIndex}
-              // setBottomTabIndex={setBottomTabIndex}
-              />
+              {hiddenTab === true ? <></> : <BottomTabNavigation />}
             </View>
           </NativeBaseProvider>
         </NavigationContainer>
-      </StateContext.Provider>
+      </TabContext.Provider>
     </ApolloProvider>
   );
 };
