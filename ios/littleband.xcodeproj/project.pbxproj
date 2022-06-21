@@ -12,6 +12,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3167637B7225057D27002B20 /* libPods-littleband-littlebandTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB257013EAA4703E01BF401 /* libPods-littleband-littlebandTests.a */; };
+		42A9F5212860005D002A8F50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		42A9F52228603A6A002A8F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		42A9F52428603C5C002A8F50 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A9F52328603C5C002A8F50 /* Launch Screen.storyboard */; };
+		42B98B1B2861636400888CD0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A9F52328603C5C002A8F50 /* Launch Screen.storyboard */; };
 		42FB1C57283B21D500FA9F5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FB1C56283B21D500FA9F5C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +43,7 @@
 		26EA5EC3E878495B8C311902 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		29BA5B92B37E4BF1A11354EA /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		3421A51B67F43D9336D7D318 /* libPods-littleband.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-littleband.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A9F52328603C5C002A8F50 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		42C21A99282BE080001A39C4 /* littleband.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = littleband.entitlements; path = littleband/littleband.entitlements; sourceTree = "<group>"; };
 		42FB1C56283B21D500FA9F5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		42FB1C58283B7EDC00FA9F5C /* littleband */ = {isa = PBXFileReference; lastKnownFileType = folder; path = littleband; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				42A9F52328603C5C002A8F50 /* Launch Screen.storyboard */,
 			);
 			name = littleband;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B98B1B2861636400888CD0 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A9F52228603A6A002A8F50 /* LaunchScreen.storyboard in Resources */,
 				42FB1C57283B21D500FA9F5C /* GoogleService-Info.plist in Resources */,
+				42A9F52428603C5C002A8F50 /* Launch Screen.storyboard in Resources */,
+				42A9F5212860005D002A8F50 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

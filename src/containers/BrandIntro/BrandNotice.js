@@ -7,6 +7,7 @@ import {
   ScrollView,
   ChevronRightIcon,
   View,
+  VStack,
 } from 'native-base';
 // react-native components
 import {TouchableOpacity} from 'react-native';
@@ -46,9 +47,9 @@ function BrandNotice(props) {
             </Text>
             <ChevronRightIcon />
           </HStack>
-          <Text color="dark.100" fontSize="xs">
+          {/* <Text color="dark.100" fontSize="xs">
             3시간 전
-          </Text>
+          </Text> */}
         </Box>
       </TouchableOpacity>
     );
@@ -72,16 +73,24 @@ function BrandNotice(props) {
     );
 
     return (
-      <ScrollView>
-        <Box mt={36} />
-        {boardLists.map((value, key) => (
-          <LinkToDetailPage
-            key={key}
-            title={value.title}
-            contents={value.contents}
-          />
-        ))}
-      </ScrollView>
+      <>
+        {boardLists.length === 0 ? (
+          <VStack flex={1} mt="36" alignItems="center">
+            <Text>아직 게시물이 게시되지 않았습니다.</Text>
+          </VStack>
+        ) : (
+          <ScrollView>
+            <Box mt={36} />
+            {boardLists.map((value, key) => (
+              <LinkToDetailPage
+                key={key}
+                title={value.title}
+                contents={value.contents}
+              />
+            ))}
+          </ScrollView>
+        )}
+      </>
     );
   }
 }

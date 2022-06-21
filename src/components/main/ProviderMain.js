@@ -5,7 +5,7 @@ import messaging from '@react-native-firebase/messaging';
 // react-native components
 import {Image, FlatList} from 'react-native';
 // native-base
-import {Box, Center, View, Button} from 'native-base';
+import {Box, Center, View, Button, VStack} from 'native-base';
 // react-navigation
 import {useNavigation} from '@react-navigation/native';
 // graqlQL sutff
@@ -19,35 +19,40 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 function ProviderMain(props) {
   const {isConsent} = props;
-  console.log(isConsent, 'ProviderMain에서 넘어오는 isConsent');
 
   const [menus, setMenus] = useState([
     {
+      index: 1,
       title: '출석',
       img: require('../../../assets/images/logos/main-attendance.png'),
       link: 'Attendance',
     },
     {
+      index: 2,
       title: '공지사항',
       img: require('../../../assets/images/logos/main-notice.png'),
       link: 'Notice',
     },
     {
+      index: 6,
       title: 'e피아노고고',
       img: require('../../../assets/images/logos/main-pianogogo.png'),
       link: 'PianoGoGo',
     },
     {
+      index: 5,
       title: '갤러리',
       img: require('../../../assets/images/logos/main-gallery.png'),
       link: 'Gallery',
     },
     {
+      index: 4,
       title: '소개',
       img: require('../../../assets/images/logos/littleband-border-logo.png'),
       link: 'BrandIntro',
     },
     {
+      index: 3,
       title: '교육비',
       img: require('../../../assets/images/logos/main-intuition.png'),
       link: 'Intuition',
@@ -60,7 +65,11 @@ function ProviderMain(props) {
   const [parentId, setParentId] = useState(null);
   const [hakwonId, setHakwonId] = useState(null);
 
-  const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE);
+  const [saveTokenToDatabase] = useMutation(SAVE_TOKEN_TO_DATABASE, {
+    onError: err => {
+      console.log(err);
+    },
+  });
 
   // functions
   const removeUserDataAndLogout = async () => {
@@ -112,7 +121,7 @@ function ProviderMain(props) {
   }, [getParentIdAndHakwonId, hakwonId, parentId, saveTokenToDatabase]);
 
   return (
-    <View flex={1} bgColor="gray.100" alignItems={'center'}>
+    <VStack flex={1} bgColor="gray.100" alignItems="center">
       <ConsentModal isConsent={isConsent} parentId={parentId} />
       <Box flex={1} width="90%" safeArea>
         <Center flex={1}>
@@ -132,11 +141,13 @@ function ProviderMain(props) {
           </Button>
         </Center>
       </Box>
-      <Box flex={5}>
+      <VStack flex={5} width="95%" p={2}>
         <FlatList
           data={menus}
+          itemDimension={120}
           renderItem={({item}) => (
             <MenuBox
+              index={item.index}
               img={item.img}
               title={item.title}
               link={item.link}
@@ -147,8 +158,8 @@ function ProviderMain(props) {
           keyExtractor={(item, index) => index}
           numColumns={2}
         />
-      </Box>
-    </View>
+      </VStack>
+    </VStack>
   );
 }
 

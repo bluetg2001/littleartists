@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 // react-native-components
-import {Image} from 'react-native';
+import {Image, Platform} from 'react-native';
 // native-base
 import {Text, Box, VStack, HStack} from 'native-base';
 
@@ -10,16 +10,30 @@ function Introduction() {
   return (
     <>
       <VStack mt="5" alignItems="center" style={{position: 'relative'}}>
-        <Image
-          style={{
-            width: 125,
-            height: 65,
-            position: 'absolute',
-            zIndex: 2,
-            elevation: 2,
-          }}
-          source={require('../../../assets/images/logos/littleband-border-logo.png')}
-        />
+        {Platform.OS === 'android' ? (
+          <Image
+            style={{
+              width: 125,
+              height: 65,
+              position: 'absolute',
+              // zIndex: 2,
+              elevation: 2,
+            }}
+            source={require('../../../assets/images/logos/littleband-border-logo.png')}
+          />
+        ) : (
+          <Image
+            style={{
+              width: 125,
+              height: 65,
+              position: 'absolute',
+              zIndex: 2,
+              // elevation: 2,
+            }}
+            source={require('../../../assets/images/logos/littleband-border-logo.png')}
+          />
+        )}
+
         <Box
           mt="8"
           width={'100%'}

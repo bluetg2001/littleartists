@@ -35,7 +35,6 @@ function ProviderPianoGoGo(props) {
   }
 
   if (error) {
-    console.log(parentId);
     return (
       <View flex={1}>
         <Text>error...</Text>
@@ -105,7 +104,6 @@ function ProviderPianoGoGo(props) {
               <Divider bg="primary.500" thickness="1.5" />
             </VStack>
             <VStack mt={4}>
-              {console.log(data)}
               {data.studentReportsForParent.map((value, key) => (
                 <LinkToDetailPage
                   key={key}

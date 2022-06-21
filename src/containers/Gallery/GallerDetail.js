@@ -12,7 +12,6 @@ import {
   Text,
   AlertDialog,
   useToast,
-  Alert,
 } from 'native-base';
 // react-native components
 import {
@@ -64,6 +63,11 @@ function GallerDetail({route}) {
     }
   };
 
+  const getExtention = filename => {
+    // To get the file extension
+    return /[.]/.exec(filename) ? /[^.]+$/.exec(filename) : undefined;
+  };
+
   async function hasAndroidPermission() {
     const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
 
@@ -80,29 +84,39 @@ function GallerDetail({route}) {
     if (Platform.OS === 'android' && !(await hasAndroidPermission())) {
       return;
     }
-    // if (Platform.OS === 'android') {
-    //   RNFetchBlob.config({
-    //     fileCache: true,
-    //     addAndroidDownloads: {
-    //       useDownloadManager: true, // <-- this is the only thing required
-    //       // Optional, override notification setting (default to true)
-    //       notification: true,
-    //       // Optional, but recommended since android DownloadManager will fail when
-    //       // the url does not contains a file extension, by default the mime type will be text/plain
-    //       mime: 'image/png',
-    //       mediaScannable: true,
-    //       description: 'File downloaded by download manager.',
-    //     },
-    //   })
-    //     .fetch('GET', url)
-    //     .then(resp => {
-    //       // the path of downloaded file
-    //       resp.path();
-    //     });
-    // } else {
-    // iOS
-    CameraRoll.save(url, {type: 'photo'});
-    // }
+    if (Platform.OS === 'android') {
+      const {config, fs} = RNFetchBlob;
+      let PictureDir = fs.dirs.PictureDir;
+      let date = new Date();
+      let ext = getExtention(url);
+
+      RNFetchBlob.config({
+        fileCache: true,
+        addAndroidDownloads: {
+          useDownloadManager: true, // <-- this is the only thing required
+          // Optional, override notification setting (default to true)
+          notification: false,
+          // Optional, but recommended since android DownloadManager will fail when
+          // the url does not contains a file extension, by default the mime type will be text/plain
+          mime: 'image/png',
+          mediaScannable: true,
+          description: 'Image',
+          path:
+            PictureDir +
+            '/image_' +
+            Math.floor(date.getTime() + date.getSeconds() / 2) +
+            ext,
+        },
+      })
+        .fetch('GET', url)
+        .then(resp => {
+          // the path of downloaded file
+          resp.path();
+        });
+    } else {
+      // iOS
+      CameraRoll.save(url, {type: 'photo'});
+    }
   };
 
   useEffect(() => {

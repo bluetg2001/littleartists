@@ -15,7 +15,6 @@ import Intuition from '../containers/Intuition/Intuition';
 import PianoGoGo from '../containers/PianoGoGo/PianoGoGo';
 import PianoGoGoDetail from '../containers/PianoGoGo/PianoGoGoDetail';
 import PaymentHistoryDetail from '../containers/Intuition/PaymentHistoryDetail';
-import ProviderMain from '../components/main/ProviderMain';
 
 const StackNavi = createNativeStackNavigator();
 
@@ -25,6 +24,7 @@ function Stack() {
       <StackNavi.Navigator
         initialRouteName="Login"
         screenOptions={{
+          headerBackTitleVisible: false,
           headerStyle: {
             backgroundColor: '#ffcc43',
           },
@@ -37,15 +37,17 @@ function Stack() {
           name="Login"
           component={Login}
           options={{
+            title: '로그인',
             headerShown: false,
           }}
         />
         <StackNavi.Screen
           name="Main"
-          component={Main}
           options={{
+            title: '',
             headerShown: false,
           }}
+          component={Main}
         />
         <StackNavi.Screen
           name="Attendance"

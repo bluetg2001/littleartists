@@ -40,7 +40,11 @@ function ProviderAttendance(props) {
     },
     //fetchPolicy: 'network-only',
   });
-  const [getStudentAttendHistory] = useMutation(GET_STUDENT_ATTEND_HISTORY);
+  const [getStudentAttendHistory] = useMutation(GET_STUDENT_ATTEND_HISTORY, {
+    onError: err => {
+      console.log(err);
+    },
+  });
 
   // 학부모의 모든 자녀 불러오기
   const students = data ? data.parent.students : null;
@@ -52,7 +56,7 @@ function ProviderAttendance(props) {
   const [AttendInfo, setAttendInfo] = useState([]);
 
   // functions
-  const searchAttendInfo = () => {
+  const searchAttendInfo = useCallback(() => {
     getStudentAttendHistory({
       variables: {
         studentId: selectStudent,
@@ -65,24 +69,24 @@ function ProviderAttendance(props) {
           const myAttend = [];
 
           if (selectYear === '전체' && selectMonth === '전체') {
-            console.log('둘다 전체로 선택', selectYear, selectMonth);
+            // console.log('둘다 전체로 선택', selectYear, selectMonth);
             entireAttendInfo.map((value, key) => myAttend.push(value));
           } else if (selectYear === '전체' && selectMonth !== '전체') {
-            console.log('년도 전체로 선택, ');
+            // console.log('년도 전체로 선택, ');
             entireAttendInfo.map((value, key) =>
               value.date.split('-')[1] === selectMonth
                 ? myAttend.push(value)
                 : null,
             );
           } else if (selectMonth === '전체' && selectYear !== '전체') {
-            console.log('월은 전체로 선택', selectYear, selectMonth);
+            // console.log('월은 전체로 선택', selectYear, selectMonth);
             entireAttendInfo.map((value, key) =>
               value.date.split('-')[0] === selectYear
                 ? myAttend.push(value)
                 : null,
             );
           } else {
-            console.log('둘다 전체로 선택 안함', selectYear, selectMonth);
+            // console.log('모두 전체로 선택 안함', selectYear, selectMonth);
             entireAttendInfo.map((value, key) =>
               value.date.split('-')[0] === selectYear &&
               value.date.split('-')[1] === selectMonth
@@ -97,17 +101,24 @@ function ProviderAttendance(props) {
         }
       })
       .catch(console.log);
-  };
+  }, [
+    getStudentAttendHistory,
+    hakwonId,
+    selectMonth,
+    selectStudent,
+    selectYear,
+  ]);
 
-  const switchReverseSort = useCallback(() => {
-    setIsReverseSort(!isReverseSort);
-  }, [isReverseSort]);
+  const switchReverseSort = () => {
+    setIsReverseSort(() => !isReverseSort);
+  };
 
   useEffect(() => {
     if (data) {
-      setSelectStudent(students[0].id);
+      // setSelectStudent(students[0].id);
+      searchAttendInfo();
     }
-  }, [data, students]);
+  }, [data, searchAttendInfo, students]);
 
   if (loading) {
     return <Loading />;
@@ -130,7 +141,8 @@ function ProviderAttendance(props) {
 
         <HStack
           shadow="1"
-          space="1"
+          space="3"
+          justifyContent="center"
           alignItems="center"
           bgColor="trueGray.100"
           borderRadius="lg"
@@ -138,8 +150,9 @@ function ProviderAttendance(props) {
           width="95%">
           {/* 학생 선택 */}
           <Select
+            placeholder="자녀 선택"
             selectedValue={selectStudent}
-            minWidth="29%"
+            minWidth="35%"
             bgColor="white"
             _selectedItem={{
               bg: 'primary.500',
@@ -173,7 +186,7 @@ function ProviderAttendance(props) {
           {/* 월 입력 */}
           <Select
             selectedValue={selectMonth}
-            minWidth="27%"
+            minWidth="25%"
             bgColor="white"
             // accessibilityLabel="김태균"
             placeholder="월 입력"
@@ -196,13 +209,14 @@ function ProviderAttendance(props) {
             <Select.Item label="11월" value="11" />
             <Select.Item label="12월" value="12" />
           </Select>
-          <Button
+          {/* <Button
+            h="100%"
             size="xs"
             onPress={() => {
               searchAttendInfo();
             }}>
             조회
-          </Button>
+          </Button> */}
         </HStack>
 
         <VStack flex={7} alignItems="center" mt="4">
@@ -212,11 +226,12 @@ function ProviderAttendance(props) {
                 flex={1}
                 justifyContent="center"
                 alignItems="center"
-                space="2">
+                space="2"
+                mb="3">
                 <Text fontSize="lg" color="dark.100">
                   날짜
                 </Text>
-                <TouchableOpacity onPress={() => switchReverseSort()}>
+                <TouchableOpacity onPress={switchReverseSort}>
                   <Icon name="up" size={12} color="#27272a" />
                 </TouchableOpacity>
               </HStack>
@@ -228,7 +243,7 @@ function ProviderAttendance(props) {
               </Text>
             </HStack>
 
-            <Divider my={3} />
+            {/* 등하원 정보 없을 때  */}
             <ScrollView mb={20}>
               {isReverseSort
                 ? AttendInfo.reverse().map((value, key) => (

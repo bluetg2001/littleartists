@@ -48,10 +48,6 @@
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
     },
     {
-        "merged": "com.littleband.app-merged_res-26:/layout_launch_screen.xml.flat",
-        "source": "com.littleband.app-main-28:/layout/launch_screen.xml"
-    },
-    {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxhdpi/ic_launcher_round.png"
     },
@@ -76,6 +72,14 @@
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "com.littleband.app-merged_res-26:/drawable-hdpi_launch_screen.png.flat",
+        "source": "com.littleband.app-main-28:/drawable-hdpi/launch_screen.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/drawable-xhdpi_launch_screen.png.flat",
+        "source": "com.littleband.app-main-28:/drawable-xhdpi/launch_screen.png"
+    },
+    {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-hdpi/ic_launcher_round.png"
     },
@@ -90,6 +94,10 @@
     {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_logos_maingallery.png.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/drawable-mdpi/assets_images_logos_maingallery.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/drawable_launch_screen.png.flat",
+        "source": "com.littleband.app-main-28:/drawable/launch_screen.png"
     },
     {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/raw_app.json.flat",
@@ -108,6 +116,10 @@
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/raw/node_modules_mdndata_css_atrules.json"
     },
     {
+        "merged": "com.littleband.app-merged_res-26:/drawable-mdpi_launch_screen.png.flat",
+        "source": "com.littleband.app-main-28:/drawable-mdpi/launch_screen.png"
+    },
+    {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/raw_node_modules_domserializer_node_modules_entities_lib_maps_entities.json.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/raw/node_modules_domserializer_node_modules_entities_lib_maps_entities.json"
     },
@@ -124,12 +136,12 @@
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
     },
     {
-        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/drawable-mdpi_launch_screen.png.flat",
@@ -138,6 +150,10 @@
     {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/drawable-mdpi_assets_images_logos_littlebandborderlogo.png.flat",
         "source": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-main-28:/drawable-mdpi/assets_images_logos_littlebandborderlogo.png"
+    },
+    {
+        "merged": "com.littleband.app-merged_res-26:/drawable-xxhdpi_launch_screen.png.flat",
+        "source": "com.littleband.app-main-28:/drawable-xxhdpi/launch_screen.png"
     },
     {
         "merged": "/Users/gimtaegyun/.gradle/daemon/7.3.3/com.littleband.app-merged_res-26:/raw_node_modules_mdndata_css_properties.json.flat",

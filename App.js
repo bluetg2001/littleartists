@@ -86,7 +86,7 @@ const App = () => {
         <NavigationContainer>
           <NativeBaseProvider theme={theme}>
             <View flex={1}>
-              <View flex={6}>
+              <View flex={7}>
                 <Stack />
               </View>
               {hiddenTab === true ? <></> : <BottomTabNavigation />}

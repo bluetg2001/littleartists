@@ -43,9 +43,9 @@ function NoticeDetail({route}) {
             fontWeight="semibold">
             {title}
           </Text>
-          <Text mt={4} color="dark.100" textAlign="right">
+          {/* <Text mt={4} color="dark.100" textAlign="right">
             3시간 전
-          </Text>
+          </Text> */}
         </Box>
         <Box flex={5}>
           <ScrollView>

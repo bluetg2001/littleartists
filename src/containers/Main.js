@@ -5,10 +5,9 @@ import ProviderMain from '../components/main/ProviderMain';
 import TabContext from '../utils/TabContext';
 
 function Main({route}) {
-  const isConsent = route.params.isConsent ?? true;
+  const isConsent = route?.params?.isConsent ?? true;
 
   const {hiddenTab, setHiddenTab} = useContext(TabContext);
-  console.log(isConsent, '메인에서 넘어오는 isConsent');
 
   useFocusEffect(
     useCallback(() => {

@@ -15,6 +15,7 @@ function BottomTabNavigation(props) {
   const [menus, setMenus] = useState([
     {
       index: 1,
+      aspectRatio: 1,
       title: '출석',
       img: require('../../assets/images/icons/tab-attendance.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-attendance.png'),
@@ -22,6 +23,7 @@ function BottomTabNavigation(props) {
     },
     {
       index: 2,
+      aspectRatio: 1,
       title: '공지사항',
       img: require('../../assets/images/icons/tab-notice.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-notice.png'),
@@ -29,6 +31,7 @@ function BottomTabNavigation(props) {
     },
     {
       index: 3,
+      aspectRatio: 1,
       title: '교육비',
       img: require('../../assets/images/icons/tab-intuition.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-intuition.png'),
@@ -36,6 +39,7 @@ function BottomTabNavigation(props) {
     },
     {
       index: 4,
+      aspectRatio: 1.5,
       title: '어린음악대',
       img: require('../../assets/images/icons/tab-littleband.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-littleband.png'),
@@ -43,6 +47,7 @@ function BottomTabNavigation(props) {
     },
     {
       index: 5,
+      aspectRatio: 1,
       title: '갤러리',
       img: require('../../assets/images/icons/tab-gallery.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-gallery.png'),
@@ -60,7 +65,7 @@ function BottomTabNavigation(props) {
   );
 
   const TabItem = props => {
-    const {title, img, clickedImg, link, index} = props;
+    const {title, img, clickedImg, link, index, aspectRatio} = props;
     return (
       <Pressable
         flex={1}
@@ -70,7 +75,9 @@ function BottomTabNavigation(props) {
         <Center flex={1}>
           <Image
             flex={1}
-            style={{aspectRatio: 1 / 1}}
+            style={{
+              aspectRatio: aspectRatio,
+            }}
             source={index === TabIndex ? clickedImg : img}
           />
           <Box flex={1} mt={2}>
@@ -94,6 +101,7 @@ function BottomTabNavigation(props) {
             img={menu.img}
             clickedImg={menu.clickedImg}
             link={menu.link}
+            aspectRatio={menu.aspectRatio}
           />
         ))}
       </HStack>

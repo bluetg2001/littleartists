@@ -120,11 +120,9 @@ function Login({navigation}) {
         },
       })
         .then(res => {
-          console.log(res.data);
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
-              console.log(parent.isConsent, 'Login에서 받아오는 isConsent');
               storeData(
                 phoneNum,
                 authKey,
@@ -177,7 +175,7 @@ function Login({navigation}) {
           <Image
             style={{
               aspectRatio: 178 / 62,
-              maxHeight: '50%',
+              height: '50%',
               resizeMode: 'contain',
             }}
             source={require('../../../assets/images/btns/login-btn.png')}

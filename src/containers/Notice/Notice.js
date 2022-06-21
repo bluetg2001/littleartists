@@ -65,9 +65,9 @@ function Notice({navigation}) {
             </Text>
             <ChevronRightIcon />
           </HStack>
-          <Text color="dark.100" fontSize="xs">
+          {/* <Text color="dark.100" fontSize="xs">
             3시간 전
-          </Text>
+          </Text> */}
         </Box>
       </TouchableOpacity>
     );
@@ -87,36 +87,44 @@ function Notice({navigation}) {
 
   if (data) {
     return (
-      <ScrollView>
-        <VStack alignItems="center" bgColor="white">
-          <VStack width="90%">
-            <Center>
-              <Logo />
-            </Center>
-            <VStack w="85">
-              <Text
-                mt={8}
-                fontSize="lg"
-                fontWeight="bold"
-                color="primary.500"
-                ml="2"
-                mb="2">
-                학원 소식
-              </Text>
-              <Divider bg="primary.500" thickness="1.5" />
-            </VStack>
-            <VStack mt={4}>
-              {data.hakwonBoards.map((value, key) => (
-                <LinkToDetailPage
-                  key={key}
-                  title={value.title}
-                  contents={value.contents}
-                />
-              ))}
-            </VStack>
+      <>
+        {data.hakwonBoards.length === 0 ? (
+          <VStack flex={1} mt="36" alignItems="center">
+            <Text>아직 게시물이 게시되지 않았습니다.</Text>
           </VStack>
-        </VStack>
-      </ScrollView>
+        ) : (
+          <ScrollView>
+            <VStack alignItems="center" bgColor="white">
+              <VStack width="90%">
+                <Center>
+                  <Logo />
+                </Center>
+                <VStack w="85">
+                  <Text
+                    mt={8}
+                    fontSize="lg"
+                    fontWeight="bold"
+                    color="primary.500"
+                    ml="2"
+                    mb="2">
+                    학원 소식
+                  </Text>
+                  <Divider bg="primary.500" thickness="1.5" />
+                </VStack>
+                <VStack mt={4}>
+                  {data.hakwonBoards.map((value, key) => (
+                    <LinkToDetailPage
+                      key={key}
+                      title={value.title}
+                      contents={value.contents}
+                    />
+                  ))}
+                </VStack>
+              </VStack>
+            </VStack>
+          </ScrollView>
+        )}
+      </>
     );
   }
 }

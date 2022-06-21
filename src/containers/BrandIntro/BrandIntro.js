@@ -26,7 +26,7 @@ function BrandIntro() {
   return (
     <ScrollView>
       <VStack flex={1} alignItems="center" bgColor={'white'}>
-        <VStack width="90%">
+        <VStack width="90%" flex={1}>
           <HStack mt="8" space="6" pl="2">
             <VStack>
               <Text

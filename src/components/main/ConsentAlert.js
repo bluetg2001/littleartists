@@ -19,14 +19,12 @@ function ConsentModal(props) {
   const {isConsent, parentId} = props;
   const [isConsentChecked, setIsConsentChecked] = useState(false);
   const [isMarketingChecked, setIsMarketingChecked] = useState(false);
-  console.log(isConsent, '모달에서 넘어온 isConsent');
 
   const [isModalOpen, setIsModalOpen] = useState(!isConsent);
 
   const navigation = useNavigation();
 
   const [editParent] = useMutation(EDIT_PARENT);
-  console.log(parentId);
 
   const checkConsentInfo = () => {
     editParent({
@@ -37,7 +35,6 @@ function ConsentModal(props) {
       },
     })
       .then(res => {
-        console.log(res);
         setIsModalOpen(!isModalOpen);
         navigation.navigate('Main', {isConsent: true});
       })
