@@ -4,6 +4,7 @@ import React, {useState, useCallback, useContext} from 'react';
 import {Image} from 'react-native';
 // native-base
 import {Box, Text, HStack, Center, Pressable} from 'native-base';
+// navigation
 import {useNavigation} from '@react-navigation/native';
 // context
 import TabContext from '../utils/TabContext';

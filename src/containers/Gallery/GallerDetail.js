@@ -12,6 +12,7 @@ import {
   Text,
   AlertDialog,
   useToast,
+  Button,
 } from 'native-base';
 // react-native components
 import {
@@ -40,16 +41,17 @@ import Logo from '../../components/Logo';
 function GallerDetail({route}) {
   const imageIndex = route.params.imageIndex;
   const [hakwonId, setHakwonId] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
 
   const toast = useToast();
 
   const [howToUseIsOpen, setHowToUseIsOpen] = useState(false);
-  const cancelRef = useRef(null);
 
   const {loading, error, data} = useQuery(GET_HAKWON_GALLERIES, {
     variables: {
       hakwonId: hakwonId,
+    },
+    onError: err => {
+      console.log(err);
     },
   });
 
@@ -137,15 +139,30 @@ function GallerDetail({route}) {
 
   const RenderItem = ({item, index}) => {
     return (
-      <AspectRatio
-        ratio={{base: 1 / 1}}
-        style={{
-          backgroundColor: 'white',
-          borderRadius: 20,
-          padding: 50,
-        }}>
-        <TouchableOpacity
-          activeOpacity={1}
+      <VStack>
+        <AspectRatio
+          ratio={{base: 1 / 1}}
+          style={{
+            backgroundColor: 'white',
+            borderRadius: 20,
+            padding: 50,
+          }}>
+          <TouchableOpacity activeOpacity={1}>
+            <Box flex={1}>
+              <Image
+                borderRadius={20}
+                flex={1}
+                style={{aspectRatio: 1 / 1}}
+                source={{uri: item.url}}
+              />
+            </Box>
+          </TouchableOpacity>
+        </AspectRatio>
+        <Button
+          size="xs"
+          width="100%"
+          mt={4}
+          bg="primary.500"
           onPress={() => {
             imageDownload(item.url);
             toast.show({
@@ -158,33 +175,22 @@ function GallerDetail({route}) {
               },
             });
           }}>
-          <Box flex={1}>
-            <Image
-              borderRadius={20}
-              flex={1}
-              style={{aspectRatio: 1 / 1}}
-              source={{uri: item.url}}
-            />
-          </Box>
-        </TouchableOpacity>
-      </AspectRatio>
+          사진 저장
+        </Button>
+      </VStack>
     );
   };
 
   const AlertFromQuestion = () => {
     return (
-      <AlertDialog
-        shadow={9}
-        leastDestructiveRef={cancelRef}
-        isOpen={howToUseIsOpen}
-        onClose={onClose}>
+      <AlertDialog shadow={9} isOpen={howToUseIsOpen} onClose={onClose}>
         <AlertDialog.Content>
           <AlertDialog.CloseButton
             onPress={() => setHowToUseIsOpen(!howToUseIsOpen)}
           />
           <AlertDialog.Header>갤러리 사용법</AlertDialog.Header>
           <AlertDialog.Body>
-            {`사진을 좌우로 밀어 여러 사진을 감상하고, 원하는 사진을 터치하여 저장해보세요. \n(30일이 지난 사진은 자동 삭제됩니다.)`}
+            {`사진을 좌우로 밀어 여러 사진을 감상하고, 원하는 사진의 버튼을 터치하여 저장해보세요. \n(30일이 지난 사진은 자동 삭제됩니다.)`}
           </AlertDialog.Body>
         </AlertDialog.Content>
       </AlertDialog>

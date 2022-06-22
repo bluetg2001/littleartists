@@ -7,47 +7,31 @@ const AttendanceInfo = props => {
 
   return (
     <Box>
-      <Box flexDirection={'row'}>
-        <Text fontSize={'sm'} color={'dark.100'} textAlign={'center'} flex={1}>
+      <Box flexDirection="row">
+        <Text fontSize="sm" color="dark.100" textAlign="center" flex={1}>
           {date}
         </Text>
-        {arrivedAt === '' ? (
-          <Text
-            fontSize={'sm'}
-            color={'dark.100'}
-            textAlign={'center'}
-            flex={1}>
+        {arrivedAt === '' || arrivedAt === null ? (
+          <Text fontSize="sm" color="dark.100" textAlign="center" flex={1}>
             미입력
           </Text>
         ) : (
-          <Text
-            fontSize={'sm'}
-            color={'dark.100'}
-            textAlign={'center'}
-            flex={1}>
+          <Text fontSize="sm" color="dark.100" textAlign="center" flex={1}>
             {arrivedAt}
           </Text>
         )}
 
-        {leftAt === '' ? (
-          <Text
-            fontSize={'sm'}
-            color={'dark.100'}
-            textAlign={'center'}
-            flex={1}>
+        {leftAt === '' || leftAt === null ? (
+          <Text fontSize="sm" color="dark.100" textAlign="center" flex={1}>
             미입력
           </Text>
         ) : (
-          <Text
-            fontSize={'sm'}
-            color={'dark.100'}
-            textAlign={'center'}
-            flex={1}>
+          <Text fontSize="sm" color="dark.100" textAlign="center" flex={1}>
             {leftAt}
           </Text>
         )}
       </Box>
-      <Divider my={4} color={'dark.100'} />
+      <Divider my={4} color="dark.100" />
     </Box>
   );
 };

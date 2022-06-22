@@ -8,6 +8,7 @@ export const PARENT = gql`
         brandId
         hakwonId
         status
+        displayName
         name
       }
     }

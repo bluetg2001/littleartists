@@ -6,10 +6,8 @@ import {
   Center,
   View,
   Select,
-  Button,
   ScrollView,
   Text,
-  Divider,
   VStack,
   HStack,
   CheckIcon,
@@ -163,7 +161,11 @@ function ProviderAttendance(props) {
               setSelectStudent(itemValue);
             }}>
             {students.map((student, key) => (
-              <Select.Item key={key} label={student.name} value={student.id} />
+              <Select.Item
+                key={key}
+                label={student.displayName}
+                value={student.id}
+              />
             ))}
           </Select>
           {/* 년도 입력 */}

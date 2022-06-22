@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 // native-base
-import {Text, Box, VStack, HStack, ScrollView, Divider} from 'native-base';
+import {Text, VStack, HStack, ScrollView, Divider} from 'native-base';
 // components
 import Introduction from './Introduction';
 import BrandNotice from './BrandNotice';

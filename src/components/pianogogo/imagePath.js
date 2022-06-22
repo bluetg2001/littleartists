@@ -1,3 +1,5 @@
+// e피아노고고 개인 캐릭터 이미지 경로
+
 export const imagePath = {
   'dotted-half-note': {
     uri: require('../../../assets/images/epianogogo/dotted-half-note-crown.png'),

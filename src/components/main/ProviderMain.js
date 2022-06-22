@@ -5,7 +5,7 @@ import messaging from '@react-native-firebase/messaging';
 // react-native components
 import {Image, FlatList} from 'react-native';
 // native-base
-import {Box, Center, View, Button, VStack} from 'native-base';
+import {Box, Center, Button, VStack} from 'native-base';
 // react-navigation
 import {useNavigation} from '@react-navigation/native';
 // graqlQL sutff
@@ -75,9 +75,10 @@ function ProviderMain(props) {
   const removeUserDataAndLogout = async () => {
     try {
       await AsyncStorage.removeItem('userData');
-      await AsyncStorage.removeItem('parentId');
       await AsyncStorage.removeItem('hakwonId');
-
+      await AsyncStorage.removeItem('parentId');
+      await AsyncStorage.removeItem('isConsent');
+      await AsyncStorage.removeItem('isMarketing');
       navigation.navigate('Login');
     } catch (e) {
       console.log('로그아웃에 실패했습니다.');

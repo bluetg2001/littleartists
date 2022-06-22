@@ -123,16 +123,9 @@ function Login({navigation}) {
           if (res.data) {
             const {success, message, parent} = res.data.parentLogin;
             if (success) {
-              storeData(
-                phoneNum,
-                authKey,
-                parent.hakwonId,
-                parent.id,
-                // parent.isConsent.toString(),
-                // parent.isMarketing.toString(),
-              );
+              storeData(phoneNum, authKey, parent.hakwonId, parent.id);
               navigation.navigate('Main', {
-                isConsent: parent.isConsent,
+                isConsent: parent.isConsent ?? false,
               });
             } else {
               setErrorMessage('전화번호나 인증번호를 확인하세요.');

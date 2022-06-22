@@ -36,18 +36,16 @@ function Introduction() {
 
         <Box
           mt="8"
-          width={'100%'}
-          borderRadius={'3xl'}
+          width="100%"
+          borderRadius="3xl"
           bgColor="primary.500"
-          paddingTop={'6'}
-          paddingBottom={'6'}
+          paddingTop="6"
+          paddingBottom="6"
           paddingLeft={4}
           style={{position: 'absolute', zIndex: 1, elevation: 1}}>
           <Text
             color="white"
-            fontSize={
-              'lg'
-            }>{`달라진 어린음악대! \n 아이에게 가장 알맞는 \n 교육환경과 음악적 경험을 \n 만들어 드립니다.`}</Text>
+            fontSize="lg">{`달라진 어린음악대! \n 아이에게 가장 알맞는 \n 교육환경과 음악적 경험을 \n 만들어 드립니다.`}</Text>
         </Box>
       </VStack>
 
@@ -59,11 +57,11 @@ function Introduction() {
           }}
           source={require('../../../assets/images/characters/brand-intro-deco.png')}
         />
-        <Box width={'6'} />
+        <Box width="6" />
         <VStack>
           <Text
-            fontWeight={'500'}
-            fontSize={'lg'}
+            fontWeight="500"
+            fontSize="lg"
             color={
               'primary.500'
             }>{`스마트한 음악교육의 시작! \n 새로운 차원의 피아노레슨 \n 어린음악대!`}</Text>

@@ -13,13 +13,4 @@ messaging().setBackgroundMessageHandler(async remoteMessage => {
   console.log('HEADLESS BACKGROUND: ' + JSON.stringify(remoteMessage));
 });
 
-// function HeadlessCheck({isHeadless}) {
-//   if (isHeadless) {
-//     console.log('Headless');
-//     return null;
-//   }
-//   return <App />;
-// }
-
 AppRegistry.registerComponent(appName, () => App);
-// AppRegistry.registerComponent(appName, () => HeadlessCheck);

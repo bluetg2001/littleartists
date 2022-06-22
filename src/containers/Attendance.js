@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext, useCallback} from 'react';
+import React, {useState, useContext, useCallback} from 'react';
 // components
 import ProviderAttendance from '../components/attendance/ProviderAttendance';
 // async storage
@@ -24,7 +24,6 @@ function Attendance() {
 
   useFocusEffect(
     useCallback(() => {
-      // setHiddenTab(false);
       setTabIndex(1);
       getParentIdAndHakwonId();
 

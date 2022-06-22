@@ -4,6 +4,7 @@ import React, {useContext} from 'react';
 import {Image, TouchableOpacity} from 'react-native';
 // native-base
 import {Center, Text, AspectRatio, VStack} from 'native-base';
+// navigation
 import {useNavigation} from '@react-navigation/native';
 // context
 import TabContext from '../../utils/TabContext';

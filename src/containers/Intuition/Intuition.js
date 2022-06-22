@@ -120,7 +120,7 @@ function Intuition({navigation}) {
                   {students.map((student, key) => (
                     <Select.Item
                       key={key}
-                      label={student.name}
+                      label={student.displayName}
                       value={student.id}
                     />
                   ))}

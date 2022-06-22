@@ -1,6 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
+// react native
 import {Image, TouchableOpacity} from 'react-native';
+// navigation
 import {useNavigation} from '@react-navigation/native';
 
 function Logo() {
