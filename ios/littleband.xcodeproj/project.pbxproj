@@ -213,6 +213,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				4E1EF0023E09D995CF5DC290 /* [CP] Copy Pods Resources */,
+				2342A08B6A01C3CE25646878 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +237,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				1BCC870DBCFE956974E14EA0 /* [CP] Copy Pods Resources */,
 				7C478BCA70914B65425FB4AD /* [CP-User] [RNFB] Core Configuration */,
+				0F674910C5BF5E9C3FDDDF30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +321,23 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		0F674910C5BF5E9C3FDDDF30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-littleband/Pods-littleband-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-littleband/Pods-littleband-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-littleband/Pods-littleband-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1BCC870DBCFE956974E14EA0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +353,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-littleband/Pods-littleband-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2342A08B6A01C3CE25646878 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-littleband-littlebandTests/Pods-littleband-littlebandTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-littleband-littlebandTests/Pods-littleband-littlebandTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-littleband-littlebandTests/Pods-littleband-littlebandTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		27DE1CE80971C2CC95BC2802 /* [CP] Check Pods Manifest.lock */ = {
@@ -533,11 +569,12 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.littleband;
 				PRODUCT_NAME = littleband;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				debug = "";
 			};
 			name = Debug;
 		};
@@ -560,10 +597,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.littleband;
 				PRODUCT_NAME = littleband;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+				debug = "";
 			};
 			name = Release;
 		};
