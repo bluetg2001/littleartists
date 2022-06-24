@@ -4,7 +4,7 @@
             "outputFile": "com.littleband.app-mergeDebugResources-24:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/Users/gimtaegyun/.gradle/caches/transforms-3/3705b7dcd1299670f894981c0dafb6a7/transformed/appcompat-1.1.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/3705b7dcd1299670f894981c0dafb6a7/transformed/appcompat-1.1.0/res/values-ldltr-v21/values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
