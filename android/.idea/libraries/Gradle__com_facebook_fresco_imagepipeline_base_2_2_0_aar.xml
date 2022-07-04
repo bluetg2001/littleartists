@@ -4,9 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a8346d2de6d05cc2ce12aea1db1ac0d5/transformed/jetified-imagepipeline-base-2.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0b7d3f8dbee144125fbace3c9abb5fca/transformed/jetified-imagepipeline-base-2.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a8346d2de6d05cc2ce12aea1db1ac0d5/transformed/jetified-imagepipeline-base-2.2.0/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a8346d2de6d05cc2ce12aea1db1ac0d5/transformed/jetified-imagepipeline-base-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a8346d2de6d05cc2ce12aea1db1ac0d5/transformed/jetified-imagepipeline-base-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a8346d2de6d05cc2ce12aea1db1ac0d5/transformed/jetified-imagepipeline-base-2.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>

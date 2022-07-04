@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>292341438726-tqahoqimqbj4vjmkvp04onn0jlnr24uv.apps.googleusercontent.com</string>
+	<string>292341438726-5f1al3q8d0tcfujh8d00m06ekamg1skk.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.292341438726-tqahoqimqbj4vjmkvp04onn0jlnr24uv</string>
+	<string>com.googleusercontent.apps.292341438726-5f1al3q8d0tcfujh8d00m06ekamg1skk</string>
 	<key>API_KEY</key>
 	<string>AIzaSyDb8DUYzExv2q_OKbpAxH011jVa2W0Mx9s</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.reactjs.native.example.littleband</string>
+	<string>org.reactjs.native.jueun.littleband</string>
 	<key>PROJECT_ID</key>
 	<string>piano-server</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:292341438726:ios:b8baae279e630c79dfa687</string>
+	<string>1:292341438726:ios:54dabca4a569a8f3dfa687</string>
 </dict>
 </plist>

@@ -65,298 +65,297 @@
 32-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:22:9-52
 33        android:roundIcon="@mipmap/ic_launcher_round"
 33-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:18:7-52
-34        android:testOnly="true"
-35        android:theme="@style/AppTheme"
-35-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:20:7-38
-36        android:usesCleartextTraffic="true" >
-36-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:21:7-42
-37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-37-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:9-86
-37-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:19-83
-38        <activity
-38-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:25:7-37:18
-39            android:name="com.littleband.MainActivity"
-39-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:27:9-37
-40            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-40-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:29:9-86
-41            android:exported="true"
-41-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:26:9-32
-42            android:label="@string/app_name"
-42-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:28:9-41
-43            android:launchMode="singleTask"
-43-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:30:9-40
-44            android:windowSoftInputMode="adjustResize" >
-44-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:31:9-51
-45            <intent-filter>
-45-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:32:9-36:25
-46                <action android:name="android.intent.action.MAIN" />
-46-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:33:13-65
-46-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:33:21-62
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-48-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:13-73
-48-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:23-70
-49
-50                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
-50-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:13-77
-50-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:21-75
-51            </intent-filter>
-52        </activity>
-53
-54        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-54-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
-54-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
-55        <service
-55-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
-56            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-56-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
-57            android:exported="false" >
-57-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
-58            <intent-filter>
-58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
-59                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-59-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-59-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
-60            </intent-filter>
-61        </service>
-62
-63        <receiver
-63-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
-64            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-64-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
-65            android:exported="true"
-65-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
-66            android:permission="com.google.android.c2dm.permission.SEND" >
-66-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
-67            <intent-filter>
-67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
-68                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-68-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-68-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
-69            </intent-filter>
-70        </receiver>
-71
-72        <meta-data
-72-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
-73            android:name="firebase_messaging_auto_init_enabled"
-73-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
-74            android:value="true" />
-74-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
-75        <meta-data
-75-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
-76            android:name="com.google.firebase.messaging.default_notification_channel_id"
-76-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
-77            android:value="" />
-77-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
-78        <meta-data
-78-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
-79            android:name="com.google.firebase.messaging.default_notification_color"
-79-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
-80            android:resource="@color/white" />
-80-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
-81        <meta-data
-81-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
-82            android:name="app_data_collection_default_enabled"
-82-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
-83            android:value="true" />
-83-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
-84
-85        <service
-85-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
-86            android:name="com.google.firebase.components.ComponentDiscoveryService"
-86-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
-87            android:directBootAware="true"
-87-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
-88            android:exported="false" >
-88-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:54:13-37
-89            <meta-data
-89-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
-90                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-90-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
-93                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-93-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
-96                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-96-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
-98            <meta-data
-98-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
-99                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-99-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
-100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
-101        </service>
-102
-103        <provider
-103-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
-104            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-104-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
-105            android:authorities="com.littleband.reactnativefirebaseappinitprovider"
-105-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
-106            android:exported="false"
-106-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
-107            android:initOrder="99" />
-107-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
-108        <provider
-108-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
-109            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-109-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
-110            android:authorities="com.littleband.fileprovider"
-110-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
-111            android:exported="false"
-111-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
-112            android:grantUriPermissions="true" >
-112-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
-113            <meta-data
-113-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
-114                android:name="android.support.FILE_PROVIDER_PATHS"
-114-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
-115                android:resource="@xml/file_provider_paths" />
-115-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
-116        </provider>
-117        <provider
-117-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
-118            android:name="com.RNFetchBlob.Utils.FileProvider"
-118-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
-119            android:authorities="com.littleband.provider"
-119-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
-120            android:exported="false"
-120-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
-121            android:grantUriPermissions="true" >
-121-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
-122            <meta-data
-122-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
-123                android:name="android.support.FILE_PROVIDER_PATHS"
-123-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
-124                android:resource="@xml/provider_paths" />
-124-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
-125        </provider>
-126
-127        <receiver
-127-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
-128            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-128-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
-129            android:exported="true"
-129-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
-130            android:permission="com.google.android.c2dm.permission.SEND" >
-130-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
-131            <intent-filter>
-131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
-132                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-132-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-132-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
-133            </intent-filter>
-134        </receiver>
-135        <!--
-136             FirebaseMessagingService performs security checks at runtime,
-137             but set to not exported to explicitly avoid allowing another app to call it.
-138        -->
-139        <service
-139-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
-140            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-140-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
-141            android:directBootAware="true"
-141-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
-142            android:exported="false" >
-142-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
-143            <intent-filter android:priority="-500" >
-143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
-144                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-144-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-144-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
-145            </intent-filter>
-146        </service>
-147        <service
-147-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
-148            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-148-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
-149            android:exported="false" >
-149-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
-150            <meta-data
-150-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
-151                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-151-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
-152                android:value="cct" />
-152-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
-153        </service>
-154        <service
-154-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
-155            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-155-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
-156            android:exported="false"
-156-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
-157            android:permission="android.permission.BIND_JOB_SERVICE" >
-157-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
-158        </service>
-159
-160        <receiver
-160-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
-161            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-161-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
-162            android:exported="false" />
-162-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
-163
-164        <provider
-164-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
-165            android:name="com.google.firebase.provider.FirebaseInitProvider"
-165-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
-166            android:authorities="com.littleband.firebaseinitprovider"
-166-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
-167            android:directBootAware="true"
-167-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
-168            android:exported="false"
-168-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
-169            android:initOrder="100" />
-169-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
-170
-171        <activity
-171-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:23:9-27:75
-172            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-172-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:24:13-93
-173            android:excludeFromRecents="true"
-173-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:25:13-46
-174            android:exported="false"
-174-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:26:13-37
-175            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-175-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:27:13-72
-176        <!--
-177            Service handling Google Sign-In user revocation. For apps that do not integrate with
-178            Google Sign-In, this service will never be started.
-179        -->
-180        <service
-180-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:33:9-37:51
-181            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-181-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:34:13-89
-182            android:exported="true"
-182-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:35:13-36
-183            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-183-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:36:13-107
-184            android:visibleToInstantApps="true" />
-184-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:37:13-48
-185
-186        <activity
-186-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-187            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-187-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-188            android:exported="false"
-188-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-189            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-189-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-190
-191        <meta-data
-191-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
-192            android:name="com.google.android.gms.version"
-192-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
-193            android:value="@integer/google_play_services_version" />
-193-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
-194    </application>
-195
-196</manifest>
+34        android:theme="@style/AppTheme"
+34-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:20:7-38
+35        android:usesCleartextTraffic="true" >
+35-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:21:7-42
+36        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+36-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:9-86
+36-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:19-83
+37        <activity
+37-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:25:7-37:18
+38            android:name="com.littleband.MainActivity"
+38-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:27:9-37
+39            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+39-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:29:9-86
+40            android:exported="true"
+40-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:26:9-32
+41            android:label="@string/app_name"
+41-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:28:9-41
+42            android:launchMode="singleTask"
+42-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:30:9-40
+43            android:windowSoftInputMode="adjustResize" >
+43-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:31:9-51
+44            <intent-filter>
+44-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:32:9-36:25
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:33:13-65
+45-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:33:21-62
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:13-73
+47-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:23-70
+48
+49                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+49-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:13-77
+49-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:21-75
+50            </intent-filter>
+51        </activity>
+52
+53        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
+53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
+53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
+54        <service
+54-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
+55            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
+55-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
+56            android:exported="false" >
+56-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+57            <intent-filter>
+57-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+58                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+59            </intent-filter>
+60        </service>
+61
+62        <receiver
+62-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
+63            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
+63-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
+64            android:exported="true"
+64-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
+65            android:permission="com.google.android.c2dm.permission.SEND" >
+65-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
+66            <intent-filter>
+66-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+67                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+68            </intent-filter>
+69        </receiver>
+70
+71        <meta-data
+71-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
+72            android:name="firebase_messaging_auto_init_enabled"
+72-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
+73            android:value="true" />
+73-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
+74        <meta-data
+74-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
+75            android:name="com.google.firebase.messaging.default_notification_channel_id"
+75-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
+76            android:value="" />
+76-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
+77        <meta-data
+77-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
+78            android:name="com.google.firebase.messaging.default_notification_color"
+78-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
+79            android:resource="@color/white" />
+79-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
+80        <meta-data
+80-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
+81            android:name="app_data_collection_default_enabled"
+81-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+82            android:value="true" />
+82-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
+83
+84        <service
+84-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
+85            android:name="com.google.firebase.components.ComponentDiscoveryService"
+85-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
+86            android:directBootAware="true"
+86-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
+87            android:exported="false" >
+87-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:54:13-37
+88            <meta-data
+88-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
+89                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+89-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
+90                android:value="com.google.firebase.components.ComponentRegistrar" />
+90-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+91            <meta-data
+91-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
+92                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+92-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:56:17-119
+93                android:value="com.google.firebase.components.ComponentRegistrar" />
+93-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:57:17-82
+94            <meta-data
+94-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:28:13-30:85
+95                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+95-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:29:17-115
+96                android:value="com.google.firebase.components.ComponentRegistrar" />
+96-->[com.google.firebase:firebase-datatransport:18.1.3] /Users/jueungaebalja/.gradle/caches/transforms-3/31722ae9694fe765257814102452f730/transformed/jetified-firebase-datatransport-18.1.3/AndroidManifest.xml:30:17-82
+97            <meta-data
+97-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+98                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+98-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+99                android:value="com.google.firebase.components.ComponentRegistrar" />
+99-->[com.google.firebase:firebase-installations:17.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/6200cc8d0495b5550483edb81e4da529/transformed/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+100        </service>
+101
+102        <provider
+102-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
+103            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+103-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
+104            android:authorities="com.littleband.reactnativefirebaseappinitprovider"
+104-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
+105            android:exported="false"
+105-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+106            android:initOrder="99" />
+106-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
+107        <provider
+107-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+108            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+108-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
+109            android:authorities="com.littleband.fileprovider"
+109-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
+110            android:exported="false"
+110-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+111            android:grantUriPermissions="true" >
+111-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+112            <meta-data
+112-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
+113                android:name="android.support.FILE_PROVIDER_PATHS"
+113-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+114                android:resource="@xml/file_provider_paths" />
+114-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
+115        </provider>
+116        <provider
+116-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+117            android:name="com.RNFetchBlob.Utils.FileProvider"
+117-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
+118            android:authorities="com.littleband.provider"
+118-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+119            android:exported="false"
+119-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+120            android:grantUriPermissions="true" >
+120-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+121            <meta-data
+121-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
+122                android:name="android.support.FILE_PROVIDER_PATHS"
+122-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+123                android:resource="@xml/provider_paths" />
+123-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
+124        </provider>
+125
+126        <receiver
+126-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:31:9-38:20
+127            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+127-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:32:13-78
+128            android:exported="true"
+128-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:33:13-36
+129            android:permission="com.google.android.c2dm.permission.SEND" >
+129-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
+130            <intent-filter>
+130-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+131                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+132            </intent-filter>
+133        </receiver>
+134        <!--
+135             FirebaseMessagingService performs security checks at runtime,
+136             but set to not exported to explicitly avoid allowing another app to call it.
+137        -->
+138        <service
+138-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:44:9-51:19
+139            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+139-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:45:13-82
+140            android:directBootAware="true"
+140-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:46:13-43
+141            android:exported="false" >
+141-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/01a792f5811c9453212e350543f6defe/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
+142            <intent-filter android:priority="-500" >
+142-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+143                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+144            </intent-filter>
+145        </service>
+146        <service
+146-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:29:9-35:19
+147            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+147-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:30:13-103
+148            android:exported="false" >
+148-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:31:13-37
+149            <meta-data
+149-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:32:13-34:39
+150                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+150-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:33:17-94
+151                android:value="cct" />
+151-->[com.google.android.datatransport:transport-backend-cct:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/2691c295d61f77c2e49cc412f713fe96/transformed/jetified-transport-backend-cct-3.1.4/AndroidManifest.xml:34:17-36
+152        </service>
+153        <service
+153-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:26:9-30:19
+154            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+154-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:27:13-117
+155            android:exported="false"
+155-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:28:13-37
+156            android:permission="android.permission.BIND_JOB_SERVICE" >
+156-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:29:13-69
+157        </service>
+158
+159        <receiver
+159-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:32:9-34:40
+160            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+160-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:33:13-132
+161            android:exported="false" />
+161-->[com.google.android.datatransport:transport-runtime:3.1.4] /Users/jueungaebalja/.gradle/caches/transforms-3/83a355c1e130b664787208380b6399ad/transformed/jetified-transport-runtime-3.1.4/AndroidManifest.xml:34:13-37
+162
+163        <provider
+163-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
+164            android:name="com.google.firebase.provider.FirebaseInitProvider"
+164-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
+165            android:authorities="com.littleband.firebaseinitprovider"
+165-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
+166            android:directBootAware="true"
+166-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43
+167            android:exported="false"
+167-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:30:13-37
+168            android:initOrder="100" />
+168-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/82feaf8c1a9b451393db8d784f1e6d3d/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:31:13-36
+169
+170        <activity
+170-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:23:9-27:75
+171            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+171-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:24:13-93
+172            android:excludeFromRecents="true"
+172-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:25:13-46
+173            android:exported="false"
+173-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:26:13-37
+174            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+174-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:27:13-72
+175        <!--
+176            Service handling Google Sign-In user revocation. For apps that do not integrate with
+177            Google Sign-In, this service will never be started.
+178        -->
+179        <service
+179-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:33:9-37:51
+180            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+180-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:34:13-89
+181            android:exported="true"
+181-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:35:13-36
+182            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+182-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:36:13-107
+183            android:visibleToInstantApps="true" />
+183-->[com.google.android.gms:play-services-auth:20.1.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4f9cdba5b7c6372ebbf13d6148480d65/transformed/jetified-play-services-auth-20.1.0/AndroidManifest.xml:37:13-48
+184
+185        <activity
+185-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+186            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+186-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+187            android:exported="false"
+187-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+188            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+188-->[com.google.android.gms:play-services-base:18.0.1] /Users/jueungaebalja/.gradle/caches/transforms-3/8fba2a1b7cccf0f5b5a048ef282140d5/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+189
+190        <meta-data
+190-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+191            android:name="com.google.android.gms.version"
+191-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+192            android:value="@integer/google_play_services_version" />
+192-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jueungaebalja/.gradle/caches/transforms-3/0a747a7cf1934601d48502730778cc28/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+193    </application>
+194
+195</manifest>
