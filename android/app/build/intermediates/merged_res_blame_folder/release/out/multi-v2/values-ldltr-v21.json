@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.littleband.app-mergeReleaseResources-23:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/f154539d251fb70f9cc23102788de834/transformed/appcompat-1.1.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/jueungaebalja/Desktop/Project/littleband/android/app"
+    name=":app"
+    type="APP"
+    maven="littleband:app:"
+    gradle="7.2.1"
+    buildFolder="build"
+    bootClassPath="/Users/jueungaebalja/Library/Android/sdk/platforms/android-30/android.jar:/Users/jueungaebalja/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-30">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

@@ -4,26 +4,7 @@
             "outputFile": "com.littleband.app-mergeDebugResources-24:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/b42521c0f1a66f6e258cc9e8aeb69b84/transformed/material-1.1.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,6",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,320",
-                        "endLines": "5,9",
-                        "endColumns": "10,10",
-                        "endOffsets": "315,588"
-                    },
-                    "to": {
-                        "startLines": "51,55",
-                        "startColumns": "4,4",
-                        "startOffsets": "3265,3530",
-                        "endLines": "54,58",
-                        "endColumns": "10,10",
-                        "endOffsets": "3525,3798"
-                    }
-                },
-                {
-                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/939875f56650c5152a1b22aa98327011/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/8a14631721aae2d031216905eb8a37c9/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -42,7 +23,26 @@
                     }
                 },
                 {
-                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/3705b7dcd1299670f894981c0dafb6a7/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/5b239f8946a545f72102229995a28cb4/transformed/material-1.1.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,6",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,320",
+                        "endLines": "5,9",
+                        "endColumns": "10,10",
+                        "endOffsets": "315,588"
+                    },
+                    "to": {
+                        "startLines": "51,55",
+                        "startColumns": "4,4",
+                        "startOffsets": "3265,3530",
+                        "endLines": "54,58",
+                        "endColumns": "10,10",
+                        "endOffsets": "3525,3798"
+                    }
+                },
+                {
+                    "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/f154539d251fb70f9cc23102788de834/transformed/appcompat-1.1.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,37,41,42,43,44",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

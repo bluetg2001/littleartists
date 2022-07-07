@@ -29,7 +29,7 @@
     <content url="file://$MODULE_DIR$/../../../../node_modules/rn-fetch-blob/android/build/generated/source/buildConfig/androidTest/debug" />
     <content url="file://$MODULE_DIR$/../../../../node_modules/rn-fetch-blob/android/src/androidTest" />
     <content url="file://$MODULE_DIR$/../../../../node_modules/rn-fetch-blob/android/src/androidTestDebug" />
-    <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="littleband.rn-fetch-blob.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.facebook.infer.annotation:infer-annotation:0.11.2" level="project" />
