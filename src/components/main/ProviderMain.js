@@ -127,6 +127,7 @@ function ProviderMain(props) {
       <Box flex={1} width="90%" safeArea>
         <Center flex={1}>
           <Image
+            resizeMode="contain"
             style={{width: 127, height: 62}}
             source={require('../../../assets/images/logos/littleband-logo.png')}
           />

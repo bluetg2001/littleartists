@@ -1,0 +1,4 @@
+#Thu Jul 14 13:54:23 KST 2022
+base.0=/Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

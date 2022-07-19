@@ -12,10 +12,7 @@ import {
   Input,
   Spinner,
   Heading,
-  Button,
 } from 'native-base';
-// native-base checkbox는 v3 버전 기준, 하자가 있음 -> react-native의 checkbox 사용
-import CheckBox from '@react-native-community/checkbox';
 // react-native components
 import {
   Image,
