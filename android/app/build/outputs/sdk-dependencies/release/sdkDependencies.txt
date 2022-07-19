@@ -367,10 +367,10 @@ library {
   maven_library {
     groupId: "androidx.swiperefreshlayout"
     artifactId: "swiperefreshlayout"
-    version: "1.0.0"
+    version: "1.1.0"
   }
   digests {
-    sha256: "\227a\263\250\t\311\260\223\375\006\243\304\273\306Eum\354\016\225\265\311\332A\233\311\362\243\363\002n\215"
+    sha256: ",\347\220l\321\336\240Z\354\201\227]\262-T8#Y\300Z!\262Rz\330H\274`\366\262r\223"
   }
   repo_index {
   }

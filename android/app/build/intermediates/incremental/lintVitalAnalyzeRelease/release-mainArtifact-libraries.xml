@@ -52,10 +52,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar"
-      jars="/Users/jueungaebalja/.gradle/caches/transforms-3/b4dcc9730a0535f9a3c5d84568c50a8e/transformed/swiperefreshlayout-1.0.0/jars/classes.jar"
-      resolved="androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-      folder="/Users/jueungaebalja/.gradle/caches/transforms-3/b4dcc9730a0535f9a3c5d84568c50a8e/transformed/swiperefreshlayout-1.0.0"
+      name="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar"
+      jars="/Users/jueungaebalja/.gradle/caches/transforms-3/d6770f087ee64e01b028bbd898bdf448/transformed/swiperefreshlayout-1.1.0/jars/classes.jar"
+      resolved="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+      folder="/Users/jueungaebalja/.gradle/caches/transforms-3/d6770f087ee64e01b028bbd898bdf448/transformed/swiperefreshlayout-1.1.0"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

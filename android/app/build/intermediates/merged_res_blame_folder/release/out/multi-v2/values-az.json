@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.littleband.app-mergeReleaseResources-23:/values-az/values-az.xml",
+            "outputFile": "com.littleband.app-mergeReleaseResources-24:/values-az/values-az.xml",
             "map": [
                 {
                     "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/373c0aba18659a9e3664becf76626ca5/transformed/jetified-play-services-basement-18.0.0/res/values-az/values.xml",

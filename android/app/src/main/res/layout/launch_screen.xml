@@ -10,6 +10,6 @@
         android:layout_height="match_parent"
         android:scaleX="0.4"
         android:scaleY="0.65"
-        android:src="@drawable/launch_screen"
+        android:src="@mipmap/launch_screen"
         />
 </RelativeLayout>

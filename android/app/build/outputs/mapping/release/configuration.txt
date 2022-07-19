@@ -129,6 +129,8 @@
 
 # Add any project specific keep options here:
 
+-keep public class com.horcrux.svg.** {*;}
+
 # End of content from /Users/jueungaebalja/Desktop/Project/littleband/android/app/proguard-rules.pro
 # The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
