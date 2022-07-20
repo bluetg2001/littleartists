@@ -23372,63 +23372,17 @@ org.jetbrains.annotations.PropertyKey
 org.jetbrains.annotations.TestOnly
 org.webkit.androidjsc.BuildConfig
 org.webkit.androidjsc.R
-androidx.activity.ImmLeaksCleaner:
-    void <init>(android.app.Activity)
-androidx.appcompat.R$styleable:
-    public static final int TextAppearance_android_textColorHint
-    public static final int TextAppearance_android_textColorLink
-androidx.appcompat.app.AlertController$2
-androidx.appcompat.app.AlertController$3
-androidx.appcompat.app.AlertController$4
-androidx.appcompat.app.AlertController$5
-androidx.appcompat.app.AlertController:
-    static void manageScrollIndicators(android.view.View,android.view.View,android.view.View)
 androidx.appcompat.app.AppCompatDelegateImpl$1
 androidx.appcompat.app.AppCompatDelegateImpl$4
 androidx.appcompat.app.AppCompatDelegateImpl:
     private static boolean sInstalledExceptionHandler
-androidx.appcompat.app.ResourcesFlusher:
-    private static void flushLollipops(android.content.res.Resources)
-    private static void flushMarshmallows(android.content.res.Resources)
 androidx.appcompat.app.WindowDecorActionBar:
     static final synthetic boolean $assertionsDisabled
-androidx.appcompat.content.res.AppCompatResources$ColorStateListCacheEntry
-androidx.appcompat.content.res.AppCompatResources:
-    private static void addColorStateListToCache(android.content.Context,int,android.content.res.ColorStateList)
-    private static android.content.res.ColorStateList getCachedColorStateList(android.content.Context,int)
-    private static android.util.TypedValue getTypedValue()
-    private static android.content.res.ColorStateList inflateColorStateList(android.content.Context,int)
-    private static boolean isColorInt(android.content.Context,int)
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$1
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimatableTransition
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimatedStateListState
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimatedVectorDrawableTransition
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimationDrawableTransition
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$FrameInterpolator
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$Transition
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat
-androidx.appcompat.graphics.drawable.DrawableContainer$1
-androidx.appcompat.graphics.drawable.DrawableContainer$BlockInvalidateCallback
-androidx.appcompat.graphics.drawable.DrawableContainer$DrawableContainerState
-androidx.appcompat.graphics.drawable.DrawableContainer
-androidx.appcompat.graphics.drawable.StateListDrawable$StateListState
-androidx.appcompat.graphics.drawable.StateListDrawable
-androidx.appcompat.resources.R$styleable
 androidx.appcompat.widget.AppCompatTextViewAutoSizeHelper:
     private static java.lang.Object accessAndReturnWithDefault(java.lang.Object,java.lang.String,java.lang.Object)
     private android.text.StaticLayout createStaticLayoutForMeasuringPre16(java.lang.CharSequence,android.text.Layout$Alignment,int)
-    private android.text.StaticLayout createStaticLayoutForMeasuringPre23(java.lang.CharSequence,android.text.Layout$Alignment,int)
     private static java.lang.reflect.Field getTextViewField(java.lang.String)
-androidx.appcompat.widget.DrawableUtils:
-    private static void fixVectorDrawableTinting(android.graphics.drawable.Drawable)
 androidx.appcompat.widget.FitWindowsViewGroup
-androidx.appcompat.widget.ListPopupWindow:
-    private static java.lang.reflect.Method sGetMaxAvailableHeightMethod
-androidx.appcompat.widget.ResourceManagerInternal$AsldcInflateDelegate
-androidx.appcompat.widget.ResourceManagerInternal$AvdcInflateDelegate
-androidx.appcompat.widget.ResourceManagerInternal$VdcInflateDelegate
-androidx.appcompat.widget.ResourceManagerInternal:
-    private void addDelegate(java.lang.String,androidx.appcompat.widget.ResourceManagerInternal$InflateDelegate)
 androidx.cardview.widget.CardViewApi17Impl$1
 androidx.cardview.widget.CardViewApi17Impl
 androidx.cardview.widget.CardViewBaseImpl$1
@@ -23480,32 +23434,8 @@ androidx.cardview.widget.RoundRectDrawableWithShadow:
     void setShadowSize(float)
     private void setShadowSize(float,float)
     private int toEven(float)
-androidx.collection.LongSparseArray:
-    public void append(long,java.lang.Object)
-androidx.core.R$attr
 androidx.core.R$id:
     public static final int tag_transition_group
-androidx.core.R$styleable:
-    public static final int ColorStateListItem_alpha
-    public static final int ColorStateListItem_android_alpha
-    public static final int ColorStateListItem_android_color
-    public static final int GradientColorItem_android_color
-    public static final int GradientColorItem_android_offset
-    public static final int GradientColor_android_centerColor
-    public static final int GradientColor_android_centerX
-    public static final int GradientColor_android_centerY
-    public static final int GradientColor_android_endColor
-    public static final int GradientColor_android_endX
-    public static final int GradientColor_android_endY
-    public static final int GradientColor_android_gradientRadius
-    public static final int GradientColor_android_startColor
-    public static final int GradientColor_android_startX
-    public static final int GradientColor_android_startY
-    public static final int GradientColor_android_tileMode
-    public static final int GradientColor_android_type
-androidx.core.app.ActivityCompat$1
-androidx.core.app.ActivityCompat$2
-androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback
 androidx.core.app.NotificationCompat$Action:
     public androidx.core.app.RemoteInput[] getDataOnlyRemoteInputs()
 androidx.core.app.NotificationCompat$BubbleMetadata$Api29Impl
@@ -23543,17 +23473,7 @@ androidx.core.app.SharedElementCallback:
 androidx.core.content.ContextCompat:
     private static android.util.TypedValue sTempValue
     private static synchronized java.io.File createFilesDir(java.io.File)
-    public static android.content.res.ColorStateList getColorStateList(android.content.Context,int)
 androidx.core.content.LocusIdCompat
-androidx.core.content.res.ColorStateListInflaterCompat
-androidx.core.content.res.ComplexColorCompat
-androidx.core.content.res.GradientColorInflaterCompat$ColorStops
-androidx.core.content.res.GradientColorInflaterCompat
-androidx.core.content.res.GrowingArrayUtils
-androidx.core.content.res.TypedArrayUtils
-androidx.core.graphics.PathParser$ExtractFloatResult
-androidx.core.graphics.PathParser$PathDataNode
-androidx.core.graphics.PathParser
 androidx.core.graphics.TypefaceCompat:
     private static android.graphics.Typeface getBestFontFromFamily(android.content.Context,android.graphics.Typeface,int)
 androidx.core.graphics.TypefaceCompatApi29Impl:
@@ -23564,25 +23484,10 @@ androidx.core.graphics.TypefaceCompatBaseImpl:
     private androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry findBestEntry(androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry,int)
     androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry getFontFamily(android.graphics.Typeface)
     private static long getUniqueKey(android.graphics.Typeface)
-androidx.core.graphics.drawable.DrawableCompat:
-    private static java.lang.reflect.Method sGetLayoutDirectionMethod
-    private static boolean sGetLayoutDirectionMethodFetched
-    private static java.lang.reflect.Method sSetLayoutDirectionMethod
-    private static boolean sSetLayoutDirectionMethodFetched
-    public static void applyTheme(android.graphics.drawable.Drawable,android.content.res.Resources$Theme)
-    public static boolean canApplyTheme(android.graphics.drawable.Drawable)
-    public static int getAlpha(android.graphics.drawable.Drawable)
-    public static android.graphics.ColorFilter getColorFilter(android.graphics.drawable.Drawable)
-    public static void inflate(android.graphics.drawable.Drawable,android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
-androidx.core.graphics.drawable.IconCompat:
-    public android.graphics.Bitmap getBitmap()
-androidx.core.graphics.drawable.TintAwareDrawable
-androidx.core.graphics.drawable.WrappedDrawableApi14
-androidx.core.graphics.drawable.WrappedDrawableApi21
-androidx.core.graphics.drawable.WrappedDrawableState
-androidx.core.os.LocaleListCompat:
-    static java.util.Locale forLanguageTagCompat(java.lang.String)
-androidx.core.os.LocaleListCompatWrapper
+androidx.core.graphics.drawable.TintAwareDrawable:
+    public abstract void setTint(int)
+    public abstract void setTintList(android.content.res.ColorStateList)
+    public abstract void setTintMode(android.graphics.PorterDuff$Mode)
 androidx.core.os.OperationCanceledException
 androidx.core.text.ICUCompat
 androidx.core.text.PrecomputedTextCompat:
@@ -23599,39 +23504,14 @@ androidx.core.view.NestedScrollingChild:
     public abstract void stopNestedScroll()
 androidx.core.view.NestedScrollingParent
 androidx.core.view.TintableBackgroundView
-androidx.core.view.ViewCompat$Api21Impl:
-    public static androidx.core.view.WindowInsetsCompat getRootWindowInsets(android.view.View)
 androidx.core.view.ViewCompat:
     private static java.lang.reflect.Field sMinHeightField
     private static boolean sMinHeightFieldFetched
     private static java.lang.reflect.Field sMinWidthField
     private static boolean sMinWidthFieldFetched
-    private static java.lang.ThreadLocal sThreadLocalRect
     private static java.util.WeakHashMap sTransitionNameMap
-    private static void compatOffsetLeftAndRight(android.view.View,int)
-    private static void compatOffsetTopAndBottom(android.view.View,int)
-    private static android.graphics.Rect getEmptyTempRect()
-    private static void tickleInvalidationFlag(android.view.View)
 androidx.core.view.ViewPropertyAnimatorCompat$ViewPropertyAnimatorListenerApi14
-androidx.core.view.WindowInsetsCompat$Api21ReflectionHolder
-androidx.core.view.WindowInsetsCompat$Builder:
-    public androidx.core.view.WindowInsetsCompat$Builder setStableInsets(androidx.core.graphics.Insets)
-androidx.core.view.WindowInsetsCompat$BuilderImpl20:
-    void setStableInsets(androidx.core.graphics.Insets)
-androidx.core.view.WindowInsetsCompat$BuilderImpl29:
-    void setStableInsets(androidx.core.graphics.Insets)
-androidx.core.view.WindowInsetsCompat$BuilderImpl:
-    void setStableInsets(androidx.core.graphics.Insets)
-androidx.core.widget.CompoundButtonCompat:
-    private static java.lang.reflect.Field sButtonDrawableField
-    private static boolean sButtonDrawableFieldFetched
-androidx.core.widget.PopupWindowCompat:
-    private static java.lang.reflect.Field sOverlapAnchorField
-    private static boolean sOverlapAnchorFieldAttempted
-    private static java.lang.reflect.Method sSetWindowLayoutTypeMethod
-    private static boolean sSetWindowLayoutTypeMethodAttempted
 androidx.core.widget.TintableCompoundButton
-androidx.core.widget.TintableCompoundDrawablesView
 androidx.core.widget.TintableImageSourceView
 androidx.fragment.app.Fragment$AnimationInfo:
     androidx.core.app.SharedElementCallback mEnterTransitionCallback
@@ -23667,114 +23547,12 @@ androidx.transition.ViewOverlayApi14$OverlayViewGroup
 androidx.transition.ViewOverlayApi14
 androidx.transition.ViewUtilsApi21:
     private static boolean sTryHiddenSetAnimationMatrix
-androidx.transition.ViewUtilsBase:
-    private static boolean sSetFrameFetched
-    private static java.lang.reflect.Method sSetFrameMethod
-    private void fetchSetFrame()
 androidx.transition.WindowIdApi14
-androidx.vectordrawable.graphics.drawable.AndroidResources
-androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$1
-androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState
-androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState
-androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat
-androidx.vectordrawable.graphics.drawable.AnimationUtilsCompat
-androidx.vectordrawable.graphics.drawable.AnimatorInflaterCompat$PathDataEvaluator
-androidx.vectordrawable.graphics.drawable.AnimatorInflaterCompat
-androidx.vectordrawable.graphics.drawable.ArgbEvaluator
+androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat:
+    private void setupColorAnimator(android.animation.Animator)
+androidx.vectordrawable.graphics.drawable.AnimationUtilsCompat:
+    private static android.view.animation.Interpolator createInterpolatorFromXml(android.content.Context,android.content.res.Resources,android.content.res.Resources$Theme,org.xmlpull.v1.XmlPullParser)
 androidx.vectordrawable.graphics.drawable.PathInterpolatorCompat
-androidx.vectordrawable.graphics.drawable.VectorDrawableCommon:
-    android.graphics.drawable.Drawable mDelegateDrawable
-    void <init>()
-    public void applyTheme(android.content.res.Resources$Theme)
-    public void clearColorFilter()
-    public android.graphics.drawable.Drawable getCurrent()
-    public int getMinimumHeight()
-    public int getMinimumWidth()
-    public boolean getPadding(android.graphics.Rect)
-    public int[] getState()
-    public android.graphics.Region getTransparentRegion()
-    public void jumpToCurrentState()
-    protected boolean onLevelChange(int)
-    public void setChangingConfigurations(int)
-    public void setColorFilter(int,android.graphics.PorterDuff$Mode)
-    public void setFilterBitmap(boolean)
-    public void setHotspot(float,float)
-    public void setHotspotBounds(int,int,int,int)
-    public boolean setState(int[])
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$1
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VClipPath
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VFullPath
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VGroup
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VObject
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPath
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VPathRenderer
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableDelegateState
-androidx.vectordrawable.graphics.drawable.VectorDrawableCompat:
-    static final android.graphics.PorterDuff$Mode DEFAULT_TINT_MODE
-    private boolean mAllowCaching
-    private android.graphics.drawable.Drawable$ConstantState mCachedConstantStateDelegate
-    private android.graphics.ColorFilter mColorFilter
-    private boolean mMutated
-    private android.graphics.PorterDuffColorFilter mTintFilter
-    private final android.graphics.Rect mTmpBounds
-    private final float[] mTmpFloats
-    private final android.graphics.Matrix mTmpMatrix
-    private androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState mVectorState
-    static void <clinit>()
-    void <init>()
-    void <init>(androidx.vectordrawable.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState)
-    static int applyAlpha(int,float)
-    public synthetic bridge void applyTheme(android.content.res.Resources$Theme)
-    public boolean canApplyTheme()
-    public synthetic bridge void clearColorFilter()
-    public static androidx.vectordrawable.graphics.drawable.VectorDrawableCompat create(android.content.res.Resources,int,android.content.res.Resources$Theme)
-    public static androidx.vectordrawable.graphics.drawable.VectorDrawableCompat createFromXmlInner(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
-    public void draw(android.graphics.Canvas)
-    public int getAlpha()
-    public int getChangingConfigurations()
-    public android.graphics.ColorFilter getColorFilter()
-    public android.graphics.drawable.Drawable$ConstantState getConstantState()
-    public synthetic bridge android.graphics.drawable.Drawable getCurrent()
-    public int getIntrinsicHeight()
-    public int getIntrinsicWidth()
-    public synthetic bridge int getMinimumHeight()
-    public synthetic bridge int getMinimumWidth()
-    public int getOpacity()
-    public synthetic bridge boolean getPadding(android.graphics.Rect)
-    public synthetic bridge int[] getState()
-    java.lang.Object getTargetByName(java.lang.String)
-    public synthetic bridge android.graphics.Region getTransparentRegion()
-    public void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet)
-    public void inflate(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
-    private void inflateInternal(android.content.res.Resources,org.xmlpull.v1.XmlPullParser,android.util.AttributeSet,android.content.res.Resources$Theme)
-    public void invalidateSelf()
-    public boolean isAutoMirrored()
-    public boolean isStateful()
-    public synthetic bridge void jumpToCurrentState()
-    public android.graphics.drawable.Drawable mutate()
-    private boolean needMirroring()
-    protected void onBoundsChange(android.graphics.Rect)
-    protected boolean onStateChange(int[])
-    private static android.graphics.PorterDuff$Mode parseTintModeCompat(int,android.graphics.PorterDuff$Mode)
-    public void scheduleSelf(java.lang.Runnable,long)
-    void setAllowCaching(boolean)
-    public void setAlpha(int)
-    public void setAutoMirrored(boolean)
-    public synthetic bridge void setChangingConfigurations(int)
-    public synthetic bridge void setColorFilter(int,android.graphics.PorterDuff$Mode)
-    public void setColorFilter(android.graphics.ColorFilter)
-    public synthetic bridge void setFilterBitmap(boolean)
-    public synthetic bridge void setHotspot(float,float)
-    public synthetic bridge void setHotspotBounds(int,int,int,int)
-    public synthetic bridge boolean setState(int[])
-    public void setTint(int)
-    public void setTintList(android.content.res.ColorStateList)
-    public void setTintMode(android.graphics.PorterDuff$Mode)
-    public boolean setVisible(boolean,boolean)
-    public void unscheduleSelf(java.lang.Runnable)
-    private void updateStateFromTypedArray(android.content.res.TypedArray,org.xmlpull.v1.XmlPullParser,android.content.res.Resources$Theme)
-    android.graphics.PorterDuffColorFilter updateTintFilter(android.graphics.PorterDuffColorFilter,android.content.res.ColorStateList,android.graphics.PorterDuff$Mode)
 androidx.viewpager2.adapter.FragmentStateAdapter$2:
     final synthetic androidx.viewpager2.adapter.FragmentStateAdapter this$0
     final synthetic androidx.viewpager2.adapter.FragmentViewHolder val$holder
@@ -23902,13 +23680,9 @@ com.google.android.gms.common.util.AndroidUtilsLight:
     private static volatile int zza
 com.google.android.gms.dynamite.DynamiteModule:
     private static int zze
-com.google.android.material.R$styleable:
-    public static final int Chip_android_textColor
 com.google.android.material.appbar.AppBarLayout$BaseBehavior$BaseDragCallback
 com.google.android.material.appbar.AppBarLayout$BaseBehavior:
     private com.google.android.material.appbar.AppBarLayout$BaseBehavior$BaseDragCallback onDragCallback
-com.google.android.material.button.MaterialButtonHelper:
-    void updateMaskBounds(int,int)
 com.google.android.material.card.MaterialCardView:
     private final com.google.android.material.card.MaterialCardViewHelper cardViewHelper
 com.google.android.material.card.MaterialCardViewHelper
@@ -23927,9 +23701,6 @@ com.google.android.material.circularreveal.CircularRevealHelper:
     public void setRevealInfo(com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo)
 com.google.android.material.circularreveal.cardview.CircularRevealCardView:
     private final com.google.android.material.circularreveal.CircularRevealHelper helper
-com.google.android.material.datepicker.UtcDates:
-    private static java.text.DateFormat getFormat(int,java.util.Locale)
-    static java.text.DateFormat getFullFormat(java.util.Locale)
 com.google.android.material.expandable.ExpandableWidgetHelper
 com.google.android.material.floatingactionbutton.BorderDrawable
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$3:
@@ -23953,8 +23724,6 @@ com.google.firebase.heartbeatinfo.HeartBeatInfoStorage:
     private static com.google.firebase.heartbeatinfo.HeartBeatInfoStorage instance
 com.reactnativecommunity.webview.RNCWebViewManager$RNCWebViewClient:
     static final synthetic boolean $assertionsDisabled
-com.th3rdwave.safeareacontext.SafeAreaUtilsKt:
-    private static final com.th3rdwave.safeareacontext.EdgeInsets getRootWindowInsetsCompatBase(android.view.View)
 io.invertase.firebase.common.RCTConvertFirebase:
     private static java.lang.String TAG
 kotlin.jvm.internal.markers.KMutableCollection

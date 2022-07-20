@@ -8,6 +8,53 @@
   "variantName": "release",
   "elements": [
     {
+      "type": "UNIVERSAL",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 10,
+      "versionName": "1.0.4",
+      "outputFile": "resources-universalRelease.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 10002,
+      "versionName": "1.0.4",
+      "outputFile": "resources-x86Release.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 10001,
+      "versionName": "1.0.4",
+      "outputFile": "resources-armeabi-v7aRelease.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 10004,
+      "versionName": "1.0.4",
+      "outputFile": "resources-x86_64Release.ap_"
+    },
+    {
       "type": "ONE_OF_MANY",
       "filters": [
         {
@@ -16,8 +63,8 @@
         }
       ],
       "attributes": [],
-      "versionCode": 9003,
-      "versionName": "1.0.3",
+      "versionCode": 10003,
+      "versionName": "1.0.4",
       "outputFile": "resources-arm64-v8aRelease.ap_"
     }
   ],
