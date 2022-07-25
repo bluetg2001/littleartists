@@ -70,56 +70,132 @@ function GallerDetail({route}) {
     return /[.]/.exec(filename) ? /[^.]+$/.exec(filename) : undefined;
   };
 
-  async function hasAndroidPermission() {
-    const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
+  // async function hasAndroidPermission() {
+  //   const permission = PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE;
 
-    const hasPermission = await PermissionsAndroid.check(permission);
-    if (hasPermission) {
-      return true;
-    }
+  //   const hasPermission = await PermissionsAndroid.check(permission);
+  //   if (hasPermission) {
+  //     return true;
+  //   }
 
-    const status = await PermissionsAndroid.request(permission);
-    return status === 'granted';
-  }
+  //   const status = await PermissionsAndroid.request(permission);
+  //   return status === 'granted';
+  // }
 
-  const imageDownload = async url => {
-    if (Platform.OS === 'android' && !(await hasAndroidPermission())) {
-      return;
-    }
-    if (Platform.OS === 'android') {
-      const {config, fs} = RNFetchBlob;
-      let PictureDir = fs.dirs.PictureDir;
-      let date = new Date();
-      let ext = getExtention(url);
+  // const imageDownload = async url => {
+  //   if (Platform.OS === 'android' && !(await hasAndroidPermission())) {
+  //     return;
+  //   }
+  //   if (Platform.OS === 'android') {
+  //     const {config, fs} = RNFetchBlob;
+  //     let PictureDir = fs.dirs.PictureDir;
+  //     let date = new Date();
+  //     let ext = getExtention(url);
 
-      RNFetchBlob.config({
-        fileCache: true,
-        addAndroidDownloads: {
-          useDownloadManager: true, // <-- this is the only thing required
-          // Optional, override notification setting (default to true)
-          notification: false,
-          // Optional, but recommended since android DownloadManager will fail when
-          // the url does not contains a file extension, by default the mime type will be text/plain
-          mime: 'image/png',
-          mediaScannable: true,
-          description: 'Image',
-          path:
-            PictureDir +
-            '/image_' +
-            Math.floor(date.getTime() + date.getSeconds() / 2) +
-            ext,
-        },
-      })
-        .fetch('GET', url)
-        .then(resp => {
-          // the path of downloaded file
-          resp.path();
-        });
+  //     RNFetchBlob.config({
+  //       fileCache: true,
+  //       addAndroidDownloads: {
+  //         useDownloadManager: true, // <-- this is the only thing required
+  //         // Optional, override notification setting (default to true)
+  //         notification: false,
+  //         // Optional, but recommended since android DownloadManager will fail when
+  //         // the url does not contains a file extension, by default the mime type will be text/plain
+  //         mime: 'image/png',
+  //         mediaScannable: true,
+  //         description: 'Image',
+  //         path:
+  //           PictureDir +
+  //           '/image_' +
+  //           Math.floor(date.getTime() + date.getSeconds() / 2) +
+  //           ext,
+  //       },
+  //     })
+  //       .fetch('GET', url)
+  //       .then(resp => {
+  //         // the path of downloaded file
+  //         resp.path();
+  //       });
+  //   } else {
+  //     // iOS
+  //     CameraRoll.save(url, {type: 'photo'});
+  //   }
+  // };
+
+  // test
+
+  const checkPermission = async REMOTE_IMAGE_PATH => {
+    // Function to check the platform
+    // If iOS then start downloading
+    // If Android then ask for permission
+
+    if (Platform.OS === 'ios') {
+      CameraRoll.save(REMOTE_IMAGE_PATH, {type: 'photo'});
     } else {
-      // iOS
-      CameraRoll.save(url, {type: 'photo'});
+      try {
+        const granted = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+          {
+            title: 'Storage Permission Required',
+            message: 'App needs access to your storage to download Photos',
+          },
+        );
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+          // Once user grant the permission start downloading
+          console.log('Storage Permission Granted.');
+          downloadImage(REMOTE_IMAGE_PATH);
+        } else {
+          // If permission denied then show alert
+          alert('Storage Permission Not Granted');
+        }
+      } catch (err) {
+        // To handle permission related exception
+        console.warn(err);
+      }
     }
   };
+
+  const downloadImage = REMOTE_IMAGE_PATH => {
+    // Main function to download the image
+
+    // To add the time suffix in filename
+    let date = new Date();
+    // Image URL which we want to download
+    let image_URL = REMOTE_IMAGE_PATH;
+    // Getting the extention of the file
+    let ext = getExtention(image_URL);
+    ext = '.' + ext[0];
+    // Get config and fs from RNFetchBlob
+    // config: To pass the downloading related options
+    // fs: Directory path where we want our image to download
+    const {config, fs} = RNFetchBlob;
+    let PictureDir = fs.dirs.PictureDir;
+    let options = {
+      fileCache: true,
+      addAndroidDownloads: {
+        // Related to the Android only
+        useDownloadManager: true,
+        notification: true,
+        path:
+          PictureDir +
+          '/image_' +
+          Math.floor(date.getTime() + date.getSeconds() / 2) +
+          ext,
+        description: 'Image',
+      },
+    };
+    config(options)
+      .fetch('GET', image_URL)
+      .then(res => {
+        // Showing alert after successful downloading
+        console.log('res -> ', JSON.stringify(res));
+        alert('Image Downloaded Successfully.');
+      });
+  };
+
+  // const getExtention = filename => {
+  //   // To get the file extension
+  //   return /[.]/.exec(filename) ? /[^.]+$/.exec(filename) : undefined;
+  // };
 
   useEffect(() => {
     getHakwonId();
@@ -164,7 +240,8 @@ function GallerDetail({route}) {
           mt={4}
           bg="primary.500"
           onPress={() => {
-            imageDownload(item.url);
+            checkPermission(item.url);
+            // imageDownload(item.url);
             toast.show({
               render: () => {
                 return (
