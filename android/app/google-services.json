@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:292341438726:android:2c22f45b5c466cb9dfa687",
+        "mobilesdk_app_id": "1:292341438726:android:c8c939a578bfd4addfa687",
         "android_client_info": {
-          "package_name": "com.attendance_pad"
+          "package_name": "com.littleartists"
         }
       },
       "oauth_client": [
@@ -31,10 +31,10 @@
               "client_type": 3
             },
             {
-              "client_id": "292341438726-6ccis3f4suv64797s6gj22bj17c1pcuu.apps.googleusercontent.com",
+              "client_id": "292341438726-3huc93jvr248stqd7pade2ms0jmjpdc4.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "org.reactjs.native.example.attendance-pad"
+                "bundle_id": "comm"
               }
             }
           ]
@@ -67,10 +67,10 @@
               "client_type": 3
             },
             {
-              "client_id": "292341438726-6ccis3f4suv64797s6gj22bj17c1pcuu.apps.googleusercontent.com",
+              "client_id": "292341438726-3huc93jvr248stqd7pade2ms0jmjpdc4.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "org.reactjs.native.example.attendance-pad"
+                "bundle_id": "comm"
               }
             }
           ]

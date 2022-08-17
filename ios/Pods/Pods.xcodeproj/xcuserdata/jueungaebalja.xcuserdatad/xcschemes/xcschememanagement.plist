@@ -99,12 +99,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-littleband-littlebandTests.xcscheme</key>
+		<key>Pods-littleartists-littleartistsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-littleband.xcscheme</key>
+		<key>Pods-littleartists.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

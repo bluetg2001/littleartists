@@ -1,0 +1,6 @@
+module Pods_littleartists_littleartistsTests {
+  umbrella header "Pods-littleartists-littleartistsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

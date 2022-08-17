@@ -3,11 +3,11 @@ import {extendTheme} from 'native-base';
 const theme = extendTheme({
   colors: {
     primary: {
-      500: '#009fe8',
+      500: '#fa9522',
       600: '#009fe8',
     },
     secondary: {
-      500: '#ffd500',
+      500: '#acdd5c',
     },
     // 배경색
     gray: {

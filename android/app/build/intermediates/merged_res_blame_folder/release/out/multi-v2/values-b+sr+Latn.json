@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.littleband.app-mergeReleaseResources-24:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "com.littleartists.app-mergeReleaseResources-24:/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/4595590e521ec76f3c93afe8f0d5d491/transformed/core-1.5.0/res/values-b+sr+Latn/values-b+sr+Latn.xml",

@@ -3,7 +3,7 @@
     <string name="default_web_client_id" translatable="false">292341438726-2jhkhfkb143165o266sm3b3n7bu1kor9.apps.googleusercontent.com</string>
     <string name="gcm_defaultSenderId" translatable="false">292341438726</string>
     <string name="google_api_key" translatable="false">AIzaSyAerMYP_F4wl6e5ZaEyF-f4KFYHhufdbhE</string>
-    <string name="google_app_id" translatable="false">1:292341438726:android:3c8497851d5c89d3dfa687</string>
+    <string name="google_app_id" translatable="false">1:292341438726:android:c8c939a578bfd4addfa687</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAerMYP_F4wl6e5ZaEyF-f4KFYHhufdbhE</string>
     <string name="google_storage_bucket" translatable="false">piano-server.appspot.com</string>
     <string name="project_id" translatable="false">piano-server</string>

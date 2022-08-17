@@ -5,7 +5,7 @@ function Loading() {
   return (
     <Center flex={1}>
       <HStack mt={4} space={2} justifyContent="center">
-        <Spinner accessibilityLabel="Loading posts" />
+        <Spinner accessibilityLabel="Loading posts" color="primary.500" />
         <Heading color="primary.500" fontSize="md">
           Loading
         </Heading>

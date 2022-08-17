@@ -10,8 +10,8 @@
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
--keep class com.littleband.MainActivity { <init>(); }
--keep class com.littleband.MainApplication { <init>(); }
+-keep class com.littleartists.MainActivity { <init>(); }
+-keep class com.littleartists.MainApplication { <init>(); }
 -keep class com.reactnativecommunity.webview.RNCWebViewFileProvider { <init>(); }
 -keep class io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider { <init>(); }
 -keep class io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService { <init>(); }

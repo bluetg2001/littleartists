@@ -12,9 +12,8 @@ import Gallery from '../containers/Gallery/Gallery';
 import GalleryDetail from '../containers/Gallery/GallerDetail';
 import BrandIntro from '../containers/BrandIntro/BrandIntro';
 import Intuition from '../containers/Intuition/Intuition';
-import PianoGoGo from '../containers/PianoGoGo/PianoGoGo';
-import PianoGoGoDetail from '../containers/PianoGoGo/PianoGoGoDetail';
 import PaymentHistoryDetail from '../containers/Intuition/PaymentHistoryDetail';
+import MusicGoGo from '../containers/MusicGoGo/MusicGoGo';
 
 const StackNavi = createNativeStackNavigator();
 
@@ -26,7 +25,7 @@ function Stack() {
         screenOptions={{
           headerBackTitleVisible: false,
           headerStyle: {
-            backgroundColor: '#ffcc43',
+            backgroundColor: '#acdd5c',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -78,7 +77,7 @@ function Stack() {
         <StackNavi.Screen
           name="BrandIntro"
           component={BrandIntro}
-          options={{title: '어린음악대'}}
+          options={{title: '어린화가들'}}
         />
         <StackNavi.Screen
           name="Intuition"
@@ -90,15 +89,11 @@ function Stack() {
           component={PaymentHistoryDetail}
           options={{title: '납입 상세'}}
         />
+
         <StackNavi.Screen
-          name="PianoGoGo"
-          component={PianoGoGo}
-          options={{title: 'e피아노고고'}}
-        />
-        <StackNavi.Screen
-          name="PianoGoGoDetail"
-          component={PianoGoGoDetail}
-          options={{title: 'e피아노고고'}}
+          name="MusicGoGo"
+          component={MusicGoGo}
+          options={{title: '뮤직고고 소개'}}
         />
       </StackNavi.Navigator>
     </>

@@ -1,6 +1,0 @@
-module Pods_littleband {
-  umbrella header "Pods-littleband-umbrella.h"
-
-  export *
-  module * { export * }
-}

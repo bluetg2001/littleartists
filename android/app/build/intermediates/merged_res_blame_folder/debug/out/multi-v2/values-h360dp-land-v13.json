@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.littleband.app-mergeDebugResources-25:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "com.littleartists.app-mergeDebugResources-25:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
                     "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/5b239f8946a545f72102229995a28cb4/transformed/material-1.1.0/res/values-h360dp-land-v13/values-h360dp-land-v13.xml",

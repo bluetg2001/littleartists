@@ -16,7 +16,7 @@ function Logo() {
           height: 60,
           marginTop: 16,
         }}
-        source={require('../../assets/images/logos/littleband-logo.png')}
+        source={require('../../assets/images/logos/littleartists-logo.png')}
       />
     </TouchableOpacity>
   );

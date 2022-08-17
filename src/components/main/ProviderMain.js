@@ -5,7 +5,7 @@ import messaging from '@react-native-firebase/messaging';
 // react-native components
 import {Image, FlatList} from 'react-native';
 // native-base
-import {Box, Center, Button, VStack} from 'native-base';
+import {Box, Center, Button, VStack, Text} from 'native-base';
 // react-navigation
 import {useNavigation} from '@react-navigation/native';
 // graqlQL sutff
@@ -35,9 +35,9 @@ function ProviderMain(props) {
     },
     {
       index: 6,
-      title: 'e피아노고고',
-      img: require('../../../assets/images/logos/main-pianogogo.png'),
-      link: 'PianoGoGo',
+      title: '뮤직고고',
+      img: require('../../../assets/images/logos/main-musicgogo.png'),
+      link: 'MusicGoGo',
     },
     {
       index: 5,
@@ -48,7 +48,7 @@ function ProviderMain(props) {
     {
       index: 4,
       title: '소개',
-      img: require('../../../assets/images/logos/littleband-border-logo.png'),
+      img: require('../../../assets/images/logos/littleartists-border-logo.png'),
       link: 'BrandIntro',
     },
     {
@@ -122,14 +122,14 @@ function ProviderMain(props) {
   }, [getParentIdAndHakwonId, hakwonId, parentId, saveTokenToDatabase]);
 
   return (
-    <VStack flex={1} bgColor="gray.100" alignItems="center">
+    <VStack flex={1} bgColor="#fcfbf7" alignItems="center">
       <ConsentModal isConsent={isConsent} parentId={parentId} />
       <Box flex={1} width="90%" safeArea>
         <Center flex={1}>
           <Image
             resizeMode="contain"
             style={{width: 127, height: 62}}
-            source={require('../../../assets/images/logos/littleband-logo.png')}
+            source={require('../../../assets/images/logos/littleartists-logo.png')}
           />
           <Button
             variant="outline"
@@ -139,7 +139,9 @@ function ProviderMain(props) {
             onPress={() => {
               removeUserDataAndLogout();
             }}>
-            로그아웃
+            <Text fontSize="xs" color="primary.500">
+              로그아웃
+            </Text>
           </Button>
         </Center>
       </Box>

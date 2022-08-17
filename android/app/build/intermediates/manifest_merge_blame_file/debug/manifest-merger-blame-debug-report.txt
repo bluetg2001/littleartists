@@ -1,179 +1,179 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.littleband"
-4    android:versionCode="10"
-5    android:versionName="1.0.4" >
+3    package="com.littleartists"
+4    android:versionCode="2"
+5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
 9        android:targetSdkVersion="30" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:8:5-77
-11-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:8:22-75
+11-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:8:5-77
+11-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:8:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:4:5-67
-12-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:4:22-64
+12-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:4:5-67
+12-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:4:22-64
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:5:5-81
-13-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:5:22-78
+13-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:5:5-81
+13-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:5:22-78
 14    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
-14-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:6:5-88
-14-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:6:22-85
+14-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:6:5-88
+14-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:6:22-85
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:7:5-79
-15-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:7:22-77
+15-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:7:5-79
+15-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:7:22-77
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:7:5-79
-16-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:7:22-77
+16-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:7:5-79
+16-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:7:22-77
 17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-17-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:10:5-78
-17-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:10:22-76
+17-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:10:5-78
+17-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:10:22-76
 18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-18-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:11:5-80
-18-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:11:22-78
+18-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:11:5-80
+18-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:11:22-78
 19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 19-->[com.facebook.flipper:flipper:0.75.1] /Users/jueungaebalja/.gradle/caches/transforms-3/4ea7ff5429e32e05111e65e94f86daa2/transformed/jetified-flipper-0.75.1/AndroidManifest.xml:16:5-76
 19-->[com.facebook.flipper:flipper:0.75.1] /Users/jueungaebalja/.gradle/caches/transforms-3/4ea7ff5429e32e05111e65e94f86daa2/transformed/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 20    <uses-permission android:name="android.permission.WAKE_LOCK" />
-20-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
-20-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+20-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+20-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required to access Google Play Licensing -->
-21-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
-21-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
+21-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+21-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
 22    <uses-permission android:name="com.android.vending.CHECK_LICENSE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-22-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
-22-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+22-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+22-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
 23    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 23-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:5-82
 23-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:28:22-79
 24
 25    <application
-25-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:14:5-39:19
-26        android:name="com.littleband.MainApplication"
-26-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:15:7-38
+25-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:14:5-39:19
+26        android:name="com.littleartists.MainApplication"
+26-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:15:7-38
 27        android:allowBackup="false"
-27-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:19:7-34
+27-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:19:7-34
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 28-->[androidx.core:core:1.5.0] /Users/jueungaebalja/.gradle/caches/transforms-3/4595590e521ec76f3c93afe8f0d5d491/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
 29        android:debuggable="true"
 30        android:icon="@mipmap/ic_launcher"
-30-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:17:7-41
+30-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:17:7-41
 31        android:label="@string/app_name"
-31-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:16:7-39
+31-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:16:7-39
 32        android:requestLegacyExternalStorage="true"
-32-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:22:9-52
+32-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:22:9-52
 33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:18:7-52
+33-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:18:7-52
 34        android:theme="@style/AppTheme"
-34-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:20:7-38
+34-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:20:7-38
 35        android:usesCleartextTraffic="true" >
-35-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:21:7-42
+35-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:21:7-42
 36        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-36-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:9-86
-36-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/debug/AndroidManifest.xml:11:19-83
+36-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/debug/AndroidManifest.xml:11:9-86
+36-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/debug/AndroidManifest.xml:11:19-83
 37        <activity
-37-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:26:7-38:18
-38            android:name="com.littleband.MainActivity"
-38-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:28:9-37
+37-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:26:7-38:18
+38            android:name="com.littleartists.MainActivity"
+38-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:28:9-37
 39            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-39-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:30:9-86
+39-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:30:9-86
 40            android:exported="true"
-40-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:27:9-32
+40-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:27:9-32
 41            android:label="@string/app_name"
-41-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:29:9-41
+41-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:29:9-41
 42            android:launchMode="singleTask"
-42-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:31:9-40
+42-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:31:9-40
 43            android:windowSoftInputMode="adjustResize" >
-43-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:32:9-51
+43-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:32:9-51
 44            <intent-filter>
-44-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:33:9-37:25
+44-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:33:9-37:25
 45                <action android:name="android.intent.action.MAIN" />
-45-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:13-65
-45-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:34:21-62
+45-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:34:13-65
+45-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:34:21-62
 46
 47                <category android:name="android.intent.category.LAUNCHER" />
-47-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:13-73
-47-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:35:23-70
+47-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:35:13-73
+47-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:35:23-70
 48
 49                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
-49-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:36:13-77
-49-->/Users/jueungaebalja/Desktop/Project/littleband/android/app/src/main/AndroidManifest.xml:36:21-75
+49-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:36:13-77
+49-->/Users/jueungaebalja/Desktop/Project/littleartists/android/app/src/main/AndroidManifest.xml:36:21-75
 50            </intent-filter>
 51        </activity>
 52
 53        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService" />
-53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
-53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
+53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-111
+53-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-108
 54        <service
-54-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
+54-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-21:19
 55            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService"
-55-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
+55-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-95
 56            android:exported="false" >
-56-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
+56-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-37
 57            <intent-filter>
-57-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+57-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
 58                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+58-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
 59            </intent-filter>
 60        </service>
 61
 62        <receiver
-62-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
+62-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-30:20
 63            android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver"
-63-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
+63-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-96
 64            android:exported="true"
-64-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
+64-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
 65            android:permission="com.google.android.c2dm.permission.SEND" >
-65-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
+65-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-73
 66            <intent-filter>
-66-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+66-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
 67                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+67-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
 68            </intent-filter>
 69        </receiver>
 70
 71        <meta-data
-71-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
+71-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:9-34:36
 72            android:name="firebase_messaging_auto_init_enabled"
-72-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
+72-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:13-64
 73            android:value="true" />
-73-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
+73-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:13-33
 74        <meta-data
-74-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
+74-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:9-37:32
 75            android:name="com.google.firebase.messaging.default_notification_channel_id"
-75-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
+75-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-89
 76            android:value="" />
-76-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
+76-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-29
 77        <meta-data
-77-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
+77-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:9-40:47
 78            android:name="com.google.firebase.messaging.default_notification_color"
-78-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
+78-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-84
 79            android:resource="@color/white" />
-79-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
+79-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-44
 80        <meta-data
-80-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
+80-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:36
 81            android:name="app_data_collection_default_enabled"
-81-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
+81-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-63
 82            android:value="true" />
-82-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
+82-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-33
 83
 84        <service
-84-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
+84-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:19
 85            android:name="com.google.firebase.components.ComponentDiscoveryService"
-85-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
+85-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:18-89
 86            android:directBootAware="true"
 86-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/7dffb12032b5761e6a3ecd432fd98a85/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:35:13-43
 87            android:exported="false" >
 87-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:54:13-37
 88            <meta-data
-88-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
+88-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
 89                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-89-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
+89-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-120
 90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+90-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
 91            <meta-data
 91-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:55:13-57:85
 92                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
@@ -195,48 +195,48 @@
 100        </service>
 101
 102        <provider
-102-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
+102-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-24:38
 103            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-103-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
-104            android:authorities="com.littleband.reactnativefirebaseappinitprovider"
-104-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
+103-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-88
+104            android:authorities="com.littleartists.reactnativefirebaseappinitprovider"
+104-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-86
 105            android:exported="false"
-105-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
+105-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-37
 106            android:initOrder="99" />
-106-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
+106-->[:react-native-firebase_app] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
 107        <provider
-107-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+107-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 108            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-108-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
-109            android:authorities="com.littleband.fileprovider"
-109-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
+108-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
+109            android:authorities="com.littleartists.fileprovider"
+109-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
 110            android:exported="false"
-110-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+110-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 111            android:grantUriPermissions="true" >
-111-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+111-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
 112            <meta-data
-112-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
+112-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
 113                android:name="android.support.FILE_PROVIDER_PATHS"
-113-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+113-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 114                android:resource="@xml/file_provider_paths" />
-114-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
+114-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
 115        </provider>
 116        <provider
-116-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+116-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
 117            android:name="com.RNFetchBlob.Utils.FileProvider"
-117-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
-118            android:authorities="com.littleband.provider"
-118-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+117-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
+118            android:authorities="com.littleartists.provider"
+118-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
 119            android:exported="false"
-119-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+119-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
 120            android:grantUriPermissions="true" >
-120-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+120-->[:rn-fetch-blob] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
 121            <meta-data
-121-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
+121-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
 122                android:name="android.support.FILE_PROVIDER_PATHS"
-122-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+122-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 123                android:resource="@xml/provider_paths" />
-123-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
+123-->[:react-native-webview] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
 124        </provider>
 125
 126        <receiver
@@ -248,10 +248,10 @@
 129            android:permission="com.google.android.c2dm.permission.SEND" >
 129-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:34:13-73
 130            <intent-filter>
-130-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
+130-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-29:29
 131                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
-131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
+131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-81
+131-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-78
 132            </intent-filter>
 133        </receiver>
 134        <!--
@@ -267,10 +267,10 @@
 141            android:exported="false" >
 141-->[com.google.firebase:firebase-messaging:23.0.4] /Users/jueungaebalja/.gradle/caches/transforms-3/48a31e453e6433b8bfd7e4e0a2076e77/transformed/jetified-firebase-messaging-23.0.4/AndroidManifest.xml:47:13-37
 142            <intent-filter android:priority="-500" >
-142-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
+142-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:29
 143                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
-143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleband/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
+143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-78
+143-->[:react-native-firebase_messaging] /Users/jueungaebalja/Desktop/Project/littleartists/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:25-75
 144            </intent-filter>
 145        </service>
 146        <service
@@ -307,7 +307,7 @@
 163-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/7dffb12032b5761e6a3ecd432fd98a85/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:26:9-31:39
 164            android:name="com.google.firebase.provider.FirebaseInitProvider"
 164-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/7dffb12032b5761e6a3ecd432fd98a85/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:27:13-77
-165            android:authorities="com.littleband.firebaseinitprovider"
+165            android:authorities="com.littleartists.firebaseinitprovider"
 165-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/7dffb12032b5761e6a3ecd432fd98a85/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:28:13-72
 166            android:directBootAware="true"
 166-->[com.google.firebase:firebase-common:20.1.1] /Users/jueungaebalja/.gradle/caches/transforms-3/7dffb12032b5761e6a3ecd432fd98a85/transformed/jetified-firebase-common-20.1.1/AndroidManifest.xml:29:13-43

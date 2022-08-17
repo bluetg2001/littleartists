@@ -41,7 +41,7 @@ function BottomTabNavigation(props) {
     {
       index: 4,
       aspectRatio: 1.5,
-      title: '어린음악대',
+      title: '어린화가들',
       img: require('../../assets/images/icons/tab-littleband.png'),
       clickedImg: require('../../assets/images/icons/tab-clicked-littleband.png'),
       link: 'BrandIntro',

@@ -4,9 +4,17 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.littleband",
+  "applicationId": "com.littleartists",
   "variantName": "release",
   "elements": [
+    {
+      "type": "UNIVERSAL",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 2,
+      "versionName": "1.0.1",
+      "outputFile": "resources-universalRelease.ap_"
+    },
     {
       "type": "ONE_OF_MANY",
       "filters": [
@@ -16,9 +24,48 @@
         }
       ],
       "attributes": [],
-      "versionCode": 10003,
-      "versionName": "1.0.4",
+      "versionCode": 2003,
+      "versionName": "1.0.1",
       "outputFile": "resources-arm64-v8aRelease.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2004,
+      "versionName": "1.0.1",
+      "outputFile": "resources-x86_64Release.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2002,
+      "versionName": "1.0.1",
+      "outputFile": "resources-x86Release.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2001,
+      "versionName": "1.0.1",
+      "outputFile": "resources-armeabi-v7aRelease.ap_"
     }
   ],
   "elementType": "File"

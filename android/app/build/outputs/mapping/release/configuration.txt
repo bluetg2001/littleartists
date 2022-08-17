@@ -1,4 +1,4 @@
-# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.2.1
+# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleartists/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.2.1
 # This is a configuration file for ProGuard.
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 #
@@ -116,8 +116,8 @@
 # These classes are duplicated between android.jar and core-lambda-stubs.jar.
 -dontnote java.lang.invoke.**
 
-# End of content from /Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.2.1
-# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleband/android/app/proguard-rules.pro
+# End of content from /Users/jueungaebalja/Desktop/Project/littleartists/android/app/build/intermediates/default_proguard_files/global/proguard-android.txt-7.2.1
+# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleartists/android/app/proguard-rules.pro
 # Add project specific ProGuard rules here.
 # By default, the flags in this file are appended to flags specified
 # in /usr/local/Cellar/android-sdk/24.3.3/tools/proguard/proguard-android.txt
@@ -131,8 +131,8 @@
 
 -keep public class com.horcrux.svg.** {*;}
 
-# End of content from /Users/jueungaebalja/Desktop/Project/littleband/android/app/proguard-rules.pro
-# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+# End of content from /Users/jueungaebalja/Desktop/Project/littleartists/android/app/proguard-rules.pro
+# The proguard configuration file for the following section is /Users/jueungaebalja/Desktop/Project/littleartists/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
 -keep class com.RNFetchBlob.Utils.FileProvider { <init>(); }
 -keep class com.google.android.datatransport.runtime.backends.TransportBackendDiscovery { <init>(); }
@@ -145,8 +145,8 @@
 -keep class com.google.firebase.iid.FirebaseInstanceIdReceiver { <init>(); }
 -keep class com.google.firebase.messaging.FirebaseMessagingService { <init>(); }
 -keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
--keep class com.littleband.MainActivity { <init>(); }
--keep class com.littleband.MainApplication { <init>(); }
+-keep class com.littleartists.MainActivity { <init>(); }
+-keep class com.littleartists.MainApplication { <init>(); }
 -keep class com.reactnativecommunity.webview.RNCWebViewFileProvider { <init>(); }
 -keep class io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider { <init>(); }
 -keep class io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService { <init>(); }
@@ -225,7 +225,7 @@
 -keep class com.google.android.material.textview.MaterialTextView { <init>(android.content.Context, android.util.AttributeSet); }
 
 
-# End of content from /Users/jueungaebalja/Desktop/Project/littleband/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
+# End of content from /Users/jueungaebalja/Desktop/Project/littleartists/android/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 # The proguard configuration file for the following section is /Users/jueungaebalja/.gradle/caches/transforms-3/758a35a4e626fdfd358a08cedfd60d97/transformed/jetified-react-native-0.64.2/proguard.txt
 # Copyright (c) Facebook, Inc. and its affiliates.
 #

@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '12.0'
 
-target 'littleband' do
+target 'littleartists' do
   config = use_native_modules!
 
   use_react_native!(
@@ -17,7 +17,7 @@ target 'littleband' do
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
   pod 'react-native-cameraroll', :path => '../node_modules/@react-native-community/cameraroll'
 
-  target 'littlebandTests' do
+  target 'littleartistsTests' do
     inherit! :complete
     # Pods for testing
   end

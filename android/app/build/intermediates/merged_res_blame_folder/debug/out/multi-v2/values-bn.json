@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.littleband.app-mergeDebugResources-25:/values-bn/values-bn.xml",
+            "outputFile": "com.littleartists.app-mergeDebugResources-25:/values-bn/values-bn.xml",
             "map": [
                 {
                     "source": "/Users/jueungaebalja/.gradle/caches/transforms-3/373c0aba18659a9e3664becf76626ca5/transformed/jetified-play-services-basement-18.0.0/res/values-bn/values.xml",

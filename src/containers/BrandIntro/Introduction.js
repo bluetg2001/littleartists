@@ -19,7 +19,7 @@ function Introduction() {
               // zIndex: 2,
               elevation: 2,
             }}
-            source={require('../../../assets/images/logos/littleband-border-logo.png')}
+            source={require('../../../assets/images/logos/littleartists-border-logo.png')}
           />
         ) : (
           <Image
@@ -30,7 +30,7 @@ function Introduction() {
               zIndex: 2,
               // elevation: 2,
             }}
-            source={require('../../../assets/images/logos/littleband-border-logo.png')}
+            source={require('../../../assets/images/logos/littleartists-border-logo.png')}
           />
         )}
 
@@ -45,15 +45,15 @@ function Introduction() {
           style={{position: 'absolute', zIndex: 1, elevation: 1}}>
           <Text
             color="white"
-            fontSize="lg">{`달라진 어린음악대! \n 아이에게 가장 알맞는 \n 교육환경과 음악적 경험을 \n 만들어 드립니다.`}</Text>
+            fontSize="lg">{` 어린화가들의 프로그램은 \n 한국아동예술창의 연구소의 \n 검증된 과정을 통해 만들어진 전문적인 \n 예술 프로그램입니다.`}</Text>
         </Box>
       </VStack>
 
       <HStack mt={220} alignItems="center">
         <Image
           style={{
-            width: 63,
-            height: 78,
+            width: 69,
+            height: 75,
           }}
           source={require('../../../assets/images/characters/brand-intro-deco.png')}
         />
@@ -64,7 +64,7 @@ function Introduction() {
             fontSize="lg"
             color={
               'primary.500'
-            }>{`스마트한 음악교육의 시작! \n 새로운 차원의 피아노레슨 \n 어린음악대!`}</Text>
+            }>{`아이들은 감각을 통해 사물을 배우고 \n그 자극이 뇌에 전달되어 \n기억으로 축적됩니다.`}</Text>
         </VStack>
       </HStack>
       <Image
@@ -85,18 +85,18 @@ function Introduction() {
           mb={16}
           position="relative"
           zIndex="1">
-          {` 어린음악대만의 디지털 콘텐츠를 대폭 강화하여\n 언제 어디서나 비대면 수업이 가능합니다. \n 체계적인 레슨과 관리, 전문교구와 \n 통합형 피아노레슨 프로그램의 \n 도입으로 최상의 교육서비스를 \n 제공합니다. `}
+          {` 유 아동 시기의 풍부한 감성 경험은 뇌의 성장에\n 커다란 영향을 미치고, 직접 만지고 \n 만들어보는 감각적인 수업은 창의적 \n 지능 발달에 크게 도움을 줍니다. \n 뿐만 아니라 다양한 경험과 \n 성취를 통한 만족감은 긍정적인 \n 자아 발달을 이루어 \n 건강하고 바른 인성을 길러줍니다. `}
         </Text>
         <Box
           alignItems="flex-end"
           position={'absolute'}
-          style={{right: 0, top: 30, zIndex: -1}}>
+          style={{right: 0, top: 25, zIndex: -1}}>
           <Image
-            source={require('../../../assets/images/characters/half-rest.png')}
+            source={require('../../../assets/images/characters/artist-char.png')}
             style={{
               marginTop: 32,
-              width: 118,
-              height: 125,
+              width: 178,
+              height: 141,
               resizeMode: 'cover',
             }}
           />

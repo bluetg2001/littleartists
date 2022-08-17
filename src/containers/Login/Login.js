@@ -179,18 +179,19 @@ function Login({navigation}) {
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       flex={1}>
-      <View flex={1} bgColor="gray.100">
+      <View flex={1} bgColor="#fcfbf7">
         <Box flex={1}>
           <Center flex={1} justifyContent="flex-end">
             <Image
               style={{width: 125, height: 60}}
-              source={require('../../..//assets/images/logos/littleband-logo.png')}
+              source={require('../../..//assets/images/logos/littleartists-logo.png')}
             />
           </Center>
         </Box>
         <Center flex={2}>
           <Box
             marginTop={8}
+            marginBottom={2}
             display="flex"
             flexDirection="row"
             justifyContent="center"
@@ -203,8 +204,8 @@ function Login({navigation}) {
 
           <Image
             flex={5}
-            style={{aspectRatio: 290 / 218}}
-            source={require('../../../assets/images/characters/with-piano.png')}
+            style={{aspectRatio: 221 / 222}}
+            source={require('../../../assets/images/characters/login-main.png')}
           />
         </Center>
         <Center flex={1}>

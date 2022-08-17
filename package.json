@@ -1,5 +1,5 @@
 {
-  "name": "littleband",
+  "name": "littleartists",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -30,6 +30,7 @@
     "native-base": "^3.2.2",
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-hyperlink": "^0.0.19",
     "react-native-paper": "^4.11.2",
     "react-native-render-html": "^6.3.4",
     "react-native-safe-area-context": "^4.2.5",

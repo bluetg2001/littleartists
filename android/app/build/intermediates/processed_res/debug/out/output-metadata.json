@@ -4,55 +4,16 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.littleband",
+  "applicationId": "com.littleartists",
   "variantName": "debug",
   "elements": [
     {
       "type": "UNIVERSAL",
       "filters": [],
       "attributes": [],
-      "versionCode": 10,
-      "versionName": "1.0.4",
+      "versionCode": 2,
+      "versionName": "1.0.1",
       "outputFile": "resources-universalDebug.ap_"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "x86_64"
-        }
-      ],
-      "attributes": [],
-      "versionCode": 10004,
-      "versionName": "1.0.4",
-      "outputFile": "resources-x86_64Debug.ap_"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "x86"
-        }
-      ],
-      "attributes": [],
-      "versionCode": 10002,
-      "versionName": "1.0.4",
-      "outputFile": "resources-x86Debug.ap_"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "armeabi-v7a"
-        }
-      ],
-      "attributes": [],
-      "versionCode": 10001,
-      "versionName": "1.0.4",
-      "outputFile": "resources-armeabi-v7aDebug.ap_"
     },
     {
       "type": "ONE_OF_MANY",
@@ -63,9 +24,48 @@
         }
       ],
       "attributes": [],
-      "versionCode": 10003,
-      "versionName": "1.0.4",
+      "versionCode": 2003,
+      "versionName": "1.0.1",
       "outputFile": "resources-arm64-v8aDebug.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2001,
+      "versionName": "1.0.1",
+      "outputFile": "resources-armeabi-v7aDebug.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2002,
+      "versionName": "1.0.1",
+      "outputFile": "resources-x86Debug.ap_"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 2004,
+      "versionName": "1.0.1",
+      "outputFile": "resources-x86_64Debug.ap_"
     }
   ],
   "elementType": "File"
